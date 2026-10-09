@@ -1,0 +1,221 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:11.190
+In the last two videos we solved linear systems: once with the inverse matrix, once with Gaussian elimination. Both times exactly one solution came out. But that is not always the case.
+
+2
+00:00:13.040 --> 00:00:14.980
+The learning goals of this video are:
+
+3
+00:00:15.480 --> 00:00:20.880
+First: to tell the three cases of solvability apart.
+
+4
+00:00:21.330 --> 00:00:25.490
+Second: to determine the rank of a matrix from its row echelon form.
+
+5
+00:00:25.940 --> 00:00:30.042
+And third: to use the rank criterion to find the number of solutions.
+
+6
+00:00:32.192 --> 00:00:44.400
+Let us first look at what can happen at all. Two equations in two unknowns are enough for that, because those can be drawn: each equation is a line, and a solution is a point that lies on both lines.
+
+7
+00:00:46.250 --> 00:00:56.393
+In the first case the two lines cross at exactly one point. Then the linear system has exactly one solution. These are the cases from the last two videos.
+
+8
+00:00:58.243 --> 00:01:11.704
+In the second case the lines are parallel and distinct. They have no point in common, so the system has no solution. You can see that in the equations as well: the left-hand side is the same twice, the right-hand side is not.
+
+9
+00:01:13.554 --> 00:01:26.182
+In the third case the two lines lie on top of each other. The second equation is twice the first and therefore says nothing new. Every point of the line is a solution, so there are infinitely many.
+
+10
+00:01:28.132 --> 00:01:39.491
+There are no cases beyond these three. With two unknowns we can draw it; with three or more unknowns we cannot. So we need a criterion that can be calculated.
+
+11
+00:01:42.341 --> 00:01:56.643
+The key to that is called the rank. Behind it lies the question of how many rows of a matrix really carry information of their own. We look at the idea in two dimensions first; there it can be drawn.
+
+12
+00:01:58.493 --> 00:02:07.035
+Two vectors are called linearly dependent if one of them is a multiple of the other. The vector two, four is twice one, two. Drawn, both lie on the same line.
+
+13
+00:02:08.885 --> 00:02:17.349
+With one, two and two, five that does not work. The two point in different directions; they are called linearly independent.
+
+14
+00:02:19.449 --> 00:02:25.072
+Formally it is defined like this, and straight away for any number of vectors.
+
+15
+00:02:27.222 --> 00:02:43.492
+k vectors are called linearly dependent if there are scalars a one to a k, not all of them zero, such that a one times x one plus and so on plus a k times x k gives the zero vector. The zero vector is the vector that contains only zeros.
+
+16
+00:02:45.692 --> 00:02:59.591
+Linearly independent then means exactly the opposite: there are no such scalars. Apart from setting all of them to zero, no combination can be found that gives the zero vector.
+
+17
+00:03:01.791 --> 00:03:14.507
+Back to the example: on the left there are such scalars, for instance two and minus one. Twice x one minus x two does indeed give the zero vector. On the right no such pair can be found.
+
+18
+00:03:16.957 --> 00:03:26.727
+With that we can explain the rank. The rank of a matrix A, written rank of A, is the number of linearly independent rows. Counting the linearly independent columns gives the same number.
+
+19
+00:03:28.627 --> 00:03:38.338
+Take this matrix. The second row is twice the first, so it brings nothing new.
+
+20
+00:03:38.988 --> 00:03:47.308
+The first and the third row, on the other hand, are independent of each other. So the rank of this matrix is two, even though it has three rows.
+
+21
+00:03:48.058 --> 00:03:57.257
+With larger matrices that is of course no longer so easy to see. So there is a procedure for it, and we already know it: Gaussian elimination.
+
+22
+00:04:00.107 --> 00:04:11.501
+In the Gauss video we kept rewriting until the identity matrix stood on the left. For the rank we only need the first half of that, so only the steps down to row echelon form.
+
+23
+00:04:12.151 --> 00:04:15.292
+So what does row echelon form mean?
+
+24
+00:04:17.392 --> 00:04:24.794
+For that we first need a name: the first entry of a row that is not zero is called the pivot element. A zero row has none.
+
+25
+00:04:26.994 --> 00:04:41.679
+And now the definition: a matrix is in row echelon form if the pivot elements form a staircase to the right from top to bottom, if there are only zeros below each pivot element, and if the zero rows are at the very bottom.
+
+26
+00:04:44.079 --> 00:04:51.948
+Let us look at that with examples. The filled dot stands for a number other than zero, the star for any value at all.
+
+27
+00:04:53.898 --> 00:05:04.735
+The first matrix is in row echelon form: the pivot element moves to the right from row to row, and below it there are only zeros.
+
+28
+00:05:05.385 --> 00:05:14.685
+The second one is as well. Here the pivot element jumps two columns at once from the first to the second row, and the zero row is at the very bottom. Both of these are allowed.
+
+29
+00:05:15.335 --> 00:05:22.640
+The third one is not in row echelon form. In the second and in the third row the pivot element sits in the same column; the staircase does not move further to the right.
+
+30
+00:05:25.490 --> 00:05:36.600
+Once a matrix is in row echelon form, the rank is easy to read off: it is the number of rows that are not zero rows. You could also say: the number of steps.
+
+31
+00:05:38.650 --> 00:05:52.702
+Let us try that on our matrix from before. The pivot element of the first row is the one at the top left. Below it, in the first column, everything is to become zero; that area is exactly what the next steps are aiming at.
+
+32
+00:05:54.752 --> 00:06:00.992
+For that we first subtract twice the first row from the second; what is left there is a zero row.
+
+33
+00:06:02.942 --> 00:06:09.131
+Then we subtract the first row from the third. What remains is zero, minus one, minus two. With that the first column below the pivot is cleared.
+
+34
+00:06:11.081 --> 00:06:21.741
+The zero row has to go to the bottom. We swap the second and the third row, and with that the row echelon form is reached.
+
+35
+00:06:23.791 --> 00:06:33.006
+Now we count the steps: two steps, so two rows that are not zero rows. The rank is two, exactly as we already saw earlier.
+
+36
+00:06:35.856 --> 00:06:46.854
+In a linear system, though, we are not only interested in the matrix A. The right-hand side b belongs to it, because it has a say in whether there is a solution at all.
+
+37
+00:06:48.804 --> 00:07:04.684
+So we write b as a further column behind A and separate it with a bar. This notation is called the augmented coefficient matrix; spoken we simply say A bar b. You already know it from the Gauss video.
+
+38
+00:07:06.684 --> 00:07:20.696
+That gives us two ranks: rank of A counts only the steps in the left-hand part, rank of A bar b counts the steps in the whole augmented matrix. The row operations are always carried out on the entire row.
+
+39
+00:07:23.546 --> 00:07:32.169
+Now we have everything we need for the rank criterion. Let a linear system A times x equals b with n unknowns be given.
+
+40
+00:07:34.119 --> 00:07:41.595
+If both ranks are equal and as large as the number of unknowns, then there is exactly one solution.
+
+41
+00:07:43.545 --> 00:07:50.846
+If both ranks are equal but smaller than the number of unknowns, then there are infinitely many solutions.
+
+42
+00:07:52.796 --> 00:07:59.265
+And if the rank of A is smaller than the rank of A bar b, then there is no solution.
+
+43
+00:08:01.465 --> 00:08:14.955
+The third case has a vivid meaning: an extra step in the last column means that somewhere there is a row with only zeros on the left and something other than zero on the right. That would be the statement zero equals a number other than zero, and that cannot be true.
+
+44
+00:08:17.405 --> 00:08:24.775
+This also answers a question that was left open in the video on the inverse matrix: how can you tell whether a matrix has an inverse at all?
+
+45
+00:08:26.925 --> 00:08:34.425
+For a square matrix A with n rows and n columns the answer is: A is invertible exactly when the rank of A equals n.
+
+46
+00:08:35.125 --> 00:08:49.851
+In plain terms: all n rows are linearly independent, none of them is redundant. By the rank criterion the linear system then has exactly one solution for every right-hand side b, and that is precisely what the inverse delivers.
+
+47
+00:08:52.751 --> 00:09:00.581
+Whether a matrix is already in row echelon form can be seen at a glance with a little practice. There is an interactive quiz here for that.
+
+48
+00:09:01.231 --> 00:09:10.091
+There you see examples of linear systems in matrix notation that have either already been brought into row echelon form or are just one step away from it.
+
+49
+00:09:12.091 --> 00:09:16.811
+In the quiz you decide in the first step whether the row echelon form has already been reached.
+
+50
+00:09:18.761 --> 00:09:21.887
+If not, you choose the last step needed to get there.
+
+51
+00:09:23.837 --> 00:09:27.403
+After that you read off the rank of A and of A bar b.
+
+52
+00:09:30.303 --> 00:09:36.564
+In summary: in this video we answered the question of how many solutions a linear system has.
+
+53
+00:09:38.414 --> 00:09:45.637
+There are exactly three possibilities: exactly one solution, no solution, or infinitely many solutions.
+
+54
+00:09:47.587 --> 00:09:59.334
+The rank of a matrix is the number of its linearly independent rows. You find it by using Gaussian elimination to reach row echelon form and then counting the steps.
+
+55
+00:10:01.284 --> 00:10:11.267
+Which of the three cases applies is revealed by the rank criterion: you compare the rank of A, the rank of A bar b and the number of unknowns n.

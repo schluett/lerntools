@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Matrix Algebra in Business – Rank and the Rank Criterion · Lerntools – Testversion</title>
+  <style>
+    :root { font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:#20242A; background:#F7F8FA; }
+    * { box-sizing:border-box; } body { margin:0; }
+    header { padding:14px 22px; background:#fff4d8; border-bottom:1px solid #ead49b; font-weight:650; }
+    main { max-width:1050px; margin:0 auto; padding:28px 22px 60px; }
+    .back { display:inline-block; margin-bottom:20px; color:#2E6F9E; text-decoration:none; }
+    h1 { margin:0 0 6px; font-size:clamp(28px,4vw,42px); }
+    .subtitle { margin:0 0 24px; color:#68707C; font-size:18px; }
+    video { width:100%; background:#111; border-radius:8px; }
+    .chapters { margin-top:30px; }
+    .chapter { width:100%; display:flex; gap:16px; align-items:center; padding:12px 14px; margin:7px 0; border:1px solid #D8DDE5; border-radius:7px; background:white; color:#20242A; text-align:left; cursor:pointer; font-size:16px; }
+    .chapter:hover { border-color:#2E6F9E; }
+    .time { min-width:58px; font-variant-numeric:tabular-nums; color:#2E6F9E; font-weight:650; }
+    .muted { color:#68707C; }
+    .warning { padding:18px; background:#fff4d8; border:1px solid #ead49b; border-radius:8px; }
+    code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; }
+  </style>
+</head>
+<body>
+  <header>TESTVERSION · nicht veröffentlicht</header>
+  <main>
+    <a class="back" href="../../../../">← Lerntools – Testversion</a>
+    <h1>Matrix Algebra in Business – Rank and the Rank Criterion</h1>
+    <p class="subtitle">Rank, row echelon form, and the rank criterion</p>
+    <video id="player" controls preload="metadata" crossorigin="anonymous">
+          <source src="https://seafile.rlp.net/seafhttp/f/48508a9048fe43518027/?op=view" type="video/mp4">
+          <track kind="subtitles" src="subtitles.vtt" srclang="en" label="Subtitles">
+          Ihr Browser kann dieses Video nicht abspielen.
+        </video>
+    <section class="chapters"><h2>Kapitel</h2><button class="chapter" data-start="0.000"><span class="time">00:00</span><span>Until now there was one solution</span></button>
+<button class="chapter" data-start="32.192"><span class="time">00:32</span><span>Three cases are possible</span></button>
+<button class="chapter" data-start="102.341"><span class="time">01:42</span><span>Linear independence</span></button>
+<button class="chapter" data-start="196.957"><span class="time">03:17</span><span>The rank of a matrix</span></button>
+<button class="chapter" data-start="240.107"><span class="time">04:00</span><span>Row echelon form</span></button>
+<button class="chapter" data-start="325.490"><span class="time">05:25</span><span>Reading off the rank</span></button>
+<button class="chapter" data-start="395.856"><span class="time">06:36</span><span>The augmented matrix</span></button>
+<button class="chapter" data-start="443.546"><span class="time">07:24</span><span>The rank criterion</span></button>
+<button class="chapter" data-start="497.405"><span class="time">08:17</span><span>When is a matrix invertible?</span></button>
+<button class="chapter" data-start="532.751"><span class="time">08:53</span><span>Quiz and summary</span></button></section>
+  </main>
+  <script>
+    const player = document.getElementById("player");
+    for (const button of document.querySelectorAll(".chapter")) {
+      button.addEventListener("click", () => {
+        if (!player || !player.querySelector("source")) return;
+        player.currentTime = Number(button.dataset.start);
+        player.play().catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
