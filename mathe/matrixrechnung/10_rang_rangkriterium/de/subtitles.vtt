@@ -13,205 +13,205 @@ Die Lernziele des Videos sind:
 Erstens: die drei Fälle der Lösbarkeit unterscheiden.
 
 4
-00:00:21.648 --> 00:00:25.635
+00:00:21.648 --> 00:00:25.636
 Zweitens: den Rang einer Matrix über die Zeilenstufenform bestimmen.
 
 5
-00:00:26.035 --> 00:00:30.048
+00:00:26.036 --> 00:00:30.048
 Und drittens: mit dem Rangkriterium die Anzahl der Lösungen bestimmen.
 
 6
-00:00:32.048 --> 00:00:47.097
+00:00:32.050 --> 00:00:47.099
 Sehen wir uns zuerst an, was überhaupt passieren kann. Dafür genügen zwei Gleichungen mit zwei Unbekannten, denn die lassen sich zeichnen: Jede Gleichung ist eine Gerade, und eine Lösung ist ein Punkt, der auf beiden Geraden liegt.
 
 7
-00:00:48.797 --> 00:00:59.233
+00:00:48.799 --> 00:00:59.235
 Im ersten Fall schneiden sich die beiden Geraden in genau einem Punkt. Dann hat das Gleichungssystem genau eine Lösung. Das sind die Fälle aus den letzten beiden Videos.
 
 8
-00:01:00.933 --> 00:01:08.813
+00:01:00.935 --> 00:01:08.814
 Im zweiten Fall sind die Geraden parallel und verschieden. Sie haben keinen gemeinsamen Punkt, also hat das System keine Lösung. Hier sieht man das auch an den Gleichungen: Die linke Seite ist zweimal dieselbe, die rechte Seite nicht.
 
 9
-00:01:10.513 --> 00:01:29.313
+00:01:10.514 --> 00:01:29.314
 Im dritten Fall liegen die beiden Geraden aufeinander. Die zweite Gleichung ist das Doppelte der ersten und sagt damit nichts Neues. Jeder Punkt der Geraden ist eine Lösung, es gibt also unendlich viele.
 
 10
-00:01:31.113 --> 00:01:42.424
+00:01:31.114 --> 00:01:42.426
 Mehr als diese drei Fälle gibt es nicht. Bei zwei Unbekannten können wir das zeichnen; bei drei oder mehr Unbekannten nicht mehr. Wir brauchen also ein Kriterium, das man ausrechnen kann.
 
 11
-00:01:45.124 --> 00:02:07.254
+00:01:45.130 --> 00:02:07.260
 Der Schlüssel dazu heißt Rang. Dahinter steckt die Frage, wie viele Zeilen einer Matrix wirklich eine eigene Information tragen. Das Konzept dahinter schauen wir uns zunächst im zweidimensionalen Fall an; dort lässt es sich zeichnen.
 
 12
-00:02:08.954 --> 00:02:19.449
+00:02:08.960 --> 00:02:19.455
 Zwei Vektoren heißen linear abhängig, wenn der eine ein Vielfaches des anderen ist. Der Vektor zwei, vier ist das Doppelte von eins, zwei. Gezeichnet liegen beide auf derselben Geraden.
 
 13
-00:02:21.149 --> 00:02:25.625
+00:02:21.155 --> 00:02:25.631
 Bei eins, zwei und zwei, fünf geht das nicht. Die beiden zeigen in verschiedene Richtungen; sie heißen linear unabhängig.
 
 14
-00:02:27.575 --> 00:02:31.978
+00:02:27.581 --> 00:02:31.984
 Formal ist das so definiert, und zwar gleich für beliebig viele Vektoren.
 
 15
-00:02:33.978 --> 00:02:52.501
+00:02:33.984 --> 00:02:52.507
 k Vektoren heißen linear abhängig, wenn es Skalare a eins bis a k gibt, die nicht alle null sind, sodass a eins mal x eins plus und so weiter plus a k mal x k den Nullvektor ergibt. Der Nullvektor ist dabei der Vektor, in dem nur Nullen stehen.
 
 16
-00:02:54.551 --> 00:03:06.071
+00:02:54.557 --> 00:03:06.077
 Linear unabhängig heißt dann genau das Gegenteil: Solche Skalare gibt es nicht. Außer der Möglichkeit, alle auf null zu setzen, lässt sich keine Kombination finden, die den Nullvektor ergibt.
 
 17
-00:03:08.121 --> 00:03:21.370
+00:03:08.127 --> 00:03:21.377
 Im Beispiel von eben: Links gibt es solche Skalare, zum Beispiel zwei und minus eins. Zweimal x eins minus x zwei ergibt tatsächlich den Nullvektor. Rechts dagegen findet man kein solches Paar.
 
 18
-00:03:23.670 --> 00:03:32.621
+00:03:23.680 --> 00:03:32.630
 Damit können wir den Rang erklären. Der Rang einer Matrix A, geschrieben rang von A, ist die Anzahl der linear unabhängigen Zeilen. Gleichbedeutend ist es, die linear unabhängigen Spalten zu zählen; beides ergibt dieselbe Zahl.
 
 19
-00:03:34.371 --> 00:03:40.429
+00:03:34.380 --> 00:03:40.439
 Nehmen wir diese Matrix. Die zweite Zeile ist das Doppelte der ersten, sie bringt also nichts Neues.
 
 20
-00:03:41.029 --> 00:03:51.561
+00:03:41.039 --> 00:03:51.570
 Die erste und die dritte Zeile sind dagegen voneinander unabhängig. Der Rang dieser Matrix ist also zwei, obwohl sie drei Zeilen hat.
 
 21
-00:03:52.261 --> 00:04:04.086
+00:03:52.270 --> 00:04:04.096
 Bei größeren Matrizen sieht man das natürlich nicht mehr so leicht. Deshalb gibt es ein Verfahren dafür, und das kennen wir schon: das Gauß-Verfahren.
 
 22
-00:04:06.786 --> 00:04:20.469
+00:04:06.800 --> 00:04:12.670
 Im Gauß-Video haben wir so lange umgeformt, bis links die Einheitsmatrix stand. Für den Rang brauchen wir nur die erste Hälfte davon, also nur die Schritte bis zur Zeilenstufenform.
 
 23
-00:04:22.369 --> 00:04:32.103
+00:04:14.570 --> 00:04:21.310
 Dafür brauchen wir zuerst einen Namen: Der erste von null verschiedene Eintrag einer Zeile heißt Pivotelement. In einer Nullzeile gibt es keines.
 
 24
-00:04:34.153 --> 00:04:50.359
+00:04:23.360 --> 00:04:50.040
 Und damit die Definition: Eine Matrix ist in Zeilenstufenform, wenn die Pivotelemente von oben nach unten eine Treppe nach rechts bilden, unter jedem Pivotelement nur Nullen stehen und Nullzeilen ganz unten stehen.
 
 25
-00:04:52.609 --> 00:05:02.254
+00:04:52.290 --> 00:05:00.763
 Schauen wir uns das an Beispielen an. Der ausgefüllte Punkt steht für eine Zahl ungleich null, der Stern für einen beliebigen Wert.
 
 26
-00:05:04.054 --> 00:05:13.559
+00:05:02.563 --> 00:05:12.068
 Die erste Matrix ist in Zeilenstufenform: Das Pivotelement rückt von Zeile zu Zeile nach rechts, und darunter stehen nur Nullen.
 
 27
-00:05:14.159 --> 00:05:23.979
+00:05:12.668 --> 00:05:22.488
 Die zweite auch. Hier springt das Pivotelement von der ersten zur zweiten Zeile gleich um zwei Spalten weiter, und die Nullzeile steht ganz unten. Beides ist erlaubt.
 
 28
-00:05:24.579 --> 00:05:34.843
+00:05:23.088 --> 00:05:33.352
 Die dritte ist keine Zeilenstufenform. In der zweiten und in der dritten Zeile steht das Pivotelement in derselben Spalte; die Treppe rückt also nicht weiter nach rechts.
 
 29
-00:05:37.543 --> 00:05:51.537
+00:05:36.050 --> 00:05:50.045
 Steht eine Matrix erst einmal in Zeilenstufenform, dann ist der Rang leicht abzulesen: Er ist die Anzahl der Zeilen, die keine Nullzeilen sind. Man kann auch sagen: die Anzahl der Stufen.
 
 30
-00:05:53.437 --> 00:06:08.637
+00:05:51.945 --> 00:06:07.144
 Probieren wir das an unserer Matrix von vorhin. Das Pivotelement der ersten Zeile ist die Eins links oben. Darunter, in der ersten Spalte, soll alles zu null werden; genau dieser Bereich ist das Ziel der nächsten Schritte.
 
 31
-00:06:10.537 --> 00:06:19.103
+00:06:09.044 --> 00:06:17.611
 Dafür ziehen wir zuerst das Zweifache der ersten Zeile von der zweiten ab; dort steht dann nur noch eine Nullzeile.
 
 32
-00:06:20.903 --> 00:06:32.136
+00:06:19.411 --> 00:06:30.643
 Dann ziehen wir die erste Zeile von der dritten ab. Übrig bleibt null, minus eins, minus zwei. Damit ist die erste Spalte unter dem Pivot aufgeräumt.
 
 33
-00:06:33.936 --> 00:06:42.251
+00:06:32.443 --> 00:06:40.758
 Die Nullzeile muss nach unten. Wir tauschen die zweite und die dritte Zeile, und damit ist die Zeilenstufenform erreicht.
 
 34
-00:06:44.151 --> 00:06:54.560
+00:06:42.658 --> 00:06:53.067
 Jetzt zählen wir die Stufen: zwei Stufen, also zwei Zeilen, die keine Nullzeilen sind. Der Rang ist zwei, genau wie wir es vorhin schon gesehen haben.
 
 35
-00:06:57.260 --> 00:07:07.710
+00:06:55.770 --> 00:07:06.220
 Bei einem Gleichungssystem interessiert uns aber nicht nur die Matrix A. Die rechte Seite b gehört dazu, denn sie entscheidet mit, ob es überhaupt eine Lösung gibt.
 
 36
-00:07:09.510 --> 00:07:21.905
+00:07:08.020 --> 00:07:20.415
 Deshalb schreiben wir b als weitere Spalte hinter A und trennen sie mit einem Strich ab. Diese Schreibweise heißt erweiterte Koeffizientenmatrix; gesprochen sagen wir kurz A Strich b. Aus dem Gauß-Video kennen Sie sie schon.
 
 37
-00:07:23.755 --> 00:07:40.218
+00:07:22.265 --> 00:07:38.728
 Damit haben wir zwei Ränge: rang von A zählt nur die Stufen im linken Teil, rang von A Strich b zählt die Stufen in der ganzen erweiterten Matrix. Die Umformungen führen wir dabei immer an der ganzen Zeile durch.
 
 38
-00:07:42.918 --> 00:07:51.648
+00:07:41.430 --> 00:07:50.160
 Jetzt haben wir alles zusammen für das Rangkriterium. Gegeben sei ein Gleichungssystem A mal x gleich b mit n Unbekannten.
 
 39
-00:07:53.448 --> 00:07:59.527
+00:07:51.960 --> 00:07:58.039
 Sind beide Ränge gleich und so groß wie die Anzahl der Unbekannten, dann gibt es genau eine Lösung.
 
 40
-00:08:01.327 --> 00:08:07.387
+00:07:59.839 --> 00:08:05.899
 Sind beide Ränge gleich, aber kleiner als die Anzahl der Unbekannten, dann gibt es unendlich viele Lösungen.
 
 41
-00:08:09.187 --> 00:08:14.320
+00:08:07.699 --> 00:08:12.832
 Und ist der Rang von A kleiner als der Rang von A Strich b, dann gibt es keine Lösung.
 
 42
-00:08:16.370 --> 00:08:33.757
+00:08:14.882 --> 00:08:32.269
 Der dritte Fall hat eine anschauliche Bedeutung: Eine zusätzliche Stufe in der letzten Spalte heißt, dass irgendwo eine Zeile steht, in der links nur Nullen stehen und rechts etwas anderes als null. Das wäre die Aussage null gleich eine Zahl ungleich null, und die kann nicht stimmen.
 
 43
-00:08:36.057 --> 00:08:45.467
+00:08:34.570 --> 00:08:43.980
 Damit lässt sich noch eine Frage beantworten, die im Video über die Matrixinverse offen geblieben ist: Woran erkennt man, ob eine Matrix überhaupt eine Inverse besitzt?
 
 44
-00:08:47.467 --> 00:09:02.007
+00:08:45.980 --> 00:09:00.520
 Für eine quadratische Matrix A mit n Zeilen und n Spalten gilt: A ist genau dann invertierbar, wenn rang von A gleich n ist.
 
 45
-00:09:02.657 --> 00:09:10.822
+00:09:01.170 --> 00:09:09.335
 Anschaulich heißt das: Alle n Zeilen sind linear unabhängig, keine ist überflüssig. Nach dem Rangkriterium hat das Gleichungssystem dann für jede rechte Seite b genau eine Lösung, und genau das leistet die Inverse.
 
 46
-00:09:13.572 --> 00:09:19.378
+00:09:12.090 --> 00:09:17.896
 Ob eine Matrix schon in Zeilenstufenform ist, erkennt man mit etwas Übung auf einen Blick. Dazu gibt es hier ein interaktives Quiz.
 
 47
-00:09:19.978 --> 00:09:26.978
+00:09:18.496 --> 00:09:25.496
 Sie sehen dort Beispiele von Gleichungssystemen in Matrixschreibweise, die entweder bereits in Zeilenstufenform gebracht sind oder bei denen nur noch ein Schritt dahin aussteht.
 
 48
-00:09:28.828 --> 00:09:34.463
+00:09:27.346 --> 00:09:32.982
 Im Quiz entscheiden Sie im ersten Schritt, ob die Zeilenstufenform schon erreicht ist.
 
 49
-00:09:36.263 --> 00:09:44.984
+00:09:34.782 --> 00:09:43.502
 Falls nicht, entscheiden Sie den letzten erforderlichen Schritt dahin.
 
 50
-00:09:46.784 --> 00:09:50.873
+00:09:45.302 --> 00:09:49.391
 Anschließend lesen Sie den Rang von A und von A Strich b ab.
 
 51
-00:09:53.623 --> 00:10:00.933
+00:09:52.141 --> 00:09:59.451
 Fazit. In diesem Video haben wir die Frage beantwortet, wie viele Lösungen ein lineares Gleichungssystem hat.
 
 52
-00:10:02.633 --> 00:10:13.633
+00:10:01.151 --> 00:10:12.151
 Es gibt genau drei Möglichkeiten: genau eine Lösung, keine Lösung oder unendlich viele Lösungen.
 
 53
-00:10:15.433 --> 00:10:22.742
+00:10:13.951 --> 00:10:21.260
 Der Rang einer Matrix ist die Anzahl ihrer linear unabhängigen Zeilen. Man bestimmt ihn, indem man mit dem Gauß-Verfahren bis zur Zeilenstufenform umformt und dann die Stufen zählt.
 
 54
-00:10:24.542 --> 00:10:33.671
+00:10:23.060 --> 00:10:32.190
 Welcher der drei Fälle vorliegt, verrät das Rangkriterium: Man vergleicht rang von A, rang von A Strich b und die Anzahl der Unbekannten n.
