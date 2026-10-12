@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Gaussian Elimination · Lerntools Quantitative Methoden</title>
+  <title>Gaussian Elimination · Learning Tools Quantitative Methods</title>
   <style>
     :root { font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:#20242A; background:#F7F8FA; }
     * { box-sizing:border-box; }
     body { margin:0; }
-    main { max-width:1050px; margin:0 auto; padding:32px 22px 60px; }
+    main { max-width:1050px; margin:0 auto; padding:58px 22px 60px; }
     .back { display:inline-block; margin-bottom:22px; padding:6px 9px; border:1px solid transparent; border-radius:6px; color:#2E6F9E; text-decoration:none; transition:border-color .15s ease, box-shadow .15s ease; }
     .back:hover, .back:focus-visible { border-color:#2E6F9E; box-shadow:0 0 0 1px #2E6F9E; outline:none; }
     h1 { margin:0 0 6px; font-size:clamp(28px,4vw,42px); }
@@ -20,19 +20,59 @@
     .time { min-width:58px; font-variant-numeric:tabular-nums; color:#2E6F9E; font-weight:650; }
     .muted { color:#68707C; }
     .warning { padding:18px; background:#fff4d8; border:1px solid #ead49b; border-radius:8px; }
+    
+.language-switch {
+  position:fixed;
+  top:14px;
+  right:18px;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  padding:6px 9px;
+  background:rgba(255,255,255,.96);
+  border:1px solid #D8DDE5;
+  border-radius:7px;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:14px;
+}
+.language-switch a {
+  min-width:28px;
+  padding:4px 5px;
+  border:1px solid transparent;
+  border-radius:5px;
+  color:#2E6F9E !important;
+  text-align:center;
+  text-decoration:none !important;
+  font-weight:650;
+}
+.language-switch a:hover,
+.language-switch a:focus-visible {
+  border-color:#2E6F9E;
+  box-shadow:0 0 0 1px #2E6F9E;
+  outline:none;
+}
+.language-switch a.current {
+  color:#20242A !important;
+  background:#EEF3F7;
+  pointer-events:none;
+}
+
   </style>
 </head>
 <body>
+  <nav class="language-switch" aria-label="Language"><a class="" href="../../../matrixrechnung/8_gauss_verfahren/" lang="de" aria-current="false">DE</a><span aria-hidden="true">|</span><a class="current" href="./" lang="en" aria-current="page">EN</a></nav>
   <main>
-    <a class="back" href="../../../mathematik/">← Mathematik, Bachelor-Modul</a>
+    <a class="back" href="../../mathematics/">← Mathematics, Bachelor&#x27;s Module</a>
     <h1>Gaussian Elimination</h1>
     <p class="subtitle">Solving linear systems step by step</p>
     <video id="player" controls preload="metadata">
           <source src="https://seafile.rlp.net/seafhttp/f/992d2ece45b3484aa789/?op=view" type="video/mp4">
           
-          Ihr Browser kann dieses Video nicht abspielen.
+          Your browser cannot play this video.
         </video>
-    <section class="chapters"><h2>Kapitel</h2><button class="chapter" data-start="0.000"><span class="time">00:00</span><span>The second route to a solution</span></button>
+    <section class="chapters"><h2>Chapters</h2><button class="chapter" data-start="0.000"><span class="time">00:00</span><span>The second route to a solution</span></button>
 <button class="chapter" data-start="82.247"><span class="time">01:22</span><span>The permitted row operations</span></button>
 <button class="chapter" data-start="139.947"><span class="time">02:20</span><span>The quiz at a glance</span></button>
 <button class="chapter" data-start="219.438"><span class="time">03:39</span><span>The first step in the quiz</span></button>
