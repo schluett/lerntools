@@ -11,8 +11,13 @@
     main { max-width:900px; margin:0 auto; padding:58px 22px 70px; }
     .back { display:inline-block; margin-bottom:22px; padding:6px 9px; border:1px solid transparent; border-radius:6px; color:#2E6F9E; text-decoration:none; transition:border-color .15s ease, box-shadow .15s ease; }
     .back:hover, .back:focus-visible { border-color:#2E6F9E; box-shadow:0 0 0 1px #2E6F9E; outline:none; }
-    h1 { margin:0 0 14px; font-size:clamp(30px,4.5vw,42px); }
-    p { color:#68707C; font-size:18px; }
+    h1 { margin:0 0 28px; font-size:clamp(30px,4.5vw,42px); }
+    .tool-row { display:flex; justify-content:space-between; gap:20px; align-items:center; background:white; border:1px solid #D8DDE5; border-radius:8px; padding:15px 17px; margin:9px 0; color:#20242A; text-decoration:none; transition:border-color .15s ease, box-shadow .15s ease; }
+    .tool-row:hover, .tool-row:focus-visible { border-color:#2E6F9E; box-shadow:0 0 0 1px #2E6F9E; outline:none; }
+    .tool-row strong { display:block; }
+    .tool-row small { display:block; margin-top:4px; color:#68707C; font-size:13px; font-weight:500; }
+    .arrow { color:#2E6F9E; font-size:20px; }
+    .muted { color:#68707C; }
     
 .language-switch {
   position:fixed;
@@ -59,7 +64,7 @@
   <main>
     <a class="back" href="../">← Learning Tools Quantitative Methods</a>
     <h1>Probability</h1>
-    <p>Content will be added next.</p>
+    <a class="tool-row" href="../probability/1_basic_concepts/"><span><strong>01 · Basic Concepts of Probability</strong><small>Video</small></span><span class="arrow">→</span></a>
   </main>
 </body>
 </html>
