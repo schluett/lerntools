@@ -1,0 +1,201 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:20.415
+Whether we roll dice, wait at the checkout or look at the demand for a product: often an outcome depends on chance. Probability theory describes such situations with clear concepts. In this video we get to know its basic concepts, using one example throughout: rolling two dice.
+
+2
+00:00:22.115 --> 00:00:24.320
+The learning goals of this video are:
+
+3
+00:00:24.770 --> 00:00:31.236
+First: to state a random experiment, its sample space and an event for a given example.
+
+4
+00:00:31.636 --> 00:00:35.432
+Second: to calculate probabilities in a Laplace experiment.
+
+5
+00:00:35.832 --> 00:00:41.699
+And third: to describe events with a random variable and to determine their probability.
+
+6
+00:00:43.700 --> 00:00:49.858
+We start with the concept of a random experiment. A process is called a random experiment if it has three properties.
+
+7
+00:00:50.408 --> 00:00:55.038
+First: it can be repeated as often as we like under comparable conditions.
+
+8
+00:00:55.488 --> 00:01:02.638
+Second: all possible outcomes can be stated before it is carried out. We call the perspective before the experiment ex ante.
+
+9
+00:01:03.088 --> 00:01:11.635
+Third: after it has been carried out, we can determine unambiguously which outcome has occurred. The perspective after the experiment is called ex post.
+
+10
+00:01:13.235 --> 00:01:19.534
+Our example for the whole video: we roll two dice at the same time, a red one and a green one.
+
+11
+00:01:20.134 --> 00:01:32.896
+Let us check the three properties: we can roll as often as we like. Even beforehand, we know which numbers are possible. And after the roll, we read off unambiguously which number is on top of each die.
+
+12
+00:01:33.496 --> 00:01:38.759
+Which numbers will come up, however, is not fixed before the roll. That is what makes it random.
+
+13
+00:01:40.770 --> 00:01:50.927
+An outcome of our experiment consists of two numbers. We write it as a pair in round brackets: first the number on the red die, then the number on the green one.
+
+14
+00:01:51.527 --> 00:02:00.394
+The roll from before, red two and green five, is a concrete outcome. Formally, we write the outcome in brackets.
+
+15
+00:02:00.894 --> 00:02:08.846
+The notation in round brackets means that the order of the elements matters. So the outcome (2,5) is different from (5,2).
+
+16
+00:02:10.646 --> 00:02:17.158
+The set of all possible outcomes is called the sample space. It is denoted by the Greek capital letter Omega.
+
+17
+00:02:17.658 --> 00:02:28.959
+Here, Omega can be shown clearly as a grid. Each row belongs to a number on the red die, each column to a number on the green die. So each cell stands for exactly one outcome.
+
+18
+00:02:29.559 --> 00:02:38.978
+In set notation, this looks as follows: Omega is the set of all pairs i, j such that i and j are each one of the numbers from one to six.
+
+19
+00:02:45.180 --> 00:02:51.610
+The elements of the set Omega are the individual outcomes of the experiment, for example red two and green five. We denote them by lowercase omega.
+
+20
+00:02:53.210 --> 00:03:00.190
+For calculating probabilities later on, it can be helpful to count the elements of Omega.
+
+21
+00:03:00.690 --> 00:03:05.213
+In our example, Omega has thirty-six elements; we write this with vertical bars.
+
+22
+00:03:07.510 --> 00:03:17.095
+Often we are not interested in one particular outcome, but in a statement about the outcome. For example: the sum of the two numbers is at most four.
+
+23
+00:03:17.695 --> 00:03:25.602
+Such a statement about the outcome is called an event. An event is usually denoted by an italic capital letter, as here by capital A.
+
+24
+00:03:26.202 --> 00:03:42.743
+The grid on the left shows us for which outcomes the event A is true. A sum of two only results from one, one. The sum three results from the two outcomes one, two and two, one. And the sum four results from three outcomes.
+
+25
+00:03:43.343 --> 00:03:49.175
+So the event A can be written as a set: A contains exactly these six outcomes.
+
+26
+00:03:51.080 --> 00:03:57.310
+For an event, we can define ex ante the probability that it occurs. We denote it by P of A.
+
+27
+00:03:57.860 --> 00:04:01.418
+The letter P is the usual abbreviation of the word probability.
+
+28
+00:04:03.720 --> 00:04:13.394
+Here we can calculate a probability under the assumption that the dice are fair, so no number comes up more often than another, and that they are rolled independently of each other.
+
+29
+00:04:13.944 --> 00:04:20.884
+In that case, the outcomes shown here are all equally likely. The experiment is then called a Laplace experiment.
+
+30
+00:04:21.484 --> 00:04:28.449
+For every event A, we then have: P of A is the number of outcomes in A divided by the number of all outcomes in Omega.
+
+31
+00:04:28.999 --> 00:04:38.527
+We also speak of favourable and possible outcomes. For the event A, a sum of at most four, six outcomes are favourable. All thirty-six are possible.
+
+32
+00:04:39.127 --> 00:04:47.010
+So P of A equals six over thirty-six, which simplifies to one sixth, or about 16.7 percent.
+
+33
+00:04:47.610 --> 00:05:03.520
+The probability calculated here has a real meaning. If we carry out the random experiment very often, that is, roll very often, we find that the share of rolls with a sum of at most four comes closer and closer to the calculated 16.7 percent in the long run.
+
+34
+00:05:05.820 --> 00:05:15.484
+Often the outcome of a random experiment can be reduced to a number, as here to the sum of the two numbers. This corresponds to the concept of a random variable.
+
+35
+00:05:16.034 --> 00:05:25.241
+A random variable is a rule that assigns a number to each outcome of the random experiment. A random variable is always denoted by a capital letter.
+
+36
+00:05:25.841 --> 00:05:35.703
+In our example, let X be the sum of the two numbers. For an outcome omega equal to i, j, X of omega is therefore i plus j.
+
+37
+00:05:36.253 --> 00:05:44.085
+For example, X of one, one equals two, X of two, five equals seven, and X of six, six equals twelve.
+
+38
+00:05:45.685 --> 00:05:54.475
+If we write the sum into each cell, we see the random variable at a glance: each of the thirty-six outcomes is assigned exactly one number.
+
+39
+00:05:55.075 --> 00:06:00.524
+Formally, this reads: every element of Omega is mapped to a real number.
+
+40
+00:06:01.024 --> 00:06:14.411
+To the left of the arrow is Omega, the set of outcomes to which X is applied. On the right is R, the symbol for the real numbers, that is, all numbers on the number line. The arrow shows: X assigns a real number to each outcome in Omega.
+
+41
+00:06:16.710 --> 00:06:25.886
+With a random variable, events can be described briefly. The event A that we already looked at can also be written as X less than or equal to four.
+
+42
+00:06:26.486 --> 00:06:35.005
+In words: the sum of the two numbers is at most four. The curly brackets stand for the set of all outcomes for which this statement is true.
+
+43
+00:06:35.605 --> 00:06:42.248
+In the grid, these are the six cells with a sum of at most four, that is, the outcomes of the set A from before.
+
+44
+00:06:42.798 --> 00:06:48.569
+So P of X less than or equal to four is six over thirty-six, one sixth.
+
+45
+00:06:49.169 --> 00:06:56.752
+So the way to calculate a probability is: from the statement about X to the outcomes in Omega, and from there to the probability.
+
+46
+00:06:59.060 --> 00:07:03.183
+Finally, let us summarise the concepts in their logical order.
+
+47
+00:07:03.683 --> 00:07:23.187
+A random experiment can be repeated as often as we like, its possible outcomes are known beforehand, and the outcome that has occurred can be determined unambiguously. All possible outcomes form the sample space Omega. Its elements, the individual outcomes, are denoted by lowercase omega.
+
+48
+00:07:23.787 --> 00:07:35.279
+An event is a statement about the outcome; it is described by the set of outcomes for which the statement is true. Its probability indicates how often the event is to be expected in many repetitions.
+
+49
+00:07:35.879 --> 00:07:49.499
+Assuming fair dice that are rolled independently, all outcomes are equally likely, and we have a Laplace experiment: the probability is then the number of favourable outcomes divided by the number of possible outcomes.
+
+50
+00:07:50.099 --> 00:08:03.171
+A random variable assigns a number to each outcome. Statements about it, such as X less than or equal to four, are again events. We determine their probability via the corresponding outcomes in Omega.

@@ -1,0 +1,205 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:12.830
+Ob beim Würfeln, bei der Wartezeit an der Kasse oder bei der Nachfrage nach einem Produkt: Oft hängt ein Ergebnis vom Zufall ab. Die Wahrscheinlichkeitsrechnung beschreibt solche Situationen mit klaren Begriffen. In diesem Video lernen wir ihre Grundbegriffe kennen, und zwar durchgehend an einem Beispiel: dem Wurf mit zwei Würfeln.
+
+2
+00:00:14.530 --> 00:00:21.865
+Die Lernziele des Videos sind:
+
+3
+00:00:22.315 --> 00:00:29.981
+Erstens: Zufallsexperiment, Ergebnismenge und Ereignis an einem Beispiel angeben.
+
+4
+00:00:30.381 --> 00:00:34.295
+Zweitens: Wahrscheinlichkeiten in einem Laplace-Experiment berechnen.
+
+5
+00:00:34.695 --> 00:00:40.391
+Und drittens: Ereignisse mit einer Zufallsvariablen beschreiben und ihre Wahrscheinlichkeit bestimmen.
+
+6
+00:00:42.390 --> 00:00:50.315
+Am Anfang steht der Begriff Zufallsexperiment. Ein Vorgang heißt Zufallsexperiment, wenn er drei Eigenschaften besitzt.
+
+7
+00:00:50.865 --> 00:00:55.853
+Erstens: Er kann unter vergleichbaren Bedingungen beliebig oft wiederholt werden.
+
+8
+00:00:56.303 --> 00:01:05.116
+Zweitens: Schon vor der Durchführung lassen sich alle möglichen Ausgänge angeben. Wir nennen die Perspektive vor der Durchführung ex ante.
+
+9
+00:01:05.566 --> 00:01:16.191
+Drittens: Nach der Durchführung lässt sich eindeutig feststellen, welcher Ausgang eingetreten ist. Die Perspektive nach der Durchführung heißt ex post.
+
+10
+00:01:17.791 --> 00:01:24.662
+Unser Beispiel für das ganze Video: Wir werfen gleichzeitig zwei Würfel, einen roten und einen grünen.
+
+11
+00:01:25.262 --> 00:01:40.255
+Prüfen wir die drei Eigenschaften: Wir können beliebig oft würfeln. Schon vorher wissen wir, welche Augenzahlen möglich sind. Und nach dem Wurf lesen wir an jedem Würfel eindeutig ab, welche Zahl oben liegt.
+
+12
+00:01:40.855 --> 00:01:48.522
+Welche Augenzahlen fallen, steht vor dem Wurf allerdings nicht fest. Genau das macht den Zufall aus.
+
+13
+00:01:50.520 --> 00:02:01.903
+Ein Ausgang unseres Experiments besteht aus zwei Augenzahlen. Wir schreiben ihn als Paar in runden Klammern: zuerst die Augenzahl des roten Würfels, dann die des grünen.
+
+14
+00:02:02.503 --> 00:02:10.962
+Der Wurf von eben, rot zwei und grün fünf, ist ein konkreter Ausgang. Formal schreiben wir den Ausgang in Klammern auf.
+
+15
+00:02:11.462 --> 00:02:22.796
+Die Notation in runden Klammern bedeutet, dass die Reihenfolge der Elemente beachtet wird. Der Ausgang (2,5) ist also ein anderer als (5,2).
+
+16
+00:02:24.596 --> 00:02:32.790
+Die Menge aller möglichen Ausgänge heißt Ergebnismenge. Man bezeichnet sie mit dem griechischen Großbuchstaben Omega.
+
+17
+00:02:33.290 --> 00:02:46.593
+Übersichtlich lässt sich Omega hier als Raster darstellen. Jede Zeile gehört zu einer Augenzahl des roten Würfels, jede Spalte zu einer Augenzahl des grünen. Jedes Feld steht damit für genau einen Ausgang.
+
+18
+00:02:47.193 --> 00:02:57.234
+Das Feld in Zeile zwei und Spalte fünf ist der Ausgang zwei, fünf. Das Feld in Zeile fünf und Spalte zwei ist der Ausgang fünf, zwei.
+
+19
+00:02:58.834 --> 00:03:09.915
+In Mengenschreibweise sieht das so aus: Omega ist die Menge aller Paare i, j, für die gilt: i und j sind jeweils eine der Zahlen von eins bis sechs.
+
+20
+00:03:16.120 --> 00:03:26.024
+Die Elemente der Menge Omega sind die einzelnen Ausgänge des Experiments, beispielsweise rot zwei und grün fünf. Wir schreiben sie als klein Omega.
+
+21
+00:03:27.624 --> 00:03:34.948
+Für das Berechnen von Wahrscheinlichkeiten später kann es hilfreich sein, die Elemente von Omega zu zählen.
+
+22
+00:03:35.448 --> 00:03:41.967
+Im Beispiel hat Omega sechsunddreißig Elemente, wir schreiben das mit senkrechten Strichen auf.
+
+23
+00:03:44.270 --> 00:03:54.019
+Oft interessiert uns nicht ein bestimmter Ausgang, sondern eine Aussage über den Ausgang. Zum Beispiel: Die Summe der beiden Augenzahlen beträgt höchstens vier.
+
+24
+00:03:54.619 --> 00:04:06.331
+Eine solche Aussage über den Ausgang nennt man ein Ereignis. Ein Ereignis bezeichnet man häufig mit einem kursiv gestellten Großbuchstaben, wie hier groß A.
+
+25
+00:04:06.931 --> 00:04:26.117
+Das Schema links zeigt uns, für welche Ausgänge das Ereignis A zutrifft. Die Augensumme zwei ergibt sich nur bei eins, eins. Die Summe drei ergibt sich in den beiden Ausgängen eins, zwei sowie zwei, eins. Und die Summe vier ergibt sich in drei Ausgängen.
+
+26
+00:04:26.717 --> 00:04:33.200
+Damit lässt sich das Ereignis A als Menge schreiben: A enthält genau diese sechs Ausgänge.
+
+27
+00:04:35.100 --> 00:04:41.830
+Zu einem Ereignis kann man ex ante die Eintrittswahrscheinlichkeit definieren. Wir bezeichnen sie mit P von A.
+
+28
+00:04:42.380 --> 00:04:46.737
+Hier ist P als Abkürzung des englischen Begriffs probability üblich.
+
+29
+00:04:49.040 --> 00:05:01.135
+Das Ausrechnen einer Wahrscheinlichkeit funktioniert hier unter der Annahme, dass die Würfel fair sind, also keine Augenzahl bevorzugt auftritt, und unabhängig voneinander geworfen werden.
+
+30
+00:05:01.685 --> 00:05:10.818
+In dem Fall sind die hier dargestellten Ausgänge jeweils gleich wahrscheinlich. Man nennt das Experiment dann ein Laplace-Experiment.
+
+31
+00:05:11.418 --> 00:05:20.507
+Für jedes Ereignis A gilt dann: P von A ist die Anzahl der Ausgänge in A geteilt durch die Anzahl aller Ausgänge in Omega.
+
+32
+00:05:21.057 --> 00:05:33.366
+Man spricht auch von günstigen und möglichen Ausgängen. Für das Ereignis A, Augensumme höchstens vier, sind sechs Ausgänge günstig. Möglich sind alle sechsunddreißig.
+
+33
+00:05:33.966 --> 00:05:42.303
+Also ist P von A gleich sechs durch sechsunddreißig, gekürzt ein Sechstel, also etwa 16,7 Prozent.
+
+34
+00:05:42.903 --> 00:06:02.556
+Die hier berechnete Wahrscheinlichkeit hat eine reale Bedeutung. Führt man das Zufallsexperiment sehr oft durch, würfelt man also sehr oft, stellt man fest, dass sich der Anteil der Würfe mit einer Augensumme von höchstens vier langfristig immer mehr den berechneten 16,7 Prozent annähert.
+
+35
+00:06:04.860 --> 00:06:16.174
+Häufig kann man den Ausgang eines Zufallsexperiments auf eine Zahl reduzieren, so wie hier auf die Summe der Augenzahlen. Das entspricht dem Konzept einer Zufallsvariable.
+
+36
+00:06:16.724 --> 00:06:29.775
+Eine Zufallsvariable ist eine Vorschrift, die jedem Ausgang des Zufallsexperiments eine Zahl zuordnet. Man bezeichnet eine Zufallsvariable grundsätzlich mit einem Großbuchstaben.
+
+37
+00:06:30.375 --> 00:06:40.602
+In unserem Beispiel sei X die Summe der beiden Augenzahlen. Für einen Ausgang omega gleich i, j ist also X von omega gleich i plus j.
+
+38
+00:06:41.152 --> 00:06:51.618
+Zum Beispiel ist X von eins, eins gleich zwei, X von zwei, fünf gleich sieben und X von sechs, sechs gleich zwölf.
+
+39
+00:06:53.218 --> 00:07:03.358
+Tragen wir in jedes Feld die Summe ein, sehen wir die Zufallsvariable auf einen Blick: Jedem der sechsunddreißig Ausgänge ist genau eine Zahl zugeordnet.
+
+40
+00:07:03.958 --> 00:07:10.533
+Formal ist eine Zufallsvariable X eine Abbildung von der Ergebnismenge Omega auf die reellen Zahlen.
+
+41
+00:07:11.033 --> 00:07:16.517
+Jedem Ausgang des Zufallsexperiments wird durch X eine reelle Zahl zugewiesen.
+
+42
+00:07:18.820 --> 00:07:29.165
+Mit einer Zufallsvariablen lassen sich Ereignisse kurz beschreiben. Das bereits betrachtete Ereignis A können wir auch als X kleiner gleich vier schreiben.
+
+43
+00:07:29.765 --> 00:07:39.913
+In Worten: Die Summe der beiden Augenzahlen beträgt höchstens vier. Die geschweiften Klammern stehen für die Menge aller Ausgänge, für die diese Aussage zutrifft.
+
+44
+00:07:40.513 --> 00:07:47.771
+Im Raster sind das die sechs Felder mit einer Summe von höchstens vier, also die Ausgänge der Menge A von vorhin.
+
+45
+00:07:48.321 --> 00:07:55.481
+Also ist P von X kleiner gleich vier gleich sechs durch sechsunddreißig, ein Sechstel.
+
+46
+00:07:56.081 --> 00:08:06.002
+Der Weg zum Berechnen einer Wahrscheinlichkeit ist also: von der Aussage über X zu den Ausgängen in Omega und von dort zur Wahrscheinlichkeit.
+
+47
+00:08:08.300 --> 00:08:13.226
+Zum Schluss fassen wir die Begriffe in ihrer logischen Reihenfolge zusammen.
+
+48
+00:08:13.726 --> 00:08:31.478
+Ein Zufallsexperiment lässt sich beliebig oft wiederholen, seine möglichen Ausgänge sind vorher bekannt, und der eingetretene Ausgang lässt sich eindeutig feststellen. Alle möglichen Ausgänge bilden die Ergebnismenge Omega. Ihre Elemente, die einzelnen Ausgänge, schreiben wir als klein Omega.
+
+49
+00:08:32.078 --> 00:08:46.668
+Ein Ereignis ist eine Aussage über den Ausgang; es wird durch die Menge der Ausgänge beschrieben, für die die Aussage zutrifft. Seine Wahrscheinlichkeit gibt an, wie häufig es bei vielen Wiederholungen zu erwarten ist.
+
+50
+00:08:47.268 --> 00:09:02.482
+Unter der Annahme fairer, unabhängig geworfener Würfel sind alle Ausgänge gleich wahrscheinlich, und es liegt ein Laplace-Experiment vor: Die Wahrscheinlichkeit ist dann die Anzahl der günstigen geteilt durch die Anzahl der möglichen Ausgänge.
+
+51
+00:09:03.082 --> 00:09:18.416
+Eine Zufallsvariable ordnet jedem Ausgang eine Zahl zu. Aussagen über sie, etwa X kleiner gleich vier, sind wieder Ereignisse. Ihre Wahrscheinlichkeit bestimmen wir über die zugehörigen Ausgänge in Omega.
