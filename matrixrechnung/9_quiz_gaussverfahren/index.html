@@ -29,6 +29,25 @@
       box-shadow:0 0 0 1px #2E6F9E;
       outline:none;
     }
+    .tool-intro-wrap {
+      width:min(980px,calc(100% - 32px));
+      margin:16px auto 18px;
+    }
+    .tool-intro {
+      margin:0;
+      padding:16px 18px;
+      background:#FFFFFF;
+      border-left:3px solid #2E6F9E;
+      border-radius:0 7px 7px 0;
+      color:#4E5661;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      font-size:14px;
+      line-height:1.55;
+    }
+    .tool-intro p { margin:0 0 9px; }
+    .tool-intro p:last-child { margin-bottom:0; }
+    .tool-intro a { color:#2E6F9E; text-decoration:none; }
+    .tool-intro a:hover, .tool-intro a:focus-visible { text-decoration:underline; }
     
 .language-switch {
   position:fixed;
@@ -75,6 +94,7 @@
   <div class="site-back-wrap">
     <a class="site-back-link" href="../../mathematik/">← Mathematik, Bachelor-Modul</a>
   </div>
+  <div class="tool-intro-wrap"><section class="tool-intro" aria-label="Information"><p>Die hier bereitgestellten Lerntools wurden entwickelt, um Studierende der Hochschule Mainz beim Lernen ausgewählter Inhalte aus dem Bereich quantitativer Methoden zu unterstützen. Sie ergänzen die regulären Lehrmaterialien und Präsenzlehrveranstaltungen, ersetzen diese jedoch nicht. Insbesondere lässt sich aus Auswahl und Umfang der Lerntools keine Eingrenzung der prüfungsrelevanten Inhalte ableiten.</p><p>Die Lerntools befinden sich derzeit in einer Erprobungsphase. Hinweise, Feedback und Verbesserungsvorschläge können gerne per E-Mail gesendet werden an <a href="mailto:a.b@hs-mainz.de">a.b@hs-mainz.de</a>.</p><p>Die Lernvideos wurden mit Python und Manim erstellt. Die Sprachausgabe erfolgt mit einer KI-generierten Stimme von OpenAI.</p></section></div>
   <main class="module-shell">
     <div class="module-heading">
       <span class="module-category">Matrixrechnung</span>

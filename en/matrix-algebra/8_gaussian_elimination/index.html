@@ -12,7 +12,12 @@
     .back { display:inline-block; margin-bottom:22px; padding:6px 9px; border:1px solid transparent; border-radius:6px; color:#2E6F9E; text-decoration:none; transition:border-color .15s ease, box-shadow .15s ease; }
     .back:hover, .back:focus-visible { border-color:#2E6F9E; box-shadow:0 0 0 1px #2E6F9E; outline:none; }
     h1 { margin:0 0 6px; font-size:clamp(28px,4vw,42px); }
-    .subtitle { margin:0 0 24px; color:#68707C; font-size:18px; }
+    .subtitle { margin:0 0 18px; color:#68707C; font-size:18px; }
+    .tool-intro { margin:0 0 28px; padding:16px 18px; background:#FFFFFF; border-left:3px solid #2E6F9E; border-radius:0 7px 7px 0; color:#4E5661; font-size:14px; line-height:1.55; }
+    .tool-intro p { margin:0 0 9px; }
+    .tool-intro p:last-child { margin-bottom:0; }
+    .tool-intro a { color:#2E6F9E; text-decoration:none; }
+    .tool-intro a:hover, .tool-intro a:focus-visible { text-decoration:underline; }
     video { width:100%; background:#111; border-radius:8px; }
     .chapters { margin-top:30px; }
     .chapter { width:100%; display:flex; gap:16px; align-items:center; padding:12px 14px; margin:7px 0; border:1px solid #D8DDE5; border-radius:7px; background:white; color:#20242A; text-align:left; cursor:pointer; font-size:16px; transition:border-color .15s ease, box-shadow .15s ease; }
@@ -67,6 +72,7 @@
     <a class="back" href="../../mathematics/">← Mathematics, Bachelor&#x27;s Module</a>
     <h1>Gaussian Elimination</h1>
     <p class="subtitle">Solving linear systems step by step</p>
+    <section class="tool-intro" aria-label="Information"><p>The learning tools provided here were developed to support students at Mainz University of Applied Sciences in studying selected topics in quantitative methods. They complement the regular course materials and in-person classes but do not replace them. In particular, the selection and scope of the learning tools do not imply any limitation of the material that may be relevant for examinations.</p><p>The learning tools are currently in a trial phase. Comments, feedback, and suggestions for improvement are welcome and can be sent by email to <a href="mailto:a.b@hs-mainz.de">a.b@hs-mainz.de</a>.</p><p>The learning videos were created using Python and Manim. The narration is generated using an AI voice provided by OpenAI.</p></section>
     <video id="player" controls preload="metadata">
           <source src="https://seafile.rlp.net/seafhttp/f/992d2ece45b3484aa789/?op=view" type="video/mp4">
           

@@ -29,6 +29,25 @@
       box-shadow:0 0 0 1px #2E6F9E;
       outline:none;
     }
+    .tool-intro-wrap {
+      width:min(980px,calc(100% - 32px));
+      margin:16px auto 18px;
+    }
+    .tool-intro {
+      margin:0;
+      padding:16px 18px;
+      background:#FFFFFF;
+      border-left:3px solid #2E6F9E;
+      border-radius:0 7px 7px 0;
+      color:#4E5661;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      font-size:14px;
+      line-height:1.55;
+    }
+    .tool-intro p { margin:0 0 9px; }
+    .tool-intro p:last-child { margin-bottom:0; }
+    .tool-intro a { color:#2E6F9E; text-decoration:none; }
+    .tool-intro a:hover, .tool-intro a:focus-visible { text-decoration:underline; }
     
 .language-switch {
   position:fixed;
@@ -75,6 +94,7 @@
   <div class="site-back-wrap">
     <a class="site-back-link" href="../../mathematics/">← Mathematics, Bachelor&#x27;s Module</a>
   </div>
+  <div class="tool-intro-wrap"><section class="tool-intro" aria-label="Information"><p>The learning tools provided here were developed to support students at Mainz University of Applied Sciences in studying selected topics in quantitative methods. They complement the regular course materials and in-person classes but do not replace them. In particular, the selection and scope of the learning tools do not imply any limitation of the material that may be relevant for examinations.</p><p>The learning tools are currently in a trial phase. Comments, feedback, and suggestions for improvement are welcome and can be sent by email to <a href="mailto:a.b@hs-mainz.de">a.b@hs-mainz.de</a>.</p><p>The learning videos were created using Python and Manim. The narration is generated using an AI voice provided by OpenAI.</p></section></div>
   <main class="module-shell">
     <div class="module-heading">
       <span class="module-category">Matrix Algebra</span>
