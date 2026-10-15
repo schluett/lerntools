@@ -9,15 +9,42 @@
     * { box-sizing:border-box; }
     body { margin:0; }
     main { max-width:1050px; margin:0 auto; padding:58px 22px 60px; }
-    .back { display:inline-block; margin-bottom:22px; padding:6px 9px; border:1px solid transparent; border-radius:6px; color:#2E6F9E; text-decoration:none; transition:border-color .15s ease, box-shadow .15s ease; }
+    .content-wide { width:100%; }
+    .back { display:inline-block; margin-bottom:20px; padding:6px 9px; border:1px solid transparent; border-radius:6px; color:#2E6F9E; text-decoration:none; transition:border-color .15s ease, box-shadow .15s ease; }
     .back:hover, .back:focus-visible { border-color:#2E6F9E; box-shadow:0 0 0 1px #2E6F9E; outline:none; }
-    h1 { margin:0 0 6px; font-size:clamp(28px,4vw,42px); }
+    .page-title { margin:0 0 6px; font-size:clamp(28px,4vw,42px); }
     .subtitle { margin:0 0 18px; color:#68707C; font-size:18px; }
-    .tool-intro { margin:0 0 28px; padding:16px 18px; background:#FFFFFF; border-left:3px solid #2E6F9E; border-radius:0 7px 7px 0; color:#4E5661; font-size:14px; line-height:1.55; }
-    .tool-intro p { margin:0 0 9px; }
-    .tool-intro p:last-child { margin-bottom:0; }
-    .tool-intro a { color:#2E6F9E; text-decoration:none; }
-    .tool-intro a:hover, .tool-intro a:focus-visible { text-decoration:underline; }
+    
+.site-header {
+  max-width:900px;
+  margin:0 auto 30px;
+}
+.site-header-title {
+  margin:0 0 8px;
+  font-size:clamp(34px,5vw,46px);
+  line-height:1.12;
+}
+.site-header-professor {
+  margin:0 0 22px;
+  color:#68707C;
+  font-size:19px;
+}
+.site-header .tool-intro {
+  margin:0;
+  padding:16px 18px;
+  background:#FFFFFF;
+  border-left:3px solid #2E6F9E;
+  border-radius:0 7px 7px 0;
+  color:#4E5661;
+  font-size:14px;
+  line-height:1.55;
+}
+.site-header .tool-intro p { margin:0 0 9px; }
+.site-header .tool-intro p:last-child { margin-bottom:0; }
+.site-header .tool-intro a { color:#2E6F9E; text-decoration:none; }
+.site-header .tool-intro a:hover,
+.site-header .tool-intro a:focus-visible { text-decoration:underline; }
+
     video { width:100%; background:#111; border-radius:8px; }
     .chapters { margin-top:30px; }
     .chapter { width:100%; display:flex; gap:16px; align-items:center; padding:12px 14px; margin:7px 0; border:1px solid #D8DDE5; border-radius:7px; background:white; color:#20242A; text-align:left; cursor:pointer; font-size:16px; transition:border-color .15s ease, box-shadow .15s ease; }
@@ -69,22 +96,24 @@
 <body>
   <nav class="language-switch" aria-label="Language"><a class="current" href="./" lang="de" aria-current="page">DE</a><span aria-hidden="true">|</span><a class="" href="../../en/matrix-algebra/5_matrix_product/" lang="en" aria-current="false">EN</a></nav>
   <main>
-    <a class="back" href="../../mathematik/">← Mathematik, Bachelor-Modul</a>
-    <h1>Matrix-Matrix-Produkt</h1>
-    <p class="subtitle">Mehrere Produktionspläne gleichzeitig</p>
-    <section class="tool-intro" aria-label="Information"><p>Die hier bereitgestellten Lerntools wurden entwickelt, um Studierende der Hochschule Mainz beim Lernen ausgewählter Inhalte aus dem Bereich quantitativer Methoden zu unterstützen. Sie ergänzen die regulären Lehrmaterialien und Präsenzlehrveranstaltungen, ersetzen diese jedoch nicht. Insbesondere lässt sich aus Auswahl und Umfang der Lerntools keine Eingrenzung der prüfungsrelevanten Inhalte ableiten.</p><p>Die Lerntools befinden sich derzeit in einer Erprobungsphase. Hinweise, Feedback und Verbesserungsvorschläge können gerne per E-Mail gesendet werden an <a href="mailto:sebastian.schluetter@hs-mainz.de">sebastian.schluetter@hs-mainz.de</a>.</p><p>Die Lernvideos wurden mit Python und Manim erstellt. Die Sprachausgabe erfolgt mit einer KI-generierten Stimme von OpenAI.</p></section>
-    <video id="player" controls preload="metadata">
+    <header class="site-header"><h1 class="site-header-title">Lerntools Quantitative Methoden</h1><p class="site-header-professor">Prof. Dr. Sebastian Schlütter</p><section class="tool-intro" aria-label="Information"><p>Die hier bereitgestellten Lerntools wurden entwickelt, um Studierende der Hochschule Mainz beim Lernen ausgewählter Inhalte aus dem Bereich quantitativer Methoden zu unterstützen. Sie ergänzen die regulären Lehrmaterialien und Präsenzlehrveranstaltungen, ersetzen diese jedoch nicht. Insbesondere lässt sich aus Auswahl und Umfang der Lerntools keine Eingrenzung der prüfungsrelevanten Inhalte ableiten.</p><p>Die Lerntools befinden sich derzeit in einer Erprobungsphase. Hinweise, Feedback und Verbesserungsvorschläge können gerne per E-Mail gesendet werden an <a href="mailto:sebastian.schluetter@hs-mainz.de">sebastian.schluetter@hs-mainz.de</a>.</p><p>Die Lernvideos wurden mit Python und Manim erstellt. Die Sprachausgabe erfolgt mit einer KI-generierten Stimme von OpenAI.</p></section></header>
+    <div class="content-wide">
+      <a class="back" href="../../mathematik/">← Mathematik, Bachelor-Modul</a>
+      <h2 class="page-title">Matrix-Matrix-Produkt</h2>
+      <p class="subtitle">Mehrere Produktionspläne gleichzeitig</p>
+      <video id="player" controls preload="metadata">
           <source src="https://seafile.rlp.net/seafhttp/f/2731ed8cd6b846c58457/?op=view" type="video/mp4">
           
           Ihr Browser kann dieses Video nicht abspielen.
         </video>
-    <section class="chapters"><h2>Kapitel</h2><button class="chapter" data-start="0.000"><span class="time">00:00</span><span>Einführung und Rückblick</span></button>
+      <section class="chapters"><h2>Kapitel</h2><button class="chapter" data-start="0.000"><span class="time">00:00</span><span>Einführung und Rückblick</span></button>
 <button class="chapter" data-start="103.570"><span class="time">01:44</span><span>Von drei Plänen zur Matrix B</span></button>
 <button class="chapter" data-start="218.908"><span class="time">03:39</span><span>Das Matrix-Matrix-Produkt</span></button>
 <button class="chapter" data-start="284.832"><span class="time">04:45</span><span>Einträge nachrechnen</span></button>
 <button class="chapter" data-start="389.204"><span class="time">06:29</span><span>Die Ergebnismatrix beschriften</span></button>
 <button class="chapter" data-start="417.588"><span class="time">06:58</span><span>Dimensionen und Bedeutungen</span></button>
 <button class="chapter" data-start="534.831"><span class="time">08:55</span><span>Fazit</span></button></section>
+    </div>
   </main>
   <script>
     const player = document.getElementById("player");

@@ -8,11 +8,43 @@
     :root { font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:#20242A; background:#F7F8FA; }
     * { box-sizing:border-box; }
     body { margin:0; }
-    main { max-width:900px; margin:0 auto; padding:58px 22px 70px; }
-    .back { display:inline-block; margin-bottom:22px; padding:6px 9px; border:1px solid transparent; border-radius:6px; color:#2E6F9E; text-decoration:none; transition:border-color .15s ease, box-shadow .15s ease; }
+    main { max-width:1050px; margin:0 auto; padding:58px 22px 70px; }
+    .content-narrow { max-width:900px; margin:0 auto; }
+    .back { display:inline-block; margin-bottom:20px; padding:6px 9px; border:1px solid transparent; border-radius:6px; color:#2E6F9E; text-decoration:none; transition:border-color .15s ease, box-shadow .15s ease; }
     .back:hover, .back:focus-visible { border-color:#2E6F9E; box-shadow:0 0 0 1px #2E6F9E; outline:none; }
-    h1 { margin:0 0 28px; font-size:clamp(30px,4.5vw,42px); }
-    h2 { margin:0 0 16px; font-size:26px; }
+    .page-title { margin:0 0 20px; font-size:clamp(30px,4.5vw,42px); }
+    .section-title { margin:0 0 16px; font-size:26px; }
+    
+.site-header {
+  max-width:900px;
+  margin:0 auto 30px;
+}
+.site-header-title {
+  margin:0 0 8px;
+  font-size:clamp(34px,5vw,46px);
+  line-height:1.12;
+}
+.site-header-professor {
+  margin:0 0 22px;
+  color:#68707C;
+  font-size:19px;
+}
+.site-header .tool-intro {
+  margin:0;
+  padding:16px 18px;
+  background:#FFFFFF;
+  border-left:3px solid #2E6F9E;
+  border-radius:0 7px 7px 0;
+  color:#4E5661;
+  font-size:14px;
+  line-height:1.55;
+}
+.site-header .tool-intro p { margin:0 0 9px; }
+.site-header .tool-intro p:last-child { margin-bottom:0; }
+.site-header .tool-intro a { color:#2E6F9E; text-decoration:none; }
+.site-header .tool-intro a:hover,
+.site-header .tool-intro a:focus-visible { text-decoration:underline; }
+
     .tool-row { display:flex; justify-content:space-between; gap:20px; align-items:center; background:white; border:1px solid #D8DDE5; border-radius:8px; padding:15px 17px; margin:9px 0; color:#20242A; text-decoration:none; transition:border-color .15s ease, box-shadow .15s ease; }
     .tool-row:hover, .tool-row:focus-visible { border-color:#2E6F9E; box-shadow:0 0 0 1px #2E6F9E; outline:none; }
     .tool-row strong { display:block; }
@@ -63,10 +95,13 @@
 <body>
   <nav class="language-switch" aria-label="Language"><a class="current" href="./" lang="de" aria-current="page">DE</a><span aria-hidden="true">|</span><a class="" href="../en/mathematics/" lang="en" aria-current="false">EN</a></nav>
   <main>
-    <a class="back" href="../">← Lerntools Quantitative Methoden</a>
-    <h1>Mathematik, Bachelor-Modul</h1>
-    <h2>Matrixrechnung</h2>
-    <a class="tool-row" href="../matrixrechnung/1_einfuehrung/"><span><strong>01 · Einführung in die Matrixrechnung</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/2_notation/"><span><strong>02 · Notation von Matrizen und Vektoren</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/3_rechenregeln/"><span><strong>03 · Rechnen mit Matrizen</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/4_produktionsplanung/"><span><strong>04 · Produktionsplanung mit Matrizen</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/5_matrix_matrix_produkt/"><span><strong>05 · Matrix-Matrix-Produkt</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/6_transponierte/"><span><strong>06 · Die Transponierte</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/7_lgs_matrixinverse/"><span><strong>07 · Gleichungssysteme und die Matrixinverse</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/8_gauss_verfahren/"><span><strong>08 · Das Gauß-Verfahren</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/9_quiz_gaussverfahren/"><span><strong>09 · Gaußverfahren</strong><small>Quiz</small></span><span class="arrow">→</span></a><a class="tool-row" href="../mathe/matrixrechnung/10_rang_rangkriterium/de/"><span><strong>10 · Rang und Rangkriterium</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/11_quiz_rang/"><span><strong>11 · Rang und Rangkriterium</strong><small>Quiz</small></span><span class="arrow">→</span></a>
+    <header class="site-header"><h1 class="site-header-title">Lerntools Quantitative Methoden</h1><p class="site-header-professor">Prof. Dr. Sebastian Schlütter</p><section class="tool-intro" aria-label="Information"><p>Die hier bereitgestellten Lerntools wurden entwickelt, um Studierende der Hochschule Mainz beim Lernen ausgewählter Inhalte aus dem Bereich quantitativer Methoden zu unterstützen. Sie ergänzen die regulären Lehrmaterialien und Präsenzlehrveranstaltungen, ersetzen diese jedoch nicht. Insbesondere lässt sich aus Auswahl und Umfang der Lerntools keine Eingrenzung der prüfungsrelevanten Inhalte ableiten.</p><p>Die Lerntools befinden sich derzeit in einer Erprobungsphase. Hinweise, Feedback und Verbesserungsvorschläge können gerne per E-Mail gesendet werden an <a href="mailto:sebastian.schluetter@hs-mainz.de">sebastian.schluetter@hs-mainz.de</a>.</p><p>Die Lernvideos wurden mit Python und Manim erstellt. Die Sprachausgabe erfolgt mit einer KI-generierten Stimme von OpenAI.</p></section></header>
+    <div class="content-narrow">
+      <a class="back" href="../">← Lerntools Quantitative Methoden</a>
+      <h2 class="page-title">Mathematik, Bachelor-Modul</h2>
+      <h3 class="section-title">Matrixrechnung</h3>
+      <a class="tool-row" href="../matrixrechnung/1_einfuehrung/"><span><strong>01 · Einführung in die Matrixrechnung</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/2_notation/"><span><strong>02 · Notation von Matrizen und Vektoren</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/3_rechenregeln/"><span><strong>03 · Rechnen mit Matrizen</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/4_produktionsplanung/"><span><strong>04 · Produktionsplanung mit Matrizen</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/5_matrix_matrix_produkt/"><span><strong>05 · Matrix-Matrix-Produkt</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/6_transponierte/"><span><strong>06 · Die Transponierte</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/7_lgs_matrixinverse/"><span><strong>07 · Gleichungssysteme und die Matrixinverse</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/8_gauss_verfahren/"><span><strong>08 · Das Gauß-Verfahren</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/9_quiz_gaussverfahren/"><span><strong>09 · Gaußverfahren</strong><small>Quiz</small></span><span class="arrow">→</span></a><a class="tool-row" href="../mathe/matrixrechnung/10_rang_rangkriterium/de/"><span><strong>10 · Rang und Rangkriterium</strong><small>Video</small></span><span class="arrow">→</span></a><a class="tool-row" href="../matrixrechnung/11_quiz_rang/"><span><strong>11 · Rang und Rangkriterium</strong><small>Quiz</small></span><span class="arrow">→</span></a>
+    </div>
   </main>
 </body>
 </html>
