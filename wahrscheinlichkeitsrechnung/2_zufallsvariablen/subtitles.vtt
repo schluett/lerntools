@@ -1,0 +1,169 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:14.792
+Im letzten Video haben wir die Grundbegriffe der Wahrscheinlichkeitsrechnung kennengelernt, zuletzt die Zufallsvariable. In diesem Video lernen wir weitere Begriffe und Konzepte für Zufallsvariablen kennen.
+
+2
+00:00:16.492 --> 00:00:19.506
+Die Lernziele des Videos sind:
+
+3
+00:00:19.956 --> 00:00:24.053
+Erstens: diskrete und stetige Zufallsvariablen unterscheiden.
+
+4
+00:00:24.453 --> 00:00:29.536
+Zweitens: zwischen einer Zufallsvariablen und ihrer Realisation unterscheiden.
+
+5
+00:00:29.936 --> 00:00:37.677
+Und drittens: Zähldichte und Verteilungsfunktion einer diskreten Zufallsvariablen aufstellen und grafisch darstellen.
+
+6
+00:00:39.680 --> 00:00:47.689
+Wir setzen das Beispiel aus dem letzten Video fort: Wir werfen zwei Würfel, einen roten und einen grünen.
+
+7
+00:00:48.239 --> 00:00:59.041
+Die Zufallsvariable X gibt die Augensumme der beiden Würfel an. Beim Wurf rot zwei und grün fünf ist X also gleich sieben.
+
+8
+00:00:59.591 --> 00:01:06.323
+Das Raster zeigt noch einmal für jeden der sechsunddreißig Ausgänge den zugehörigen Wert von X.
+
+9
+00:01:08.430 --> 00:01:17.731
+Wir behandeln nun einige neue Begriffe und Konzepte für Zufallsvariablen. Es gibt zwei Typen von Zufallsvariablen: diskrete und stetige.
+
+10
+00:01:18.281 --> 00:01:24.872
+Bei einer diskreten Zufallsvariablen können wir vorab auflisten, welche Werte sie annehmen kann.
+
+11
+00:01:25.372 --> 00:01:41.806
+Ein Beispiel: X beschreibt eine Anzahl, etwa die Anzahl der Stornierungen in einem Hotel an einem Tag. Mögliche Werte sind null, eins, zwei, drei und so weiter, in diesem Fall bis hin zur gesamten Zahl der Buchungen als Obergrenze.
+
+12
+00:01:42.406 --> 00:01:53.690
+Eine stetige Zufallsvariable liefert dagegen Werte mit unendlich vielen Nachkommastellen. Möglich sind ganze Bereiche des Zahlenstrahls oder auch der ganze Zahlenstrahl.
+
+13
+00:01:54.190 --> 00:02:11.390
+Ein Beispiel: X beschreibt eine Entfernung oder eine Dauer, die sehr genau gemessen werden kann, etwa die Fahrzeit zur Hochschule. Sie kann zum Beispiel 23,47 Minuten betragen, und bei genauerer Messung kommen weitere Nachkommastellen hinzu.
+
+14
+00:02:11.990 --> 00:02:26.005
+In unserem Beispiel ist die Augensumme X eine diskrete Zufallsvariable, denn ihre möglichen Werte lassen sich vorab auflisten: zwei, drei, vier und so weiter bis zwölf.
+
+15
+00:02:28.110 --> 00:02:39.926
+Als Nächstes klären wir einen zentralen Aspekt zur Perspektive. Bei einem Zufallsvorgang kann man stets zwischen der ex-ante- und der ex-post-Perspektive unterscheiden.
+
+16
+00:02:40.476 --> 00:03:02.855
+Ex ante bedeutet: vor der Durchführung des Zufallsvorgangs. Für diese Perspektive schreiben wir Zufallsvariablen mit Großbuchstaben, hier groß X. Wir wissen zu diesem Zeitpunkt, welche Werte für X möglich sind, und können über Wahrscheinlichkeiten sprechen, beispielsweise darüber, dass die Augensumme genau sieben ist.
+
+17
+00:03:03.404 --> 00:03:14.578
+Ex post bedeutet: nach der Durchführung. Hier können wir beobachten, welchen Wert die Zufallsvariable geliefert hat, beispielsweise welche Augensumme gewürfelt wurde.
+
+18
+00:03:15.128 --> 00:03:27.061
+Diesen beobachteten Wert nennen wir Realisation. Für die Realisation nutzen wir den entsprechenden Kleinbuchstaben, hier klein x.
+
+19
+00:03:27.611 --> 00:03:37.994
+Ein Beispiel: Gewürfelt werden rot drei und grün vier. Die Realisation der Augensumme ist dann klein x gleich sieben.
+
+20
+00:03:40.090 --> 00:03:49.631
+Für die Augensumme wollen wir nun alle möglichen Realisationen in einer Tabelle auflisten. Es sind die ganzen Zahlen von zwei bis zwölf.
+
+21
+00:03:50.181 --> 00:04:04.871
+Zu jeder Realisation ergänzen wir die Wahrscheinlichkeit, dass X genau diesen Wert annimmt. Wir bestimmen sie nach dem Laplace-Ansatz: Anzahl der günstigen geteilt durch die Anzahl der möglichen Ausgänge.
+
+22
+00:04:05.421 --> 00:04:20.355
+Die Augensumme zwei ergibt sich nur beim Ausgang eins, eins. Das ist einer von sechsunddreißig gleich wahrscheinlichen Ausgängen. Also ist P von X gleich zwei gleich ein Sechsunddreißigstel.
+
+23
+00:04:20.955 --> 00:04:37.508
+Die Augensumme drei ergibt sich bei zwei Ausgängen: eins, zwei und zwei, eins. Also ist P von X gleich drei gleich zwei Sechsunddreißigstel. Wir lassen die Brüche ungekürzt, so lassen sich die Werte leichter vergleichen.
+
+24
+00:04:38.108 --> 00:04:51.282
+Auf dieselbe Weise ergänzen wir die übrigen Werte: Die Augensumme vier ergibt sich in drei Ausgängen, die Augensumme fünf in vier, die sechs in fünf und die sieben in sechs Ausgängen.
+
+25
+00:04:51.782 --> 00:05:04.250
+Danach nimmt die Anzahl wieder ab: die acht in fünf Ausgängen, die neun in vier, die zehn in drei, die elf in zwei und die zwölf nur noch bei sechs, sechs.
+
+26
+00:05:06.360 --> 00:05:16.786
+Die hier dargestellte Tabelle nennt man auch Zähldichte. Sie gibt für jede mögliche Realisation an, mit welcher Wahrscheinlichkeit X genau diesen Wert annimmt.
+
+27
+00:05:17.336 --> 00:05:23.850
+Man schreibt dafür auch f von x gleich P von X gleich x.
+
+28
+00:05:24.450 --> 00:05:32.405
+Das Vorgehen ist grundsätzlich bei diskreten Zufallsvariablen sinnvoll, da hier die Realisationen vorab aufgelistet werden können.
+
+29
+00:05:34.510 --> 00:05:52.009
+Neben der Zähldichte gibt es die Verteilungsfunktion, um Wahrscheinlichkeiten von Zufallsvariablen auszudrücken. Wir ergänzen sie als dritte Spalte. Während die Zähldichte klein f von x heißt, wird die Verteilungsfunktion mit groß F von x bezeichnet.
+
+30
+00:05:52.559 --> 00:06:06.287
+Die Zähldichte liefert die Wahrscheinlichkeit, dass ein bestimmter Wert exakt angenommen wird. Die Verteilungsfunktion liefert die Wahrscheinlichkeit dafür, dass ein bestimmter Wert nicht überschritten wird.
+
+31
+00:06:06.887 --> 00:06:17.089
+Für die erste Zeile, x gleich zwei, sind Zähldichte und Verteilungsfunktion noch gleich, da Augensummen unter zwei nicht möglich sind.
+
+32
+00:06:17.689 --> 00:06:42.831
+In der nächsten Zeile betrachten wir x gleich drei. Die Verteilungsfunktion gibt jetzt die Wahrscheinlichkeit dafür an, dass die Augensumme höchstens drei beträgt. Dazu gehören die Augensummen zwei und drei. Wir addieren also die entsprechenden Wahrscheinlichkeiten: ein Sechsunddreißigstel plus zwei Sechsunddreißigstel ergibt drei Sechsunddreißigstel.
+
+33
+00:06:43.431 --> 00:07:11.720
+Für x gleich vier kommt die Wahrscheinlichkeit für die Augensumme vier hinzu. Die Wahrscheinlichkeit, höchstens eine Vier zu würfeln, ist die Wahrscheinlichkeit für höchstens eine Drei plus die Wahrscheinlichkeit für genau eine Vier. In Zahlen also: drei Sechsunddreißigstel plus drei Sechsunddreißigstel ergibt sechs Sechsunddreißigstel. Die Verteilungsfunktion wächst also von Zeile zu Zeile um die jeweilige Wahrscheinlichkeit aus der Zähldichte.
+
+34
+00:07:12.320 --> 00:07:20.294
+So können wir die dritte Spalte sukzessive auffüllen.
+
+35
+00:07:24.794 --> 00:07:35.710
+In der letzten Zeile ergibt sich sechsunddreißig Sechsunddreißigstel, also eins oder 100 Prozent: Eine Augensumme von höchstens zwölf tritt sicher ein.
+
+36
+00:07:37.810 --> 00:07:42.320
+Zum Schluss stellen wir die Zähldichte der Augensumme grafisch dar.
+
+37
+00:07:42.870 --> 00:07:58.376
+Auf der waagerechten Achse stehen die möglichen Realisationen x von zwei bis zwölf, auf der senkrechten Achse f von x, also die Wahrscheinlichkeiten dafür, dass die Augensumme exakt diesen Wert annimmt.
+
+38
+00:07:58.926 --> 00:08:05.612
+Über jedem Wert zeichnen wir einen Stab, dessen Höhe der Wahrscheinlichkeit aus der Tabelle entspricht.
+
+39
+00:08:06.212 --> 00:08:20.763
+Die größte Einzelwahrscheinlichkeit stellen wir für die Augensumme sieben fest, mit sechs Sechsunddreißigsteln, also knapp 17 Prozent. Zu beiden Rändern hin werden die Wahrscheinlichkeiten kleiner.
+
+40
+00:08:23.260 --> 00:08:29.800
+Fassen wir zusammen: Zufallsvariablen können diskret oder stetig sein.
+
+41
+00:08:30.400 --> 00:08:40.661
+Vor der Durchführung des Zufallsvorgangs betrachten wir die Zufallsvariable groß X. Nach der Durchführung beobachten wir eine Realisation klein x.
+
+42
+00:08:41.261 --> 00:08:54.979
+Bei diskreten Zufallsvariablen gibt die Zähldichte die Wahrscheinlichkeit für genau einen Wert an. Die Verteilungsfunktion gibt die Wahrscheinlichkeit dafür an, dass ein vorgegebener Wert nicht überschritten wird.
