@@ -1,0 +1,181 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:09.398
+Im letzten Video haben wir Zufallsvariablen und ihre Zähldichte kennengelernt. Darauf bauen wir in diesem Video auf.
+
+2
+00:00:11.098 --> 00:00:19.198
+Wir setzen das Beispiel mit dem Werfen von zwei Würfeln fort. Die Zufallsvariable X gibt wieder die Augensumme der beiden Würfel an.
+
+3
+00:00:19.748 --> 00:00:31.656
+Aus dem letzten Video kennen wir bereits die möglichen Realisationen x von zwei bis zwölf und die Zähldichte, also die Eintrittswahrscheinlichkeit für jede Realisation.
+
+4
+00:00:32.206 --> 00:00:46.708
+Nun wollen wir die Verteilung mit Kennzahlen beschreiben. Dazu betrachten wir zunächst den Erwartungswert und anschließend die Streuung der Zufallsvariablen mithilfe von Varianz und Standardabweichung.
+
+5
+00:00:48.308 --> 00:00:50.767
+Die Lernziele des Videos sind:
+
+6
+00:00:51.217 --> 00:00:59.307
+Erstens: den Erwartungswert einer diskreten Zufallsvariablen berechnen und als wahrscheinlichkeitsgewichtetes Mittel einordnen.
+
+7
+00:00:59.707 --> 00:01:07.545
+Zweitens: die Varianz einer diskreten Zufallsvariablen berechnen und ihre Bedeutung für die Streuung verstehen.
+
+8
+00:01:07.945 --> 00:01:16.398
+Und drittens: die Standardabweichung berechnen und als Streuungsmaß in der Einheit der Zufallsvariablen interpretieren.
+
+9
+00:01:18.400 --> 00:01:26.103
+Der Erwartungswert einer diskreten Zufallsvariablen ist das wahrscheinlichkeitsgewichtete Mittel ihrer möglichen Realisationen.
+
+10
+00:01:26.653 --> 00:01:41.251
+Für eine diskrete Zufallsvariable gilt: Jede Realisation k wird mit ihrer Eintrittswahrscheinlichkeit multipliziert. Dann werden alle diese Produkte aufaddiert. Das Ergebnis ist der Erwartungswert.
+
+11
+00:01:42.251 --> 00:02:02.888
+Wir wenden diese Definition auf die Augensumme unserer beiden Würfel an: Augensumme zwei mal Wahrscheinlichkeit ein Sechsunddreißigstel plus Augensumme drei mal Wahrscheinlichkeit zwei Sechsunddreißigstel und so weiter, bis zur maximalen Augensumme zwölf mal ein Sechsunddreißigstel.
+
+12
+00:02:03.438 --> 00:02:06.998
+Addiert man alle Produkte, ergibt sich genau sieben.
+
+13
+00:02:07.598 --> 00:02:15.690
+Im Stabdiagramm der Zähldichte zeichnen wir den Erwartungswert E von X gleich sieben als senkrechte Linie ein.
+
+14
+00:02:17.790 --> 00:02:30.483
+Der Erwartungswert lässt sich als langfristiger Durchschnitt interpretieren. Wenn wir sehr oft zwei Würfel werfen, liegt der Durchschnitt der beobachteten Augensummen langfristig nahe bei sieben.
+
+15
+00:02:31.033 --> 00:02:44.996
+Die Grafik zeigt dazu eine Reihe von fünfhundert Würfen: Nach jedem Wurf berechnen wir den Durchschnitt aller bisherigen Augensummen. Am Anfang schwankt er noch deutlich, mit zunehmender Zahl der Würfe nähert er sich der Sieben.
+
+16
+00:02:46.950 --> 00:03:02.214
+Bei der Augensumme von zwei Würfeln ist der Erwartungswert zugleich die Realisation mit der größten Eintrittswahrscheinlichkeit: E von X ist sieben, und die Augensumme sieben hat auch die größte Wahrscheinlichkeit.
+
+17
+00:03:02.814 --> 00:03:08.793
+Im Allgemeinen gilt das jedoch nicht. Dazu betrachten wir als Beispiel nur einen fairen Würfel.
+
+18
+00:03:09.343 --> 00:03:24.461
+Die Zufallsvariable Y sei die beim einmaligen Würfeln beobachtete Augenzahl. Ihre möglichen Realisationen sind eins, zwei, drei, vier, fünf und sechs. Jede dieser Realisationen hat die Wahrscheinlichkeit ein Sechstel.
+
+19
+00:03:25.011 --> 00:03:38.028
+Für den Erwartungswert erhalten wir: eins mal ein Sechstel plus zwei mal ein Sechstel und so weiter bis sechs mal ein Sechstel. Das ergibt einundzwanzig Sechstel, also drei Komma fünf.
+
+20
+00:03:38.578 --> 00:03:55.178
+Der Erwartungswert kann also als Realisation selbst gar nicht auftreten. Das heißt übrigens nicht, dass der Erwartungswert hier auf eine ganze Zahl gerundet werden sollte: Der Erwartungswert ist wie ein Mittelwert inklusive seiner Nachkommastellen aussagekräftig.
+
+21
+00:03:57.280 --> 00:04:11.970
+Wir gehen wieder zurück zur Zähldichte der Augensumme von zwei Würfeln. Der Erwartungswert E von X gleich sieben beschreibt die Lage der Verteilung.
+
+22
+00:04:12.520 --> 00:04:34.252
+Nun kommen wir zu einer zweiten Kennzahl, die nicht die Lage beschreibt, sondern wie stark die möglichen Realisationen um den Erwartungswert streuen. Es geht jetzt also um eine Streuungskennzahl. Als Ausgangspunkt betrachten wir diese Streuungen, also die Differenzen zwischen den möglichen Realisationen und dem Erwartungswert.
+
+23
+00:04:34.802 --> 00:04:48.861
+Zum Beispiel: Augensumme zwei minus Erwartungswert sieben ist minus fünf, Augensumme sechs minus Erwartungswert sieben ist minus eins, acht minus sieben ist eins und zwölf minus sieben ist fünf.
+
+24
+00:04:49.461 --> 00:05:00.996
+Wir sehen, dass Realisationen unterhalb vom Erwartungswert zu negativen Differenzen führen und Realisationen oberhalb vom Erwartungswert zu positiven Differenzen.
+
+25
+00:05:01.546 --> 00:05:10.747
+Würden wir diese Differenzen direkt miteinander verrechnen, würden sich positive und negative Abweichungen gegenseitig aufheben.
+
+26
+00:05:11.347 --> 00:05:23.200
+Damit Abstände in beiden Richtungen zum Streuungsmaß beitragen, werden die Differenzen quadriert. Aus minus fünf wird so fünfundzwanzig, aus minus eins wird eins.
+
+27
+00:05:23.800 --> 00:05:31.855
+Die quadrierten Abstände sind nie negativ. Außerdem gehen größere Abstände stärker in das Streuungsmaß ein als kleinere.
+
+28
+00:05:33.960 --> 00:05:46.003
+Die Varianz einer diskreten Zufallsvariablen ist definiert als wahrscheinlichkeitsgewichtetes Mittel der quadrierten Abstände der einzelnen Realisationen vom Erwartungswert.
+
+29
+00:05:46.602 --> 00:06:01.948
+Rechnen wir die Varianz für die Augensumme nach. Der Erwartungswert ist sieben. Für die Augensummen von zwei bis zwölf wird jeweils die Differenz zum Erwartungswert bestimmt, quadriert und wahrscheinlichkeitsgewichtet aufaddiert.
+
+30
+00:06:02.499 --> 00:06:06.629
+Im Ergebnis ergibt sich circa fünf Komma acht drei.
+
+31
+00:06:07.229 --> 00:06:18.059
+Die Varianz hat einen entscheidenden Haken: Durch das Quadrieren der Abstände passt ihre Größenordnung nicht mehr zur Größenordnung von X.
+
+32
+00:06:18.659 --> 00:06:36.373
+Das zeigt sich auch an der Einheit. Stellen wir uns vor, dass die Augensumme in Euro ausgezahlt wird. Dann hätte die Zufallsvariable X die Einheit Euro. Die Differenz X minus E von X hätte ebenfalls die Einheit Euro.
+
+33
+00:06:36.923 --> 00:06:50.066
+Durch das Quadrieren hätte X minus E von X zum Quadrat dagegen die Einheit Euro zum Quadrat. Damit besitzt auch die Varianz die Einheit Euro zum Quadrat.
+
+34
+00:06:52.170 --> 00:07:02.404
+Um zur Größenordnung und Einheit von X zurückzukehren, zieht man die Quadratwurzel der Varianz. Das Ergebnis heißt Standardabweichung.
+
+35
+00:07:02.954 --> 00:07:25.097
+Die Standardabweichung ist die wichtigste Streuungskennzahl von Zufallsvariablen. Durch die Abfolge von Quadrieren und Wurzelziehen kann man sie kaum in einen präzisen Interpretationssatz fassen. Sie liefert aber einen sinnvollen Eindruck davon, wie stark die Realisationen der Zufallsvariablen schwanken, wenn man den Zufallsvorgang mehrfach durchführt.
+
+36
+00:07:25.697 --> 00:07:36.612
+Für unser Würfelbeispiel ergibt sich: SD von X gleich Wurzel aus fünfunddreißig Sechsteln, also ungefähr zwei Komma vier eins fünf.
+
+37
+00:07:37.212 --> 00:07:55.272
+Durch das Ziehen der Wurzel besitzt die Standardabweichung wieder dieselbe Einheit wie die Zufallsvariable. Wenn X beispielsweise eine Auszahlung in Euro beschreibt, wird die Varianz in Euro zum Quadrat gemessen, die Standardabweichung dagegen wieder in Euro.
+
+38
+00:07:55.872 --> 00:08:14.953
+Bei einer Auszahlung in Euro beschreibt E von X gleich sieben die langfristige durchschnittliche Auszahlung und SD von X, ungefähr zwei Komma vier eins fünf, die Streuung der einzelnen Auszahlungen um diesen Erwartungswert.
+
+39
+00:08:17.050 --> 00:08:26.639
+Zum Abschluss stellen wir Erwartungswert und Standardabweichung in der Zähldichte der Augensumme dar. Der Erwartungswert liegt bei sieben.
+
+40
+00:08:27.189 --> 00:08:42.881
+Vom Erwartungswert aus tragen wir die Standardabweichung nach links ab. Wir erhalten E von X minus SD von X, also ungefähr sieben minus zwei Komma vier eins fünf gleich vier Komma fünf acht fünf.
+
+41
+00:08:43.431 --> 00:08:55.675
+Nach rechts erhalten wir E von X plus SD von X, also ungefähr sieben plus zwei Komma vier eins fünf gleich neun Komma vier eins fünf.
+
+42
+00:08:56.225 --> 00:09:19.157
+Der Bereich von Erwartungswert plus minus Standardabweichung enthält häufig die typischen Realisationen. Im Falle einer Normalverteilung, die wir später besprechen, wird dieser Bereich mit gut 68 Prozent Wahrscheinlichkeit erreicht. So eine Wahrscheinlichkeitsaussage gilt bei anderen Verteilungen im Allgemeinen aber nicht.
+
+43
+00:09:21.660 --> 00:09:46.694
+Fassen wir zusammen: Der Erwartungswert einer diskreten Zufallsvariablen ist das wahrscheinlichkeitsgewichtete Mittel ihrer möglichen Realisationen. Er beschreibt den langfristigen Durchschnitt bei sehr vielen Wiederholungen des Zufallsvorgangs. Der Erwartungswert muss dabei weder die Realisation mit der höchsten Eintrittswahrscheinlichkeit sein noch selbst eine mögliche Realisation darstellen.
+
+44
+00:09:47.294 --> 00:09:55.338
+Die Varianz misst die Streuung der möglichen Realisationen um den Erwartungswert mithilfe quadrierter Abstände.
+
+45
+00:09:55.938 --> 00:10:14.792
+Da die quadrierten Abstände auch zu einer quadrierten Einheit führen, wird zur Interpretation häufig die Standardabweichung verwendet, also die Wurzel aus der Varianz. Sie besitzt wieder dieselbe Einheit wie die Zufallsvariable und beschreibt die Größenordnung der Streuung um den Erwartungswert.

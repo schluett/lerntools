@@ -1,0 +1,221 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:14.678
+Wie wahrscheinlich ist es, dass beim IT-Support eines Unternehmens an einem Tag höchstens zwei Anfragen eingehen? Fragen dieser Art beantwortet die Binomialverteilung, um die es in diesem Video geht.
+
+2
+00:00:15.278 --> 00:00:32.586
+Die Binomialverteilung ist eine spezielle diskrete Verteilung. Sobald wir feststellen können, dass die Binomialverteilung zur Anwendungssituation passt, lassen sich Zähldichte und die Kennzahlen Erwartungswert und Varianz unmittelbar durch geschlossene Formeln berechnen.
+
+3
+00:00:34.186 --> 00:00:36.412
+Die Lernziele des Videos sind:
+
+4
+00:00:36.862 --> 00:00:45.348
+Erstens: die Voraussetzungen der Binomialverteilung prüfen und ihre Parameter n und pi aus einer Anwendungssituation bestimmen.
+
+5
+00:00:45.748 --> 00:00:55.798
+Zweitens: Wahrscheinlichkeiten mit der Zähldichte der Binomialverteilung berechnen und Erwartungswert, Varianz und Standardabweichung bestimmen.
+
+6
+00:00:56.198 --> 00:01:06.582
+Und drittens: Einzelwahrscheinlichkeiten und kumulierte Wahrscheinlichkeiten mit den R-Funktionen dbinom und pbinom berechnen und interpretieren.
+
+7
+00:01:08.580 --> 00:01:13.080
+Der IT-Support eines Unternehmens betreut siebzig Mitarbeitende.
+
+8
+00:01:13.580 --> 00:01:26.533
+Betrachten wir eine beliebige Person. Für einen zufällig ausgewählten Tag gilt, dass mit einer Wahrscheinlichkeit von fünf Prozent ein Problem auftritt und die Person den IT-Support kontaktiert.
+
+9
+00:01:27.333 --> 00:01:37.728
+Uns interessiert, wie viele der siebzig Mitarbeitenden sich an einem zufälligen Tag beim IT-Support melden. An dem dargestellten Tag könnten es zum Beispiel drei sein.
+
+10
+00:01:38.128 --> 00:01:44.094
+Es wäre aber auch jede andere Anzahl zwischen null und siebzig Kontaktaufnahmen möglich.
+
+11
+00:01:44.794 --> 00:01:56.959
+Wenn wir die Anzahl der Kontaktaufnahmen mit einer Zufallsvariable modellieren möchten, handelt es sich also um eine diskrete Zufallsvariable, da wir die möglichen Realisationen auflisten können.
+
+12
+00:01:58.910 --> 00:02:23.642
+Das beschriebene Set-up stimmt bereits recht gut mit dem überein, was eine binomialverteilte Zufallsvariable modellieren kann. Dazu sind jedoch bestimmte Voraussetzungen zu prüfen, die wir nun durchgehen. Erstens: Ein Vorgang wird n-mal wiederholt. Im Beispiel wird für jede der siebzig Personen festgestellt, ob sie sich meldet; also ist n gleich siebzig.
+
+13
+00:02:24.192 --> 00:02:48.349
+Zweitens: Jeder Vorgang hat genau zwei mögliche Ergebnisse, Erfolg oder Misserfolg. Hier ist der Erfolg, dass sich eine Person beim IT-Support meldet. Erfolg bezeichnet dabei nur das Ergebnis, das wir zählen, auch wenn ein IT-Problem für die Betroffenen eher kein Erfolg ist. Durch die zwei möglichen Ausgänge liegt ein sogenanntes Bernoulli-Experiment vor.
+
+14
+00:02:48.899 --> 00:03:04.757
+Drittens: Die Erfolgswahrscheinlichkeit ist bei jeder Wiederholung gleich. Sie wird mit dem griechischen Buchstaben pi bezeichnet, hier ist pi gleich null Komma null fünf für jede Person. pi steht an dieser Stelle also nicht für die Kreiszahl.
+
+15
+00:03:05.307 --> 00:03:26.919
+Viertens: Die Wiederholungen sind unabhängig voneinander. Das heißt: Ein Erfolg im ersten Vorgang erhöht oder vermindert die Erfolgswahrscheinlichkeit des nächsten Vorgangs nicht. Im Beispiel: Wissen wir, dass sich eine Person beim IT-Support gemeldet hat, schätzen wir die Wahrscheinlichkeiten für die anderen Personen nicht anders ein.
+
+16
+00:03:27.519 --> 00:03:47.558
+Dass diese Voraussetzungen erfüllt sind, ist eine Modellannahme. Wenn IT-Probleme zum Beispiel typischerweise durch Probleme am zentralen Server verursacht werden, die viele Mitarbeitende gleichzeitig beeinträchtigen, wäre die Unabhängigkeit verletzt. Die Binomialverteilung wäre dann nicht angemessen.
+
+17
+00:03:49.660 --> 00:04:02.008
+Zwei Größen legen die Binomialverteilung vollständig fest: die Anzahl der Wiederholungen n und die Erfolgswahrscheinlichkeit pi. Sie heißen die Parameter der Binomialverteilung.
+
+18
+00:04:02.558 --> 00:04:14.484
+In einer Anwendung müssen wir beide Parameter aus der Situation herauslesen. Im Beispiel sind das n gleich siebzig und pi gleich fünf Prozent.
+
+19
+00:04:15.034 --> 00:04:25.040
+Als Kurznotation kann man die Verteilung von X mit der kleinen Schlange, der Abkürzung B-i-n und den beiden Parameterwerten angeben.
+
+20
+00:04:25.740 --> 00:04:36.528
+Sobald wir wissen, dass X der Binomialverteilung folgt, können wir unmittelbar die Eintrittswahrscheinlichkeiten für einzelne Werte, also die Zähldichte bestimmen.
+
+21
+00:04:37.228 --> 00:04:57.618
+Hinter der hier dargestellten Formel steckt folgende Überlegung: pi hoch k ist die Wahrscheinlichkeit für k Erfolge, zugleich sollen n minus k Misserfolge auftreten, was der Ausdruck eins minus pi hoch n minus k ausdrückt. Wegen der Unabhängigkeit werden die Wahrscheinlichkeiten multipliziert.
+
+22
+00:04:58.168 --> 00:05:08.925
+Der Binomialkoeffizient n über k zählt, wie viele solcher Reihenfolgen es gibt, also auf wie viele Arten sich die k Erfolge auf die n Wiederholungen verteilen können.
+
+23
+00:05:11.330 --> 00:05:24.037
+Schauen wir uns den Binomialkoeffizienten kurz genauer an. Man liest ihn als n über k und berechnet ihn als n Fakultät geteilt durch k Fakultät mal n minus k Fakultät.
+
+24
+00:05:24.587 --> 00:05:40.499
+Die Fakultät n Fakultät ist das Produkt aller natürlichen Zahlen von eins bis n. Zum Beispiel ist vier Fakultät gleich eins mal zwei mal drei mal vier, also vierundzwanzig. Null Fakultät ist als eins festgelegt.
+
+25
+00:05:41.099 --> 00:05:49.463
+Den Binomialkoeffizienten müssen Sie mit Ihrem Taschenrechner berechnen können, die Taste dazu ist häufig mit n C r beschriftet.
+
+26
+00:05:51.560 --> 00:06:02.851
+Nun berechnen wir für unser Beispiel einige Wahrscheinlichkeiten und tragen sie in eine Tabelle ein. Dazu setzen wir die Werte für n und pi aus dem IT-Support-Beispiel ein.
+
+27
+00:06:03.451 --> 00:06:16.427
+Beginnen wir mit P von X gleich null, der Wahrscheinlichkeit, dass sich an dem Tag niemand meldet. Wenn im Binomialkoeffizient wie hier die Null unten steht, ergibt er immer eins.
+
+28
+00:06:16.927 --> 00:06:30.544
+Auch der zweite Faktor in der Wahrscheinlichkeit ist eins, da Potenzen mit Null im Exponent immer eins ergeben. Es bleibt null Komma neun fünf hoch siebzig, das sind ungefähr null Komma null zwei sieben sechs.
+
+29
+00:06:31.144 --> 00:06:41.027
+Mit einer Wahrscheinlichkeit von knapp drei Prozent geht an einem zufälligen Tag keine einzige Anfrage ein. Wir tragen den Wert in die Tabelle ein.
+
+30
+00:06:42.027 --> 00:06:54.776
+Als nächstes die Wahrscheinlichkeit für genau eine Kontaktaufnahme. Hier steht im Binomialkoeffizient die Eins unten. Das Ergebnis ist dann stets die obere Zahl, also hier siebzig.
+
+31
+00:06:55.276 --> 00:07:03.032
+Das Gesamtergebnis für genau eine Kontaktaufnahme liegt bei gut zehn Prozent. Auch diesen Wert tragen wir ein.
+
+32
+00:07:04.032 --> 00:07:18.697
+Nun die Wahrscheinlichkeit für genau zwei Kontaktaufnahmen. Hier ergibt sich für den Binomialkoeffizient mit zweitausendvierhundertfünfzehn erstmals eine größere Zahl, und als Gesamtergebnis gut achtzehn Prozent.
+
+33
+00:07:21.200 --> 00:07:35.347
+Nach demselben Muster lassen sich auch die übrigen Wahrscheinlichkeiten berechnen, recht unkompliziert zum Beispiel mit Excel. So entsteht die vollständige Tabelle der Zähldichte, wie bei der Augensumme zweier Würfel.
+
+34
+00:07:35.897 --> 00:07:47.780
+Ab acht werden die Wahrscheinlichkeiten sehr klein. Dass sich alle siebzig Mitarbeitenden unabhängig voneinander am selben Tag melden, hat eine Wahrscheinlichkeit von praktisch null.
+
+35
+00:07:48.380 --> 00:08:04.874
+Im Stabdiagramm sehen wir die Zähldichte auf einen Blick. Es zeigt die Realisationen null bis zwölf, denn ab dreizehn ist jede Wahrscheinlichkeit kleiner als null Komma null null null eins und im Diagramm nicht mehr sichtbar.
+
+36
+00:08:05.424 --> 00:08:18.330
+Die drei vorhin vorgerechneten Wahrscheinlichkeiten finden wir auf der x-Achse bei null, eins und zwei wieder. Die größte Einzelwahrscheinlichkeit erhalten wir hier für drei Anfragen mit gut zweiundzwanzig Prozent.
+
+37
+00:08:20.730 --> 00:08:34.434
+Wie viele Anfragen sind langfristig im Durchschnitt zu erwarten? Aus dem letzten Video kennen wir die allgemeine Formel für den Erwartungswert: die Summe über alle Realisationen k, jeweils mal ihrer Wahrscheinlichkeit.
+
+38
+00:08:34.984 --> 00:08:46.313
+Diese Formel würde auch hier zum richtigen Ergebnis führen, wäre aber aufwändig. Für die Binomialverteilung kann man den Erwartungswert einfacher berechnen, nämlich durch n mal pi.
+
+39
+00:08:46.863 --> 00:08:54.015
+In unserem Beispiel ist der Erwartungswert siebzig mal null Komma null fünf, das ist drei Komma fünf.
+
+40
+00:08:55.215 --> 00:09:06.370
+Das heißt: Über sehr viele Tage hinweg gehen im Durchschnitt drei Komma fünf IT-Anfragen pro Tag ein. Im Stabdiagramm liegt der Erwartungswert zwischen den Stäben drei und vier.
+
+41
+00:09:08.470 --> 00:09:26.910
+Analog gehen wir bei der Varianz vor. Aus dem letzten Video kennen wir die allgemeine Formel: die wahrscheinlichkeitsgewichtete Summe der quadrierten Abstände vom Erwartungswert. Bei der Binomialverteilung verkürzt sie sich zu n mal pi mal, in Klammern, eins minus pi.
+
+42
+00:09:27.460 --> 00:09:34.841
+Im Beispiel: siebzig mal null Komma null fünf mal null Komma neun fünf, das ergibt drei Komma drei zwei fünf.
+
+43
+00:09:35.841 --> 00:09:44.823
+Die Standardabweichung ist die Wurzel aus der Varianz: Wurzel aus drei Komma drei zwei fünf, also ungefähr eins Komma acht zwei drei.
+
+44
+00:09:46.023 --> 00:10:02.356
+Die Anzahl der IT-Anfragen schwankt also von Tag zu Tag typischerweise um ungefähr eins Komma acht Anfragen um den Erwartungswert drei Komma fünf. Im Stabdiagramm markieren wir den Bereich von Erwartungswert minus bis Erwartungswert plus Standardabweichung.
+
+45
+00:10:04.460 --> 00:10:22.806
+Zum Abschluss berechnen wir die Wahrscheinlichkeiten mit R. Für die Zähldichte, also die Wahrscheinlichkeit für genau x Erfolge, gibt es die Funktion dbinom. Ihre Argumente sind x für die Anzahl der Erfolge, size für die Anzahl der Wiederholungen n und prob für die Erfolgswahrscheinlichkeit pi.
+
+46
+00:10:23.356 --> 00:10:31.231
+Der erste Befehl hier liefert die Zähldichte für x gleich null, also die Wahrscheinlichkeit, dass null Kontaktaufnahmen erfolgen.
+
+47
+00:10:31.831 --> 00:10:40.498
+Der zweite Befehl liefert die Zähldichte für x gleich zwei, also die Wahrscheinlichkeit, dass genau zwei Kontaktaufnahmen erfolgen.
+
+48
+00:10:41.498 --> 00:10:56.788
+Für die Verteilungsfunktion, also die Wahrscheinlichkeit für höchstens k Erfolge, gibt es bei der Binomialverteilung keine kurze geschlossene Formel. Stattdessen müssen die Einzelwahrscheinlichkeiten von null bis k addiert werden.
+
+49
+00:10:57.338 --> 00:11:06.855
+Als Beispiel betrachten wir die Wahrscheinlichkeit für höchstens zwei Anfragen. Als Summe der drei Einzelwahrscheinlichkeiten ergeben sich gut einunddreißig Prozent.
+
+50
+00:11:07.855 --> 00:11:38.737
+Wenn k einen größeren Wert annimmt, sind mitunter viele Einzelwahrscheinlichkeiten zu berechnen, die Berechnung kann also aufwändig werden. Daher ist hier eine Berechnung mit R besonders hilfreich. Die Verteilungsfunktion sprechen wir in R stets mit p als erstem Buchstaben an, also hier pbinom. Das erste Argument heißt q und steht für die Obergrenze k. Mit q gleich zwei, size gleich siebzig und prob gleich null Komma null fünf liefert pbinom das soeben berechnete Ergebnis.
+
+51
+00:11:39.437 --> 00:11:48.786
+Das heißt: Mit einer Wahrscheinlichkeit von rund einunddreißig Prozent gehen an einem zufällig ausgewählten Tag höchstens zwei IT-Anfragen ein.
+
+52
+00:11:51.590 --> 00:12:10.193
+Fassen wir zusammen: Die Binomialverteilung beschreibt die Anzahl der Erfolge bei n unabhängigen Wiederholungen mit jeweils genau zwei möglichen Ergebnissen und konstanter Erfolgswahrscheinlichkeit pi. Die Parameter n und pi bestimmen wir aus der Anwendungssituation.
+
+53
+00:12:10.793 --> 00:12:18.924
+Mit der Zähldichte und dem Binomialkoeffizienten berechnen wir die Einzelwahrscheinlichkeiten P von X gleich k.
+
+54
+00:12:19.524 --> 00:12:26.273
+Für Erwartungswert und Varianz gibt es bei der Binomialverteilung ebenfalls kurze geschlossene Formeln.
+
+55
+00:12:26.873 --> 00:12:38.568
+Für Zähldichte und Verteilungsfunktion haben wir die R-Befehle kennengelernt. Hilfreich ist die computergestützte Berechnung vor allem zur Auswertung der Verteilungsfunktion.

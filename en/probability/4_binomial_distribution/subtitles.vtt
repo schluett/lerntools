@@ -1,0 +1,221 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:12.668
+How likely is it that the IT support of a company receives at most two requests on one day? Questions like this are answered by the binomial distribution, which is the topic of this video.
+
+2
+00:00:13.268 --> 00:00:30.766
+The binomial distribution is a special discrete distribution. As soon as we can establish that the binomial distribution fits the application, the probability mass function and the key figures expected value and variance can be calculated directly with closed-form formulas.
+
+3
+00:00:32.366 --> 00:00:34.626
+The learning goals of this video are:
+
+4
+00:00:35.076 --> 00:00:42.580
+First: to check the assumptions of the binomial distribution and to determine its parameters n and pi from an application.
+
+5
+00:00:42.980 --> 00:00:53.054
+Second: to calculate probabilities with the probability mass function of the binomial distribution and to determine the expected value, variance and standard deviation.
+
+6
+00:00:53.454 --> 00:01:02.213
+And third: to calculate and interpret individual and cumulative probabilities with the R functions dbinom and pbinom.
+
+7
+00:01:04.220 --> 00:01:08.639
+The IT support of a company looks after seventy employees.
+
+8
+00:01:09.139 --> 00:01:18.235
+Let us consider any one person. On a randomly selected day, with a probability of five per cent, a problem occurs and the person contacts IT support.
+
+9
+00:01:19.035 --> 00:01:27.669
+We are interested in how many of the seventy employees contact IT support on a random day. On the day shown, there could be three, for example.
+
+10
+00:01:28.069 --> 00:01:33.931
+However, any other number of contacts between zero and seventy would also be possible.
+
+11
+00:01:34.631 --> 00:01:43.072
+If we want to model the number of contacts with a random variable, it is therefore a discrete random variable, since we can list the possible realisations.
+
+12
+00:01:45.020 --> 00:02:05.410
+The set-up described here already matches quite well what a binomially distributed random variable can model. However, certain assumptions have to be checked, and we now go through them. First: a process is repeated n times. In the example, we observe for each of the seventy people whether they make contact; so n equals seventy.
+
+13
+00:02:05.960 --> 00:02:27.128
+Second: each process has exactly two possible outcomes, success or failure. Here, success means that a person contacts IT support. Success only refers to the outcome we count, even though an IT problem is hardly a success for the people affected. With these two possible outcomes, each process is a so-called Bernoulli trial.
+
+14
+00:02:27.678 --> 00:02:43.342
+Third: the probability of success is the same in every repetition. It is denoted by the Greek letter pi; here, pi equals zero point zero five for every person. At this point, pi stands for a probability, not for the circle constant.
+
+15
+00:02:43.892 --> 00:03:02.717
+Fourth: the repetitions are independent of each other. This means that a success in the first process neither increases nor decreases the probability of success in the next process. In the example: if we know that one person has contacted IT support, our assessment of the probabilities for the other people stays the same.
+
+16
+00:03:03.317 --> 00:03:19.507
+That these assumptions are met is a modelling assumption. If, for example, IT problems are typically caused by problems with the central server that affect many employees at the same time, independence would be violated. The binomial distribution would then not be appropriate.
+
+17
+00:03:21.610 --> 00:03:31.794
+Two quantities fully determine the binomial distribution: the number of repetitions n and the probability of success pi. They are called the parameters of the binomial distribution.
+
+18
+00:03:32.344 --> 00:03:41.614
+In an application, we have to read off both parameters from the situation. In the example, these are n equals seventy and pi equals five per cent.
+
+19
+00:03:42.164 --> 00:03:50.578
+As a short notation, we can state the distribution of X with the tilde, the abbreviation B-i-n and the two parameter values.
+
+20
+00:03:51.278 --> 00:04:01.415
+As soon as we know that X follows the binomial distribution, we can directly determine the probabilities of occurrence for individual values, that is, the probability mass function.
+
+21
+00:04:02.115 --> 00:04:20.196
+The formula shown here is based on the following idea: pi to the power of k is the probability of k successes; at the same time, n minus k failures are to occur, which is expressed by one minus pi, to the power of n minus k. Because of independence, the probabilities are multiplied.
+
+22
+00:04:20.746 --> 00:04:31.982
+The binomial coefficient n choose k counts how many such sequences there are, that is, in how many ways the k successes can be distributed among the n repetitions.
+
+23
+00:04:34.380 --> 00:04:47.494
+Let us take a closer look at the binomial coefficient. It is read as n choose k and is calculated as n factorial divided by k factorial times n minus k factorial.
+
+24
+00:04:48.044 --> 00:05:02.199
+The factorial n factorial is the product of all natural numbers from one to n. For example, four factorial equals one times two times three times four, that is, twenty-four. Zero factorial is defined as one.
+
+25
+00:05:02.799 --> 00:05:10.278
+You should be able to calculate the binomial coefficient with your calculator; the key for it is often labelled n C r.
+
+26
+00:05:12.380 --> 00:05:21.722
+Now we calculate some probabilities for our example and enter them in a table. To do so, we insert the values of n and pi from the IT support example.
+
+27
+00:05:22.322 --> 00:05:35.065
+Let us start with P of X equals zero, the probability that nobody makes contact on that day. If, as here, the zero is at the bottom of the binomial coefficient, it always equals one.
+
+28
+00:05:35.565 --> 00:05:51.379
+The second factor of the probability is also one, since a power with zero as the exponent always equals one. What remains is zero point nine five to the power of seventy, which is approximately zero point zero two seven six.
+
+29
+00:05:51.979 --> 00:06:00.078
+With a probability of just under three per cent, not a single request comes in on a random day. We enter the value in the table.
+
+30
+00:06:01.078 --> 00:06:12.513
+Next, the probability of exactly one contact. Here, the one is at the bottom of the binomial coefficient. The result is then always the number at the top, so here seventy.
+
+31
+00:06:13.013 --> 00:06:20.084
+The overall result for exactly one contact is just over ten per cent. We enter this value as well.
+
+32
+00:06:21.084 --> 00:06:34.084
+Now the probability of exactly two contacts. Here, the binomial coefficient gives a larger number for the first time, two thousand four hundred and fifteen, and the overall result is just over eighteen per cent.
+
+33
+00:06:36.580 --> 00:06:48.513
+In the same way, the remaining probabilities can be calculated, quite conveniently with Excel, for example. This gives the complete table of the probability mass function, as with the sum of two dice.
+
+34
+00:06:49.063 --> 00:07:01.415
+From eight onwards, the probabilities become very small. That all seventy employees contact IT support independently of each other on the same day has a probability of practically zero.
+
+35
+00:07:02.015 --> 00:07:17.020
+In the bar chart, we see the probability mass function at a glance. It shows the realisations zero to twelve, because from thirteen onwards each probability is smaller than zero point zero zero zero one and no longer visible in the chart.
+
+36
+00:07:17.570 --> 00:07:28.902
+We find the three probabilities calculated earlier on the x-axis at zero, one and two. The largest individual probability here is for three requests, at just over twenty-two per cent.
+
+37
+00:07:31.300 --> 00:07:44.350
+How many requests can we expect on average in the long run? From the last video, we know the general formula for the expected value: the sum over all realisations k, each multiplied by its probability.
+
+38
+00:07:44.900 --> 00:07:58.216
+This formula would also lead to the correct result here, but it would be laborious. For the binomial distribution, the expected value can be calculated more easily, namely as n times pi.
+
+39
+00:07:58.766 --> 00:08:05.227
+In our example, the expected value is seventy times zero point zero five, which is three point five.
+
+40
+00:08:06.427 --> 00:08:18.336
+This means that over a very large number of days, three point five IT requests come in per day on average. In the bar chart, the expected value lies between the bars at three and four.
+
+41
+00:08:20.440 --> 00:08:38.908
+We proceed in the same way for the variance. From the last video, we know the general formula: the probability-weighted sum of the squared deviations from the expected value. For the binomial distribution, it reduces to n times pi times, in brackets, one minus pi.
+
+42
+00:08:39.458 --> 00:08:46.872
+In the example: seventy times zero point zero five times zero point nine five, which gives three point three two five.
+
+43
+00:08:47.872 --> 00:08:55.547
+The standard deviation is the square root of the variance: the square root of three point three two five, so approximately one point eight two three.
+
+44
+00:08:56.747 --> 00:09:13.493
+So from day to day, the number of IT requests typically fluctuates by about one point eight requests around the expected value of three point five. In the bar chart, we mark the range from the expected value minus to the expected value plus one standard deviation.
+
+45
+00:09:15.590 --> 00:09:33.591
+Finally, we calculate the probabilities with R. For the probability mass function, that is, the probability of exactly x successes, there is the function dbinom. Its arguments are x for the number of successes, size for the number of repetitions n and prob for the probability of success pi.
+
+46
+00:09:34.141 --> 00:09:41.987
+The first command here gives the probability mass function for x equals zero, that is, the probability that no contacts occur.
+
+47
+00:09:42.587 --> 00:09:50.102
+The second command gives the probability mass function for x equals two, that is, the probability that exactly two contacts occur.
+
+48
+00:09:51.102 --> 00:10:06.438
+For the cumulative distribution function, that is, the probability of at most k successes, the binomial distribution has no short closed-form formula. Instead, the individual probabilities from zero to k have to be added up.
+
+49
+00:10:06.988 --> 00:10:16.464
+As an example, we consider the probability of at most two requests. As the sum of the three individual probabilities, we get just over thirty-one per cent.
+
+50
+00:10:17.464 --> 00:10:47.378
+If k takes a larger value, many individual probabilities may have to be calculated, so the calculation can become laborious. This is where a calculation with R is particularly helpful. In R, we always address the cumulative distribution function with p as the first letter, so here pbinom. The first argument is called q and stands for the upper limit k. With q equals two, size equals seventy and prob equals zero point zero five, pbinom returns the result we have just calculated.
+
+51
+00:10:48.078 --> 00:10:55.612
+This means: with a probability of around thirty-one per cent, at most two IT requests come in on a randomly selected day.
+
+52
+00:10:58.410 --> 00:11:14.116
+To sum up: the binomial distribution describes the number of successes in n independent repetitions, each with exactly two possible outcomes and a constant probability of success pi. We determine the parameters n and pi from the application.
+
+53
+00:11:14.716 --> 00:11:23.231
+With the probability mass function and the binomial coefficient, we calculate the individual probabilities P of X equals k.
+
+54
+00:11:23.831 --> 00:11:30.615
+For the expected value and the variance, the binomial distribution also has short closed-form formulas.
+
+55
+00:11:31.215 --> 00:11:43.289
+For the probability mass function and the cumulative distribution function, we have got to know the R commands. A computer-based calculation is helpful above all for evaluating the cumulative distribution function.

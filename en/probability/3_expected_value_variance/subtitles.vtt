@@ -1,0 +1,181 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:07.976
+In the last video, we got to know random variables and their probability mass function. In this video, we build on that.
+
+2
+00:00:09.676 --> 00:00:17.042
+We continue with the example of rolling two dice. Once again, the random variable X gives the sum of the two numbers.
+
+3
+00:00:17.592 --> 00:00:28.896
+From the last video, we already know the possible realisations x from two to twelve and the probability mass function, that is, the probability of occurrence for each realisation.
+
+4
+00:00:29.446 --> 00:00:40.132
+Now we want to describe the distribution with key figures. To do so, we first look at the expected value and then at the spread of the random variable, using the variance and the standard deviation.
+
+5
+00:00:41.732 --> 00:00:43.973
+The learning goals of this video are:
+
+6
+00:00:44.423 --> 00:00:51.762
+First: to calculate the expected value of a discrete random variable and to understand it as a probability-weighted mean.
+
+7
+00:00:52.162 --> 00:00:58.726
+Second: to calculate the variance of a discrete random variable and to understand what it says about the spread.
+
+8
+00:00:59.126 --> 00:01:06.663
+And third: to calculate the standard deviation and to interpret it as a measure of spread in the unit of the random variable.
+
+9
+00:01:08.670 --> 00:01:15.275
+The expected value of a discrete random variable is the probability-weighted mean of its possible realisations.
+
+10
+00:01:15.875 --> 00:01:25.872
+For a discrete random variable: each realisation k is multiplied by its probability of occurrence. Then all of these products are added up. The result is the expected value.
+
+11
+00:01:27.072 --> 00:01:42.550
+We apply this definition to the sum of our two dice: a sum of two times its probability of one over thirty-six, plus a sum of three times its probability of two over thirty-six, and so on, up to the largest sum, twelve, times one over thirty-six.
+
+12
+00:01:43.150 --> 00:01:46.205
+Adding up all of the products gives exactly seven.
+
+13
+00:01:47.405 --> 00:01:56.103
+In the bar chart of the probability mass function, we draw the expected value E of X equals seven as a vertical line.
+
+14
+00:01:58.300 --> 00:02:07.797
+The expected value can be interpreted as a long-run average. If we roll two dice very often, the average of the observed sums is close to seven in the long run.
+
+15
+00:02:08.397 --> 00:02:22.036
+The chart shows a series of five hundred rolls: after each roll, we calculate the average of all sums so far. At the beginning, it still fluctuates noticeably; as the number of rolls increases, it approaches seven.
+
+16
+00:02:24.140 --> 00:02:37.690
+For the sum of two dice, the expected value is at the same time the realisation with the highest probability of occurrence: E of X is seven, and the sum seven also has the highest probability.
+
+17
+00:02:38.390 --> 00:02:44.914
+In general, however, this does not hold. As an example, we now look at just one fair die.
+
+18
+00:02:45.464 --> 00:03:00.526
+Let the random variable Y be the number observed when rolling the die once. Its possible realisations are one, two, three, four, five and six. Each of these realisations has the probability one over six.
+
+19
+00:03:01.126 --> 00:03:14.764
+For the expected value, we get: one times one over six, plus two times one over six, and so on, up to six times one over six. This gives twenty-one over six, that is, three point five.
+
+20
+00:03:15.764 --> 00:03:31.343
+So the expected value cannot even occur as a realisation itself. By the way, this does not mean that the expected value should be rounded to a whole number here: like a mean, the expected value is meaningful including its decimal places.
+
+21
+00:03:33.540 --> 00:03:44.563
+Let us go back to the probability mass function of the sum of two dice. The expected value E of X equals seven describes the location of the distribution.
+
+22
+00:03:45.163 --> 00:04:04.912
+Now we come to a second key figure. It does not describe the location, but how strongly the possible realisations spread around the expected value. So we are now looking for a measure of spread. As a starting point, we look at these deviations, that is, the differences between the possible realisations and the expected value.
+
+23
+00:04:05.512 --> 00:04:18.052
+For example: a sum of two minus the expected value seven is minus five, a sum of six minus the expected value seven is minus one, eight minus seven is one, and twelve minus seven is five.
+
+24
+00:04:18.752 --> 00:04:28.406
+We see that realisations below the expected value lead to negative differences, and realisations above the expected value lead to positive differences.
+
+25
+00:04:28.956 --> 00:04:34.371
+If we simply combined these differences, positive and negative deviations would cancel each other out.
+
+26
+00:04:35.071 --> 00:04:46.327
+So that distances in both directions contribute to the measure of spread, the differences are squared. Minus five thus becomes twenty-five, and minus one becomes one.
+
+27
+00:04:47.127 --> 00:04:55.755
+The squared distances are never negative. In addition, larger distances contribute more strongly to the measure of spread than smaller ones.
+
+28
+00:04:57.860 --> 00:05:06.687
+The variance of a discrete random variable is defined as the probability-weighted mean of the squared distances of the individual realisations from the expected value.
+
+29
+00:05:07.587 --> 00:05:21.023
+Let us calculate the variance for the sum. The expected value is seven. For each sum from two to twelve, the difference from the expected value is determined, squared and added up, weighted by its probability.
+
+30
+00:05:21.623 --> 00:05:25.250
+The result is approximately five point eight three.
+
+31
+00:05:26.450 --> 00:05:35.387
+The variance has one decisive drawback: because the distances are squared, its order of magnitude no longer matches the order of magnitude of X.
+
+32
+00:05:35.987 --> 00:05:49.382
+This also shows in the unit. Let us imagine that the sum is paid out in euros. Then the random variable X would have the unit euro. The difference X minus E of X would also have the unit euro.
+
+33
+00:05:49.932 --> 00:05:58.799
+Because of the squaring, X minus E of X, squared, would instead have the unit euro squared. So the variance also has the unit euro squared.
+
+34
+00:06:01.000 --> 00:06:10.161
+To return to the order of magnitude and the unit of X, we take the square root of the variance. The result is called the standard deviation.
+
+35
+00:06:11.061 --> 00:06:33.377
+The standard deviation is the most important measure of spread for random variables. Because of the sequence of squaring and taking the square root, it can hardly be summed up in one precise interpretation. It does, however, give a useful impression of how strongly the realisations of the random variable fluctuate when the random experiment is carried out several times.
+
+36
+00:06:33.977 --> 00:06:42.878
+For our dice example, we get: SD of X equals the square root of thirty-five over six, so approximately two point four one five.
+
+37
+00:06:44.078 --> 00:07:01.093
+Because we take the square root, the standard deviation again has the same unit as the random variable. If X describes, for example, a payout in euros, the variance is measured in euros squared, but the standard deviation is measured in euros again.
+
+38
+00:07:01.793 --> 00:07:17.687
+For a payout in euros, E of X equals seven describes the long-run average payout, and SD of X, approximately two point four one five, describes the spread of the individual payouts around this expected value.
+
+39
+00:07:19.890 --> 00:07:28.905
+Finally, we show the expected value and the standard deviation in the probability mass function of the sum. The expected value is seven.
+
+40
+00:07:29.505 --> 00:07:44.838
+Starting from the expected value, we mark off the standard deviation to the left. We get E of X minus SD of X, that is, approximately seven minus two point four one five, which equals four point five eight five.
+
+41
+00:07:45.638 --> 00:07:55.903
+To the right, we get E of X plus SD of X, that is, approximately seven plus two point four one five, which equals nine point four one five.
+
+42
+00:07:56.803 --> 00:08:16.609
+The range of the expected value plus or minus the standard deviation often contains the typical realisations. In the case of a normal distribution, which we will discuss later, this range is reached with a probability of just over 68 percent. For other distributions, however, such a probability statement does not hold in general.
+
+43
+00:08:19.110 --> 00:08:39.683
+To sum up: the expected value of a discrete random variable is the probability-weighted mean of its possible realisations. It describes the long-run average over very many repetitions of the random experiment. The expected value need neither be the realisation with the highest probability of occurrence nor be a possible realisation itself.
+
+44
+00:08:40.383 --> 00:08:47.823
+The variance measures the spread of the possible realisations around the expected value using squared distances.
+
+45
+00:08:48.523 --> 00:09:05.112
+Since the squared distances also lead to a squared unit, the standard deviation, that is, the square root of the variance, is often used for interpretation. It again has the same unit as the random variable and describes the order of magnitude of the spread around the expected value.
