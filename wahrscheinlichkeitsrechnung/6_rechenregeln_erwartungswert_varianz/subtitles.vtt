@@ -1,0 +1,225 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:15.830
+In Video drei haben wir Erwartungswert, Varianz und Standardabweichung einer diskreten Zufallsvariablen berechnet. In diesem Video lernen wir Rechenregeln kennen, mit denen sich diese Kennzahlen in manchen Fällen schneller bestimmen lassen.
+
+2
+00:00:17.530 --> 00:00:26.275
+Wir betrachten wieder das Beispiel vom Werfen von zwei Würfeln. Die Zufallsvariable X gibt die Augensumme der beiden Würfel an.
+
+3
+00:00:26.825 --> 00:00:37.297
+Aus Video drei kennen wir ihren Erwartungswert sieben, ihre Varianz fünfunddreißig Sechstel und ihre Standardabweichung, ungefähr zwei Komma vier eins fünf.
+
+4
+00:00:37.997 --> 00:00:50.224
+Zunächst schauen wir uns ein Casinospiel an, in dem die Augensumme die Grundlage für den Spielgewinn ist, und wir wollen für diesen Gewinn den Erwartungswert und die Standardabweichung bestimmen.
+
+5
+00:00:51.824 --> 00:00:55.115
+Die Lernziele des Videos sind:
+
+6
+00:00:55.565 --> 00:01:02.949
+Erstens: Erwartungswert und Varianz einer Lineartransformation einer Zufallsvariablen mit Rechenregeln bestimmen.
+
+7
+00:01:03.349 --> 00:01:08.489
+Zweitens: den Erwartungswert einer Summe von zwei Zufallsvariablen berechnen.
+
+8
+00:01:08.889 --> 00:01:14.127
+Und drittens: die Varianz einer Summe von zwei unabhängigen Zufallsvariablen berechnen.
+
+9
+00:01:16.130 --> 00:01:28.314
+Wir beginnen mit der Lineartransformation einer Zufallsvariablen. Dazu seien a und b zwei feststehende Zahlen und X eine Zufallsvariable.
+
+10
+00:01:28.864 --> 00:01:45.146
+Wir multiplizieren X mit a und addieren anschließend b. Das Ergebnis, a mal X plus b, hängt über X vom Zufall ab. Daher ist a mal X plus b selbst auch wieder eine Zufallsvariable.
+
+11
+00:01:45.746 --> 00:01:52.133
+Der Faktor a streckt die Werte von X, der Summand b verschiebt sie.
+
+12
+00:01:54.030 --> 00:02:08.170
+Als Beispiel betrachten wir ein Spiel im Casino. Der Spieleinsatz beträgt fest fünfzehn Euro. Im Spiel werden zwei Würfel geworfen, und das Casino zahlt die doppelte Augensumme in Euro aus.
+
+13
+00:02:08.720 --> 00:02:17.861
+Die Augensumme ist wieder unsere Zufallsvariable X. Die Auszahlung beträgt also zwei mal X Euro.
+
+14
+00:02:18.411 --> 00:02:39.567
+Uns interessiert der Gewinn, also die Auszahlung abzüglich des Einsatzes. Auch der Gewinn ist eine Zufallsvariable, wir nennen sie G. G ist definiert als zwei mal die Augensumme X minus den Einsatz von fünfzehn. Die Werte von G haben die Einheit Euro.
+
+15
+00:02:40.167 --> 00:02:49.276
+Der Gewinn ist also eine Lineartransformation von X, mit dem Faktor a gleich zwei und dem Summanden b gleich minus fünfzehn.
+
+16
+00:02:51.180 --> 00:03:01.896
+Links sehen wir die Tabelle der Zähldichte von X aus Video zwei. Wir erweitern sie um eine Spalte für die Realisationen g des Gewinns.
+
+17
+00:03:02.446 --> 00:03:31.256
+In der ersten Zeile zeigen beide Würfel eine Eins, und die Augensumme ist zwei. Der Gewinn ist zwei Euro mal die Augensumme zwei, abzüglich des Einsatzes von fünfzehn Euro. Das macht minus elf Euro. Das Spiel führt also zu einem kräftigen Verlust. In der zweiten Zeile ist die Augensumme drei, und wir berechnen den Gewinn als zwei mal drei minus fünfzehn, also auch hier ein Verlust mit minus neun Euro.
+
+18
+00:03:31.856 --> 00:03:38.746
+So geht es weiter bis zur Augensumme zwölf. Dort ergibt sich ein positiver Gewinn von neun Euro.
+
+19
+00:03:39.346 --> 00:03:50.181
+Noch einmal zusammengefasst: Negative Gewinne sind Verluste. Bei einer Augensumme bis sieben verliert man Geld, ab einer Augensumme von acht gewinnt man aus dem Spiel.
+
+20
+00:03:50.781 --> 00:04:26.134
+Auf Basis dieser Tabelle können wir Wahrscheinlichkeiten für den Spielgewinn G berechnen. Jede Realisation des Gewinns gehört zu genau einer Realisation der Augensumme X. Der maximale Spielverlust, ein G von minus elf Euro, tritt beispielsweise genau dann ein, wenn die Augensumme zwei ist. Deshalb hat dieses Spielergebnis eine Eintrittswahrscheinlichkeit von ein Sechsunddreißigstel. Genauso gilt für jeden Gewinn g: Er hat dieselbe Wahrscheinlichkeit wie die zugehörige Augensumme x.
+
+21
+00:04:28.030 --> 00:04:44.935
+Nun stellen wir beide Zähldichten als Stabdiagramm übereinander dar: oben die Zähldichte der Augensumme X, unten die Zähldichte des Gewinns G. Die x-Achse des unteren Diagramms zeigt die möglichen Spielergebnisse in Euro.
+
+22
+00:04:45.485 --> 00:04:54.337
+Zur Augensumme zwei gehört der Gewinn minus elf. Der Stab hat in beiden Diagrammen dieselbe Höhe, ein Sechsunddreißigstel.
+
+23
+00:04:54.887 --> 00:05:02.959
+Zur Augensumme drei gehört der Gewinn minus neun, wieder mit derselben Wahrscheinlichkeit, zwei Sechsunddreißigstel.
+
+24
+00:05:03.559 --> 00:05:20.509
+Insgesamt sind die Stabhöhen in beiden Diagrammen gleich. Nur die Realisationen auf der x-Achse unterscheiden sich. Die Werte der Augensumme x rechnen wir mit zwei mal x minus fünfzehn auf die Skala des unteren Diagramms um.
+
+25
+00:05:22.410 --> 00:05:39.644
+Wie hoch ist der Gewinn bei vielen Spielen langfristig im Durchschnitt? Den Erwartungswert von G könnten wir über die Definition berechnen: Jede Realisation von G wird mit ihrer Wahrscheinlichkeit multipliziert, und alle Produkte werden aufaddiert.
+
+26
+00:05:40.244 --> 00:05:58.383
+Wenn der Erwartungswert von X schon berechnet ist, geht es schneller. Für eine Lineartransformation gilt allgemein: Den Erwartungswert von a mal X plus b erhalten wir, indem wir den Erwartungswert von X mit a multiplizieren und anschließend b addieren.
+
+27
+00:05:59.383 --> 00:06:12.798
+In unserem Beispiel ist a gleich zwei und b gleich minus fünfzehn. Mit dem Erwartungswert sieben der Augensumme erhalten wir zwei mal sieben minus fünfzehn, also minus eins.
+
+28
+00:06:13.398 --> 00:06:19.336
+Im Durchschnitt verliert man also pro Spiel einen Euro. Auf lange Sicht gewinnt das Casino.
+
+29
+00:06:21.240 --> 00:06:30.331
+Auch für die Varianz gibt es eine Rechenregel: Die Varianz von a mal X plus b ist das Quadrat von a mal die Varianz von X.
+
+30
+00:06:31.031 --> 00:06:43.795
+Der Summand b kommt auf der rechten Seite nicht vor. Er verschiebt alle Realisationen und den Erwartungswert um denselben Betrag. Die Abstände zum Erwartungswert bleiben dabei gleich.
+
+31
+00:06:44.345 --> 00:06:54.088
+Der Faktor a vervielfacht dagegen alle Abstände zum Erwartungswert. Da die Varianz auf quadrierten Abständen beruht, geht a quadriert ein.
+
+32
+00:06:54.688 --> 00:07:12.839
+Für unser Spiel ist die Varianz von X fünfunddreißig Sechstel. Die Varianz des Gewinns ist damit zwei zum Quadrat, also vier, mal fünfunddreißig Sechstel. Das ergibt siebzig Drittel, ungefähr dreiundzwanzig Komma drei drei drei Euro zum Quadrat.
+
+33
+00:07:13.439 --> 00:07:32.934
+Die Standardabweichung erhalten wir wie gewohnt als Wurzel der Varianz: Die Wurzel aus siebzig Dritteln ist vier Komma acht drei Euro. Wir sehen hier noch einmal, dass das Umrechnen der Varianz in die Standardabweichung nötig ist, um die richtige Größenordnung und Einheit zu erreichen.
+
+34
+00:07:34.840 --> 00:07:53.546
+Wir ergänzen diese Kennzahlen in den beiden Stabdiagrammen. Oben liegt der Erwartungswert von X bei sieben, unten der Erwartungswert von G bei minus eins. Langfristig verlieren wir durch die Teilnahme am Casinospiel also im Mittel einen Euro.
+
+35
+00:07:54.096 --> 00:08:11.490
+Oben tragen wir vom Erwartungswert aus die Standardabweichung zwei Komma vier eins fünf nach beiden Seiten ab, um einen typischen Bereich der Realisationen zu markieren. Dieser Bereich reicht von ungefähr vier Komma fünf acht fünf bis neun Komma vier eins fünf.
+
+36
+00:08:12.040 --> 00:08:21.774
+Unten ist die Standardabweichung vier Komma acht drei. Der Bereich reicht hier von ungefähr minus fünf Komma acht drei bis drei Komma acht drei.
+
+37
+00:08:22.324 --> 00:08:38.965
+Erwartungswert und Streubereich liegen in beiden Diagrammen an derselben Stelle, allerdings angepasst an die jeweilige Skala. In unserem Beispiel wurden sie genauso umgerechnet wie die Realisationen: mal zwei, minus fünfzehn.
+
+38
+00:08:41.270 --> 00:09:00.312
+Wir kommen nun zu weiteren Rechenregeln für Erwartungswert und Varianz, bei denen es um die Summe von zwei Zufallsvariablen geht. Wir verlassen dazu das Casinospiel und gehen einen Schritt zurück, indem wir die Augensumme auf Zufallsvariablen für die beiden einzelnen Würfel zurückführen.
+
+39
+00:09:00.862 --> 00:09:10.754
+Die Zufallsvariable X eins gibt die Augenzahl des roten Würfels an, die Zufallsvariable X zwei die Augenzahl des grünen Würfels.
+
+40
+00:09:11.304 --> 00:09:19.742
+Ein einzelner Würfel hat als Zähldichte, dass jede Augenzahl von eins bis sechs mit der Wahrscheinlichkeit ein Sechstel auftritt.
+
+41
+00:09:20.292 --> 00:09:36.693
+Den Erwartungswert eines einzelnen Würfels haben wir in Video drei bereits berechnet: Jede Augenzahl wird mit ein Sechstel gewichtet, das ergibt drei Komma fünf. Das gilt für X eins und X zwei gleichermaßen.
+
+42
+00:09:37.293 --> 00:09:46.866
+Für die Varianz eines einzelnen Würfels bestimmen wir für jede Augenzahl den Abstand zu drei Komma fünf, quadrieren ihn und gewichten ihn mit ein Sechstel.
+
+43
+00:09:47.416 --> 00:09:57.055
+Die Summe ergibt fünfunddreißig Zwölftel, ungefähr zwei Komma neun eins sieben. Auch die Varianz ist natürlich für beide Würfel gleich.
+
+44
+00:09:58.960 --> 00:10:09.164
+Die Augensumme der beiden Würfel lässt sich mit den Zufallsvariablen für die beiden einzelnen Würfel ausdrücken: X ist gleich X eins plus X zwei.
+
+45
+00:10:09.714 --> 00:10:17.756
+Für den Erwartungswert einer Summe von zwei Zufallsvariablen gilt stets: Er ist die Summe der beiden Erwartungswerte.
+
+46
+00:10:18.756 --> 00:10:26.400
+Für die Augensumme erhalten wir drei Komma fünf plus drei Komma fünf, also sieben.
+
+47
+00:10:27.000 --> 00:10:33.499
+Das ist genau der Erwartungswert, den wir in Video drei über die Zähldichte der Augensumme berechnet haben.
+
+48
+00:10:35.400 --> 00:10:44.065
+Auch für die Varianz einer Summe gibt es eine Rechenregel. Hier betrachten wir die Situation, dass die beiden Zufallsvariablen unabhängig sind.
+
+49
+00:10:44.615 --> 00:11:05.415
+Vereinfacht heißt das: Wenn der Wert von X eins bekannt ist, gelten für X zwei immer noch dieselben Wahrscheinlichkeiten wie ohne diese Information. Beim Würfeln ist das der Fall: Zeigt der rote Würfel eine Sechs, hat beim grünen Würfel trotzdem jede Augenzahl die Wahrscheinlichkeit ein Sechstel.
+
+50
+00:11:06.015 --> 00:11:12.111
+Für unabhängige Zufallsvariablen ist die Varianz der Summe gleich der Summe der beiden Varianzen.
+
+51
+00:11:13.111 --> 00:11:21.745
+Für die Augensumme ergibt sich fünfunddreißig Zwölftel plus fünfunddreißig Zwölftel, also fünfunddreißig Sechstel.
+
+52
+00:11:22.345 --> 00:11:28.892
+Das ist dasselbe Ergebnis wie in Video drei, wo wir die Varianz der Augensumme über ihre Zähldichte berechnet haben.
+
+53
+00:11:31.000 --> 00:11:45.807
+Fassen wir zusammen: Bei einer Lineartransformation a mal X plus b wird der Erwartungswert von X genauso umgerechnet wie die Realisationen: mit a multipliziert, dann wird b addiert.
+
+54
+00:11:46.407 --> 00:11:57.574
+Die Varianz wird mit dem Quadrat von a multipliziert, der Summand b spielt für sie keine Rolle. Die Standardabweichung ergibt sich als Wurzel der Varianz.
+
+55
+00:11:58.174 --> 00:12:11.110
+Der Erwartungswert einer Summe von zwei Zufallsvariablen ist die Summe ihrer Erwartungswerte. Diese Regel gilt immer, egal ob die Zufallsvariablen unabhängig sind oder nicht.
+
+56
+00:12:11.710 --> 00:12:21.275
+Die Varianz einer Summe ist die Summe der Varianzen. Diese Regel gilt dagegen nur, wenn die beiden Zufallsvariablen unabhängig sind.

@@ -1,0 +1,289 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:08.254
+Alongside the binomial distribution, the Poisson distribution is a frequently used special discrete distribution.
+
+2
+00:00:08.754 --> 00:00:19.414
+This distribution also counts how often a success or a particular event occurs. Unlike with the binomial distribution, however, the number of events here has no predefined upper limit.
+
+3
+00:00:21.014 --> 00:00:23.274
+The learning goals of this video are:
+
+4
+00:00:23.724 --> 00:00:31.264
+First: to recognise when the Poisson distribution fits an application and to determine its parameter lambda from the situation.
+
+5
+00:00:31.664 --> 00:00:41.006
+Second: to calculate probabilities with the probability mass function of the Poisson distribution and to determine the expected value, variance and standard deviation.
+
+6
+00:00:41.406 --> 00:00:50.536
+And third: to calculate and interpret individual probabilities, cumulative probabilities and complementary probabilities with the R functions.
+
+7
+00:00:52.540 --> 00:00:58.376
+A company wants to model how many calls its IT hotline receives in a randomly selected hour.
+
+8
+00:00:58.976 --> 00:01:05.562
+In the hour shown, for example, four calls come in.
+
+9
+00:01:06.162 --> 00:01:11.115
+In another hour, not a single call might come in, or seven calls might come in.
+
+10
+00:01:11.815 --> 00:01:16.101
+We cannot set an upper limit for the number of calls in advance.
+
+11
+00:01:16.651 --> 00:01:24.991
+We model the number of calls in one hour as a random variable X. The possible realisations are zero, one, two, three and so on.
+
+12
+00:01:25.541 --> 00:01:37.942
+So we can still list the possible realisations in advance, even though there are now infinitely many possible values because there is no upper limit. It is therefore again a discrete random variable.
+
+13
+00:01:38.542 --> 00:01:47.320
+Possible questions in this situation are: How likely is it that not a single call comes in within one hour? Or that more than five calls come in?
+
+14
+00:01:49.620 --> 00:02:02.522
+The Poisson distribution is used when we count how often a particular event occurs in a fixed observation range. This observation range can be a period of time, but also a distance, an area or another clearly delimited range.
+
+15
+00:02:03.072 --> 00:02:14.579
+Typical examples are the number of arrivals at a checkout within one hour or the number of defects during one production day. In our example, it is the number of calls to the hotline within one hour.
+
+16
+00:02:15.179 --> 00:02:24.615
+As with the binomial distribution, we check whether the model describes the application in a sensible way. To do so, we go through four assumptions.
+
+17
+00:02:25.115 --> 00:02:33.516
+First: we count how often a particular event occurs in a fixed observation range. In the example, we count the calls within one hour.
+
+18
+00:02:34.066 --> 00:02:43.051
+Second: events in separate sections occur independently of each other. In the example, this means: one call does not change the probability of further calls.
+
+19
+00:02:43.601 --> 00:03:03.522
+Third: for every observation range of the same size, for example every hour, the expected number of events is the same. So there are no systematic differences over the course of the day, such as more calls in the morning. In the example, we assume that in the long run the company observes three calls per hour on average, and that there are no predictable trends.
+
+20
+00:03:04.072 --> 00:03:14.972
+Fourth: in a very small section, at most one event occurs with high probability. In the example, it is very unlikely that more than one call comes in within a few seconds.
+
+21
+00:03:15.572 --> 00:03:27.571
+That these assumptions are met is a modelling assumption. If, for example, a server failure causes many employees to call almost simultaneously for the same reason, the assumption of independent events is violated.
+
+22
+00:03:28.121 --> 00:03:38.720
+A clear trend also speaks against the model. If, for example, systematically many more calls come in during the morning than in the afternoon, the expected number is not the same for every hour.
+
+23
+00:03:39.420 --> 00:03:46.686
+The Poisson distribution is connected to the binomial distribution and can be understood as a limiting case.
+
+24
+00:03:47.236 --> 00:03:56.318
+For a binomial distribution, the observation range would have to be divided into n opportunities for an event, for example n employees who could call the hotline.
+
+25
+00:03:56.868 --> 00:04:01.108
+For each opportunity, the probability of occurrence pi must be the same.
+
+26
+00:04:01.658 --> 00:04:08.845
+The binomial distribution then models the occurrences in the observation range, with an expected value of n times pi events.
+
+27
+00:04:10.145 --> 00:04:16.002
+Here we look at different constellations of how the expected value of three calls could come about.
+
+28
+00:04:16.702 --> 00:04:39.389
+In the upper picture, there are only ten employees, but each of them calls fairly often. In the lower picture, there are considerably more employees, each of whom calls only rarely. If the division becomes very fine, that is, extremely many potential callers, each with a very small probability, then the binomial distribution is very similar to the Poisson distribution.
+
+29
+00:04:41.790 --> 00:04:52.856
+The Poisson distribution has only one parameter, the Greek letter lambda. Lambda is greater than zero and describes the average number of events in the observation range considered.
+
+30
+00:04:53.406 --> 00:05:01.483
+In the example, we consider one hour, and on average three calls come in during this hour. So lambda equals three.
+
+31
+00:05:02.083 --> 00:05:13.469
+The short notation here means: the random variable X follows the Poisson distribution with the parameter value lambda. As soon as lambda is fixed, we can enter it as a number in the brackets.
+
+32
+00:05:14.169 --> 00:05:18.854
+For the Poisson distribution, lambda is at the same time the expected value.
+
+33
+00:05:19.404 --> 00:05:28.142
+This also provides an approach to determining lambda from data: we count the calls over many hours and calculate the average number per hour.
+
+34
+00:05:28.692 --> 00:05:44.291
+Lambda does not have to be a whole number. On average, two and a half calls per hour could come in, for example, even though a whole number of calls always comes in during a single hour. We know this from video three: the expected value itself does not have to be a possible realisation.
+
+35
+00:05:44.891 --> 00:05:49.466
+In addition, the variance of the Poisson distribution also equals lambda.
+
+36
+00:05:50.016 --> 00:06:03.966
+The variance therefore follows without any further calculation. This is also useful when working with data: if the observed variance is clearly above or below the observed mean, this indicates that the Poisson distribution does not fit well.
+
+37
+00:06:04.766 --> 00:06:13.603
+As soon as lambda has been determined from the application, we calculate the probabilities of the individual realisations with the probability mass function.
+
+38
+00:06:14.203 --> 00:06:24.688
+The numerator of the fraction is lambda to the power of k, the denominator is k factorial. We already know how to calculate the factorial from the binomial coefficient in the last video.
+
+39
+00:06:25.238 --> 00:06:38.607
+The second factor is e to the power of minus lambda. Here, e is Euler's number, approximately two point seven one eight. Your calculator has a key for it, labelled e to the x, for example.
+
+40
+00:06:39.157 --> 00:06:44.796
+This factor depends only on lambda and is therefore the same for all values of k.
+
+41
+00:06:45.346 --> 00:06:51.900
+All values zero, one, two and so on are possible for k, without an upper limit.
+
+42
+00:06:54.110 --> 00:07:04.105
+Now we calculate some probabilities for our example and enter them in a table. To do so, we insert lambda equals three into the probability mass function.
+
+43
+00:07:04.705 --> 00:07:13.638
+Let us start with P of X equals zero, that is, with the question from the beginning: how likely is it that no call comes in within one hour?
+
+44
+00:07:14.138 --> 00:07:24.163
+Three to the power of zero is one, and zero factorial is also one. What remains is e to the power of minus three, which is approximately zero point zero four nine eight.
+
+45
+00:07:25.163 --> 00:07:32.477
+With a probability of just under five per cent, not a single call comes in within one hour. We enter the value in the table.
+
+46
+00:07:33.377 --> 00:07:45.642
+Next, the probability of exactly one call. Three to the power of one is three, one factorial is one. We get three times e to the power of minus three, which is just under fifteen per cent.
+
+47
+00:07:46.942 --> 00:07:57.833
+Now the probability of exactly two calls. Three squared is nine, two factorial is two. Nine halves times e to the power of minus three gives just over twenty-two per cent.
+
+48
+00:08:00.330 --> 00:08:07.052
+In the same way, the remaining probabilities can be calculated, for example with Excel or R.
+
+49
+00:08:07.602 --> 00:08:19.002
+Unlike with the binomial distribution, the table has no last row, because there is no largest possible value. As k increases, however, the probabilities quickly become very small.
+
+50
+00:08:19.602 --> 00:08:35.001
+In the bar chart, we see the probability mass function at a glance. It shows the realisations zero to eleven, because from twelve onwards each probability is smaller than zero point zero one per cent and no longer visible in the chart.
+
+51
+00:08:35.551 --> 00:08:47.550
+We find the three probabilities calculated earlier at zero, one and two. The largest individual probabilities here are for two and three calls, both at just over twenty-two per cent.
+
+52
+00:08:48.150 --> 00:08:58.533
+That two and three calls are exactly equally likely here is due to lambda being the whole number three. With lambda equal to two and a half, for example, there would be only one highest bar.
+
+53
+00:09:00.930 --> 00:09:08.707
+For our example, the three key figures follow directly from lambda. The expected value is lambda, so three calls per hour.
+
+54
+00:09:09.307 --> 00:09:12.701
+The variance is also lambda, so three as well.
+
+55
+00:09:13.301 --> 00:09:21.152
+The standard deviation is the square root of the variance, so the square root of three, approximately one point seven three two.
+
+56
+00:09:22.152 --> 00:09:42.038
+Over a very large number of hours, three calls per hour come in on average. From hour to hour, the number of calls typically fluctuates by about one point seven calls around this expected value. In the bar chart, we mark the expected value and the range from the expected value minus to the expected value plus one standard deviation.
+
+57
+00:09:44.250 --> 00:09:58.084
+Now we calculate the probabilities with R. The functions follow the same naming pattern as for the binomial distribution: d for the probability mass function, p for the cumulative distribution function, followed by the abbreviation pois.
+
+58
+00:09:58.634 --> 00:10:09.339
+For the probability mass function, there is the function dpois. Its arguments are x for the number of events and lambda for the parameter lambda.
+
+59
+00:10:09.889 --> 00:10:21.077
+The command shown here gives the probability mass function for x equals zero, that is, the probability that no call comes in within one hour. We calculated this value by hand earlier.
+
+60
+00:10:22.077 --> 00:10:34.094
+The cumulative distribution function, that is, the probability of at most k events, is obtained, as with the binomial distribution, as the sum of the individual probabilities from zero to k.
+
+61
+00:10:34.644 --> 00:10:44.126
+As an example value, we consider the probability of at most two calls. As the sum of the three individual probabilities, we get just over forty-two per cent.
+
+62
+00:10:45.126 --> 00:11:05.670
+In R, we again address the cumulative distribution function with p as the first letter, so here ppois. The first argument q stands for the upper limit k, which we set to two here for the example value. Together with lambda equals three, ppois returns the result we have just calculated.
+
+63
+00:11:06.270 --> 00:11:13.828
+The interpretation is that with a probability of around forty-two per cent, at most two calls come in within a randomly selected hour.
+
+64
+00:11:14.828 --> 00:11:25.830
+Finally, we come to the second question from the beginning. The hotline is staffed by one person who can handle at most five calls per hour. How likely is it that more than five calls come in within one hour?
+
+65
+00:11:26.430 --> 00:11:38.262
+More than five calls is the complementary event to at most five calls. The probability we are looking for is therefore one minus P of X less than or equal to five.
+
+66
+00:11:38.862 --> 00:11:48.170
+In R, we subtract the result of ppois with q equals five from one and get approximately zero point zero eight four.
+
+67
+00:11:49.170 --> 00:11:54.532
+So in about eight point four per cent of hours, more calls come in than the person can handle.
+
+68
+00:11:57.330 --> 00:12:14.947
+To sum up: the Poisson distribution describes the number of events in a fixed observation range if the events occur independently of each other and the expected number is the same for every observation range of the same size. The possible realisations are zero, one, two and so on, without a fixed upper limit.
+
+69
+00:12:15.547 --> 00:12:26.362
+Its only parameter lambda is the average number of events in the observation range. With the probability mass function, we calculate the individual probabilities P of X equals k.
+
+70
+00:12:26.962 --> 00:12:34.167
+The expected value and the variance are both equal to lambda, and the standard deviation is the square root of lambda.
+
+71
+00:12:34.767 --> 00:12:48.518
+In R, dpois calculates the probability mass function and ppois the cumulative distribution function. We obtain probabilities of more than k events via the complementary probability, that is, one minus ppois.
+
+72
+00:12:49.318 --> 00:12:54.737
+To conclude, we compare the binomial distribution and the Poisson distribution once more.

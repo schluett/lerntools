@@ -1,0 +1,225 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:15.915
+In video three, we calculated the expected value, the variance and the standard deviation of a discrete random variable. In this video, we get to know rules of calculation with which these key figures can, in some cases, be determined more quickly.
+
+2
+00:00:17.615 --> 00:00:25.293
+Once again, we look at the example of rolling two dice. The random variable X gives the sum of the two numbers.
+
+3
+00:00:25.843 --> 00:00:35.633
+From video three, we know its expected value, seven, its variance, thirty-five sixths, and its standard deviation, approximately two point four one five.
+
+4
+00:00:36.333 --> 00:00:45.377
+First, we look at a casino game in which the sum of the two dice is the basis for the gain, and we want to determine the expected value and the standard deviation of this gain.
+
+5
+00:00:46.977 --> 00:00:49.487
+The learning goals of this video are:
+
+6
+00:00:49.937 --> 00:00:57.938
+First: to determine the expected value and the variance of a linear transformation of a random variable using rules of calculation.
+
+7
+00:00:58.338 --> 00:01:03.312
+Second: to calculate the expected value of a sum of two random variables.
+
+8
+00:01:03.712 --> 00:01:09.298
+And third: to calculate the variance of a sum of two independent random variables.
+
+9
+00:01:11.300 --> 00:01:20.083
+We begin with the linear transformation of a random variable. To do so, let a and b be two fixed numbers and X a random variable.
+
+10
+00:01:20.633 --> 00:01:33.139
+We multiply X by a and then add b. The result, a times X plus b, depends on chance through X. Therefore, a times X plus b is itself a random variable as well.
+
+11
+00:01:33.739 --> 00:01:38.726
+The factor a stretches the values of X, the constant b shifts them.
+
+12
+00:01:40.630 --> 00:01:50.569
+As an example, we consider a game in a casino. The stake is a fixed fifteen euros. In the game, two dice are rolled, and the casino pays out twice the sum in euros.
+
+13
+00:01:51.119 --> 00:01:57.147
+The sum is again our random variable X. So the payout is two times X euros.
+
+14
+00:01:57.697 --> 00:02:14.118
+We are interested in the gain, that is, the payout minus the stake. The gain is also a random variable; we call it G. G is defined as two times the sum X minus the stake of fifteen. The values of G have the unit euro.
+
+15
+00:02:14.718 --> 00:02:22.903
+So the gain is a linear transformation of X, with the factor a equal to two and the constant b equal to minus fifteen.
+
+16
+00:02:24.800 --> 00:02:34.699
+On the left, we see the table of the probability mass function of X from video two. We extend it by a column for the realisations g of the gain.
+
+17
+00:02:35.249 --> 00:02:55.835
+In the first row, both dice show a one, and the sum is two. The gain is two euros times the sum of two, minus the stake of fifteen euros. That makes minus eleven euros. So the game leads to a considerable loss. In the second row, the sum is three, and we calculate the gain as two times three minus fifteen, so again a loss, of minus nine euros.
+
+18
+00:02:56.435 --> 00:03:02.671
+This continues up to the sum of twelve. There we get a positive gain of nine euros.
+
+19
+00:03:03.271 --> 00:03:13.605
+To summarise once more: negative gains are losses. For a sum up to seven, you lose money; from a sum of eight onwards, you make a profit from the game.
+
+20
+00:03:14.205 --> 00:03:42.325
+Based on this table, we can calculate probabilities for the gain G. Each realisation of the gain belongs to exactly one realisation of the sum X. The largest loss, a G of minus eleven euros, for example, occurs exactly when the sum is two. Therefore, this outcome of the game has a probability of one over thirty-six. In the same way, every gain g has the same probability as the corresponding sum x.
+
+21
+00:03:44.230 --> 00:04:01.330
+Now we show both probability mass functions as bar charts, one above the other: at the top, the probability mass function of the sum X; below, the probability mass function of the gain G. The x-axis of the lower chart shows the possible outcomes of the game in euros.
+
+22
+00:04:01.880 --> 00:04:10.546
+The sum two corresponds to the gain minus eleven. The bar has the same height in both charts, one over thirty-six.
+
+23
+00:04:11.097 --> 00:04:18.111
+The sum three corresponds to the gain minus nine, again with the same probability, two over thirty-six.
+
+24
+00:04:18.711 --> 00:04:34.268
+Overall, the bar heights are the same in both charts. Only the realisations on the x-axis differ. We convert the values of the sum x to the scale of the lower chart using two times x minus fifteen.
+
+25
+00:04:36.170 --> 00:04:50.877
+How high is the gain on average in the long run, over many games? We could calculate the expected value of G using the definition: each realisation of G is multiplied by its probability, and all products are added up.
+
+26
+00:04:51.477 --> 00:05:07.176
+If the expected value of X has already been calculated, it is quicker. For a linear transformation, the following holds in general: we obtain the expected value of a times X plus b by multiplying the expected value of X by a and then adding b.
+
+27
+00:05:08.176 --> 00:05:19.178
+In our example, a equals two and b equals minus fifteen. With the expected value of seven for the sum, we get two times seven minus fifteen, which is minus one.
+
+28
+00:05:19.778 --> 00:05:26.372
+So on average, you lose one euro per game. In the long run, the casino wins.
+
+29
+00:05:28.270 --> 00:05:37.753
+There is also a rule of calculation for the variance: the variance of a times X plus b is the square of a times the variance of X.
+
+30
+00:05:38.453 --> 00:05:49.555
+The constant b does not appear on the right-hand side. It shifts all realisations and the expected value by the same amount. The distances to the expected value stay the same.
+
+31
+00:05:50.105 --> 00:06:00.769
+The factor a, on the other hand, multiplies all distances to the expected value. Since the variance is based on squared distances, a enters squared.
+
+32
+00:06:01.369 --> 00:06:16.022
+For our game, the variance of X is thirty-five sixths. The variance of the gain is therefore two squared, that is four, times thirty-five sixths. This gives seventy thirds, approximately twenty-three point three three three euros squared.
+
+33
+00:06:16.622 --> 00:06:34.193
+As usual, we obtain the standard deviation as the square root of the variance: the square root of seventy thirds is four point eight three euros. Here we see once again that converting the variance into the standard deviation is necessary to obtain the right order of magnitude and unit.
+
+34
+00:06:36.090 --> 00:06:52.992
+We add these key figures to the two bar charts. At the top, the expected value of X is at seven; at the bottom, the expected value of G is at minus one. So in the long run, taking part in the casino game costs us one euro on average.
+
+35
+00:06:53.542 --> 00:07:09.146
+At the top, starting from the expected value, we mark off the standard deviation of two point four one five to both sides to mark a typical range of the realisations. This range extends from approximately four point five eight five to nine point four one five.
+
+36
+00:07:09.696 --> 00:07:18.697
+At the bottom, the standard deviation is four point eight three. The range here extends from approximately minus five point eight three to three point eight three.
+
+37
+00:07:19.247 --> 00:07:34.887
+The expected value and the range of spread are in the same place in both charts, but adapted to the respective scale. In our example, they were converted in exactly the same way as the realisations: times two, minus fifteen.
+
+38
+00:07:37.190 --> 00:07:54.975
+We now come to further rules of calculation for the expected value and the variance, which concern the sum of two random variables. To do so, we leave the casino game and go one step back by tracing the sum back to random variables for the two individual dice.
+
+39
+00:07:55.525 --> 00:08:03.676
+The random variable X one gives the number on the red die, the random variable X two the number on the green die.
+
+40
+00:08:04.226 --> 00:08:11.128
+A single die has a probability mass function in which each number from one to six occurs with probability one sixth.
+
+41
+00:08:11.678 --> 00:08:22.795
+We already calculated the expected value of a single die in video three: each number is weighted with one sixth, which gives three point five. This applies equally to X one and X two.
+
+42
+00:08:23.395 --> 00:08:30.555
+For the variance of a single die, we determine the distance of each number to three point five, square it and weight it with one sixth.
+
+43
+00:08:31.105 --> 00:08:40.354
+The sum gives thirty-five twelfths, approximately two point nine one seven. Naturally, the variance is also the same for both dice.
+
+44
+00:08:42.260 --> 00:08:50.548
+The sum of the two dice can be expressed with the random variables for the two individual dice: X equals X one plus X two.
+
+45
+00:08:51.098 --> 00:08:58.337
+For the expected value of a sum of two random variables, the following always holds: it is the sum of the two expected values.
+
+46
+00:08:59.337 --> 00:09:05.128
+For the sum of the dice, we get three point five plus three point five, which is seven.
+
+47
+00:09:05.728 --> 00:09:12.718
+This is exactly the expected value that we calculated in video three using the probability mass function of the sum.
+
+48
+00:09:14.620 --> 00:09:23.521
+There is also a rule of calculation for the variance of a sum. Here we consider the situation in which the two random variables are independent.
+
+49
+00:09:24.071 --> 00:09:40.329
+Put simply, this means: if the value of X one is known, the same probabilities still apply to X two as without this information. With dice, this is the case: if the red die shows a six, each number on the green die still has probability one sixth.
+
+50
+00:09:40.929 --> 00:09:47.412
+For independent random variables, the variance of the sum equals the sum of the two variances.
+
+51
+00:09:48.412 --> 00:09:55.893
+For the sum of the dice, we get thirty-five twelfths plus thirty-five twelfths, which is thirty-five sixths.
+
+52
+00:09:56.493 --> 00:10:03.782
+This is the same result as in video three, where we calculated the variance of the sum using its probability mass function.
+
+53
+00:10:05.890 --> 00:10:17.664
+Let us summarise: for a linear transformation a times X plus b, the expected value of X is converted in the same way as the realisations: multiplied by a, then b is added.
+
+54
+00:10:18.264 --> 00:10:27.494
+The variance is multiplied by the square of a; the constant b plays no role for it. The standard deviation is the square root of the variance.
+
+55
+00:10:28.094 --> 00:10:38.870
+The expected value of a sum of two random variables is the sum of their expected values. This rule always holds, whether the random variables are independent or not.
+
+56
+00:10:39.470 --> 00:10:48.584
+The variance of a sum is the sum of the variances. This rule, however, only holds if the two random variables are independent.

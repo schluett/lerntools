@@ -1,0 +1,289 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:08.087
+Die Poissonverteilung ist neben der Binomialverteilung eine häufig verwendete spezielle diskrete Verteilung.
+
+2
+00:00:08.587 --> 00:00:21.787
+Auch diese Verteilung zählt, wie oft ein Erfolg oder ein bestimmtes Ereignis auftritt. Anders als bei der Binomialverteilung hat die Anzahl der Ereignisse hier aber keine vorgegebene Obergrenze.
+
+3
+00:00:23.387 --> 00:00:25.435
+Die Lernziele des Videos sind:
+
+4
+00:00:25.885 --> 00:00:34.870
+Erstens: erkennen, wann die Poissonverteilung zu einer Anwendungssituation passt, und ihren Parameter lambda aus der Situation bestimmen.
+
+5
+00:00:35.270 --> 00:00:44.910
+Zweitens: Wahrscheinlichkeiten mit der Zähldichte der Poissonverteilung berechnen und Erwartungswert, Varianz und Standardabweichung bestimmen.
+
+6
+00:00:45.310 --> 00:00:54.504
+Und drittens: Einzelwahrscheinlichkeiten, kumulierte Wahrscheinlichkeiten und Gegenwahrscheinlichkeiten mit den R-Funktionen berechnen und interpretieren.
+
+7
+00:00:56.500 --> 00:01:04.545
+Ein Unternehmen möchte modellieren, wie viele Anrufe in einer zufällig ausgewählten Stunde bei seiner IT-Hotline eingehen.
+
+8
+00:01:05.145 --> 00:01:10.160
+In der dargestellten Stunde gehen zum Beispiel vier Anrufe ein.
+
+9
+00:01:10.760 --> 00:01:16.293
+In einer anderen Stunde könnte auch kein einziger Anruf eingehen, oder es könnten sieben Anrufe eingehen.
+
+10
+00:01:16.993 --> 00:01:22.576
+Eine Obergrenze für die Anzahl der Anrufe können wir dabei nicht vorab festlegen.
+
+11
+00:01:23.126 --> 00:01:37.816
+Die Anzahl der Anrufe in einer Stunde modellieren wir als Zufallsvariable X. Die möglichen Realisationen sind null, eins, zwei, drei und so weiter.
+
+12
+00:01:38.366 --> 00:01:52.419
+Wir können die möglichen Realisationen also weiterhin vorab auflisten, auch wenn es wegen der fehlenden Obergrenze nun unendlich viele mögliche Werte sind. Es handelt sich daher auch hier um eine diskrete Zufallsvariable.
+
+13
+00:01:53.019 --> 00:02:03.653
+Mögliche Fragen in dieser Situation sind: Wie wahrscheinlich ist es, dass in einer Stunde kein einziger Anruf eingeht? Oder dass mehr als fünf Anrufe eingehen?
+
+14
+00:02:05.950 --> 00:02:23.283
+Die Poissonverteilung wird verwendet, wenn gezählt wird, wie oft ein bestimmtes Ereignis in einem festgelegten Beobachtungsbereich auftritt. Dieser Beobachtungsbereich kann ein Zeitraum sein, aber auch eine Strecke, eine Fläche oder ein anderer klar abgegrenzter Bereich.
+
+15
+00:02:23.833 --> 00:02:40.576
+Typische Beispiele sind die Anzahl der Ankünfte an einer Kasse innerhalb einer Stunde oder die Anzahl der Defekte während eines Produktionstags. In unserem Beispiel ist es die Anzahl der Anrufe bei der Hotline innerhalb einer Stunde.
+
+16
+00:02:41.176 --> 00:02:50.117
+Wie bei der Binomialverteilung prüfen wir, ob das Modell die Anwendungssituation sinnvoll beschreibt. Dazu gehen wir vier Voraussetzungen durch.
+
+17
+00:02:50.617 --> 00:03:01.293
+Erstens: Es wird gezählt, wie oft ein bestimmtes Ereignis in einem festgelegten Beobachtungsbereich auftritt. Im Beispiel zählen wir die Anrufe innerhalb einer Stunde.
+
+18
+00:03:01.843 --> 00:03:14.123
+Zweitens: Ereignisse in voneinander getrennten Abschnitten treten unabhängig voneinander auf. Im Beispiel heißt das: Ein Anruf verändert nicht die Wahrscheinlichkeit für weitere Anrufe.
+
+19
+00:03:14.673 --> 00:03:39.207
+Drittens: Für jeden gleich großen Beobachtungsbereich, zum Beispiel jede Stunde, ist die erwartete Anzahl von Ereignissen gleich. Es gibt also keine systematischen Unterschiede im Tagesverlauf, etwa mehr Anrufe am Vormittag. Im Beispiel nehmen wir an, dass das Unternehmen langfristig im Mittel drei Anrufe pro Stunde beobachtet, und dass es keine vorhersehbaren Trends gibt.
+
+20
+00:03:39.757 --> 00:03:52.812
+Viertens: In einem sehr kleinen Abschnitt tritt mit hoher Wahrscheinlichkeit höchstens ein Ereignis auf. Im Beispiel ist es sehr unwahrscheinlich, dass innerhalb weniger Sekunden mehr als ein Anruf eingeht.
+
+21
+00:03:53.412 --> 00:04:10.288
+Dass diese Voraussetzungen erfüllt sind, ist eine Modellannahme. Wenn zum Beispiel ein Serverausfall dazu führt, dass viele Mitarbeitende aus demselben Grund nahezu gleichzeitig anrufen, ist die Annahme unabhängiger Ereignisse verletzt.
+
+22
+00:04:10.838 --> 00:04:23.688
+Auch ein deutlicher Trend spricht gegen das Modell. Gehen zum Beispiel am Vormittag systematisch viel mehr Anrufe ein als am Nachmittag, ist die erwartete Anzahl nicht für jede Stunde gleich.
+
+23
+00:04:24.388 --> 00:04:30.961
+Die Poissonverteilung steht in Verbindung zur Binomialverteilung und lässt sich als Grenzfall verstehen.
+
+24
+00:04:31.511 --> 00:04:45.041
+Für eine Binomialverteilung müsste sich der Beobachtungsbereich in n Gelegenheiten für ein Ereignis aufteilen, zum Beispiel n Mitarbeitende, die bei der Hotline anrufen könnten.
+
+25
+00:04:45.591 --> 00:04:49.633
+Je Gelegenheit muss die Eintrittswahrscheinlichkeit pi gleich groß sein.
+
+26
+00:04:50.183 --> 00:04:59.618
+Dann modelliert die Binomialverteilung die Eintritte im Beobachtungsbereich, mit einem Erwartungswert von n mal pi Ereignissen.
+
+27
+00:05:00.918 --> 00:05:07.734
+Wir betrachten hier verschiedene Konstellationen, wie sich der Erwartungswert von drei Anrufen zusammensetzen könnte.
+
+28
+00:05:08.434 --> 00:05:34.301
+Im oberen Bild gibt es nur zehn Mitarbeitende, die sich aber jeweils recht häufig melden. Im unteren Bild sind es deutlich mehr Mitarbeitende, von denen sich jede und jeder nur selten meldet. Wenn die Aufteilung sehr fein wird, also extrem viele potenziell Anrufende mit jeweils sehr geringer Wahrscheinlichkeit, dann ist die Binomialverteilung sehr ähnlich zur Poissonverteilung.
+
+29
+00:05:36.700 --> 00:05:49.815
+Die Poissonverteilung hat nur einen Parameter, den griechischen Buchstaben lambda. Lambda ist größer als null und beschreibt die durchschnittliche Anzahl der Ereignisse im betrachteten Beobachtungsbereich.
+
+30
+00:05:50.365 --> 00:05:59.548
+Im Beispiel betrachten wir eine Stunde, und im Mittel gehen in dieser Stunde drei Anrufe ein. Also ist lambda gleich drei.
+
+31
+00:06:00.148 --> 00:06:16.088
+Die Kurznotation hier bedeutet: Die Zufallsvariable X folgt den Verteilungsgesetzmäßigkeiten der Poissonverteilung mit dem Parameterwert lambda. Sobald lambda feststeht, können wir es als Zahl in den Klammern eintragen.
+
+32
+00:06:16.788 --> 00:06:20.736
+Bei der Poissonverteilung ist lambda zugleich der Erwartungswert.
+
+33
+00:06:21.286 --> 00:06:31.589
+Das liefert auch einen Ansatz, um lambda aus Daten zu bestimmen: Wir zählen die Anrufe über viele Stunden und berechnen die durchschnittliche Anzahl pro Stunde.
+
+34
+00:06:32.139 --> 00:06:52.028
+Lambda muss keine ganze Zahl sein. Im Durchschnitt könnten zum Beispiel auch zweieinhalb Anrufe pro Stunde eingehen, obwohl in einer einzelnen Stunde immer eine ganze Anzahl von Anrufen eingeht. Das kennen wir aus Video drei: Der Erwartungswert muss selbst keine mögliche Realisation sein.
+
+35
+00:06:52.628 --> 00:06:56.860
+Zugleich ist bei der Poissonverteilung auch die Varianz gleich lambda.
+
+36
+00:06:57.410 --> 00:07:13.893
+Die Varianz ergibt sich damit ohne weitere Rechnung. Für die Arbeit mit Daten ist das ebenfalls nützlich: Liegt die beobachtete Varianz deutlich über oder unter dem beobachteten Mittelwert, ist das ein Hinweis darauf, dass die Poissonverteilung nicht gut passt.
+
+37
+00:07:14.693 --> 00:07:24.576
+Sobald lambda aus der Anwendungssituation bestimmt ist, berechnen wir die Wahrscheinlichkeiten der einzelnen Realisationen mit der Zähldichte.
+
+38
+00:07:25.176 --> 00:07:37.114
+Im Zähler des Bruchs steht lambda hoch k, im Nenner k Fakultät. Die Berechnung der Fakultät kennen wir bereits vom Binomialkoeffizienten aus dem letzten Video.
+
+39
+00:07:37.664 --> 00:07:52.521
+Der zweite Faktor ist e hoch minus lambda. Dabei ist e die Eulersche Zahl, ungefähr zwei Komma sieben eins acht. Dafür gibt es auf Ihrem Taschenrechner eine Taste, die zum Beispiel mit e hoch x beschriftet ist.
+
+40
+00:07:53.071 --> 00:07:59.059
+Dieser Faktor hängt nur von lambda ab und ist daher für alle Werte von k gleich.
+
+41
+00:07:59.609 --> 00:08:06.393
+Für k kommen alle Werte null, eins, zwei und so weiter in Frage, ohne Obergrenze.
+
+42
+00:08:08.600 --> 00:08:19.383
+Nun berechnen wir für unser Beispiel einige Wahrscheinlichkeiten und tragen sie in eine Tabelle ein. Dazu setzen wir lambda gleich drei in die Zähldichte ein.
+
+43
+00:08:19.983 --> 00:08:28.628
+Beginnen wir mit P von X gleich null, also mit der Frage vom Anfang: Wie wahrscheinlich ist es, dass in einer Stunde kein Anruf eingeht?
+
+44
+00:08:29.128 --> 00:08:40.195
+Drei hoch null ist eins, und null Fakultät ist ebenfalls eins. Es bleibt e hoch minus drei, das sind ungefähr null Komma null vier neun acht.
+
+45
+00:08:41.195 --> 00:08:51.382
+Mit einer Wahrscheinlichkeit von knapp fünf Prozent geht in einer Stunde kein einziger Anruf ein. Wir tragen den Wert in die Tabelle ein.
+
+46
+00:08:52.282 --> 00:09:06.557
+Als Nächstes die Wahrscheinlichkeit für genau einen Anruf. Drei hoch eins ist drei, eins Fakultät ist eins. Wir erhalten drei mal e hoch minus drei, das sind knapp fünfzehn Prozent.
+
+47
+00:09:07.857 --> 00:09:20.947
+Nun die Wahrscheinlichkeit für genau zwei Anrufe. Drei hoch zwei ist neun, zwei Fakultät ist zwei. Neun Halbe mal e hoch minus drei ergibt gut zweiundzwanzig Prozent.
+
+48
+00:09:23.450 --> 00:09:30.611
+Nach demselben Muster lassen sich die übrigen Wahrscheinlichkeiten berechnen, zum Beispiel mit Excel oder R.
+
+49
+00:09:31.161 --> 00:09:43.857
+Anders als bei der Binomialverteilung hat die Tabelle keine letzte Zeile, denn es gibt keinen größten möglichen Wert. Mit wachsendem k werden die Wahrscheinlichkeiten aber schnell sehr klein.
+
+50
+00:09:44.456 --> 00:09:59.880
+Im Stabdiagramm sehen wir die Zähldichte auf einen Blick. Es zeigt die Realisationen null bis elf, denn ab zwölf ist jede Wahrscheinlichkeit kleiner als null Komma null eins Prozent und im Diagramm nicht mehr sichtbar.
+
+51
+00:10:00.430 --> 00:10:13.912
+Die drei vorhin berechneten Wahrscheinlichkeiten finden wir bei null, eins und zwei wieder. Die größten Einzelwahrscheinlichkeiten haben hier zwei und drei Anrufe, beide mit gut zweiundzwanzig Prozent.
+
+52
+00:10:14.512 --> 00:10:26.093
+Dass zwei und drei Anrufe hier genau gleich wahrscheinlich sind, liegt am ganzzahligen lambda gleich drei. Bei lambda gleich zweieinhalb gäbe es zum Beispiel nur einen höchsten Stab.
+
+53
+00:10:28.500 --> 00:10:37.238
+Für unser Beispiel ergeben sich die drei Kennzahlen direkt aus lambda. Der Erwartungswert ist lambda, also drei Anrufe pro Stunde.
+
+54
+00:10:37.838 --> 00:10:41.906
+Die Varianz ist ebenfalls lambda, also auch drei.
+
+55
+00:10:42.506 --> 00:10:49.934
+Die Standardabweichung ist die Wurzel aus der Varianz, also die Wurzel aus drei, ungefähr eins Komma sieben drei zwei.
+
+56
+00:10:50.934 --> 00:11:14.023
+Über sehr viele Stunden hinweg gehen im Durchschnitt drei Anrufe pro Stunde ein. Von Stunde zu Stunde schwankt die Anzahl der Anrufe typischerweise um ungefähr eins Komma sieben Anrufe um diesen Erwartungswert. Im Stabdiagramm markieren wir den Erwartungswert und den Bereich von Erwartungswert minus bis Erwartungswert plus Standardabweichung.
+
+57
+00:11:16.220 --> 00:11:31.187
+Nun berechnen wir die Wahrscheinlichkeiten mit R. Die Funktionen folgen demselben Namensmuster wie bei der Binomialverteilung: d für die Zähldichte, p für die Verteilungsfunktion, dahinter die Abkürzung pois.
+
+58
+00:11:31.737 --> 00:11:41.597
+Für die Zähldichte gibt es die Funktion dpois. Ihre Argumente sind x für die Anzahl der Ereignisse und lambda für den Parameter lambda.
+
+59
+00:11:42.147 --> 00:11:54.426
+Der hier gezeigte Befehl liefert die Zähldichte für x gleich null, also die Wahrscheinlichkeit, dass in einer Stunde kein Anruf eingeht. Den Wert haben wir vorhin händisch berechnet.
+
+60
+00:11:55.426 --> 00:12:07.377
+Die Verteilungsfunktion, also die Wahrscheinlichkeit für höchstens k Ereignisse, erhalten wir wie bei der Binomialverteilung als Summe der Einzelwahrscheinlichkeiten von null bis k.
+
+61
+00:12:07.927 --> 00:12:19.225
+Als Beispielwert betrachten wir die Wahrscheinlichkeit für höchstens zwei Anrufe. Als Summe der drei Einzelwahrscheinlichkeiten ergeben sich gut zweiundvierzig Prozent.
+
+62
+00:12:20.225 --> 00:12:40.749
+In R sprechen wir die Verteilungsfunktion wieder mit p als erstem Buchstaben an, also hier ppois. Das erste Argument q steht für die Obergrenze k, die wir für den Beispielwert hier auf zwei setzen. Zusammen mit lambda gleich drei liefert ppois das soeben berechnete Ergebnis.
+
+63
+00:12:41.349 --> 00:12:50.665
+Die Interpretation ist, dass mit einer Wahrscheinlichkeit von rund zweiundvierzig Prozent in einer zufällig ausgewählten Stunde höchstens zwei Anrufe eingehen.
+
+64
+00:12:51.665 --> 00:13:06.410
+Abschließend kommen wir zur zweiten Frage vom Anfang. Die Hotline ist mit einer Person besetzt, die höchstens fünf Anrufe pro Stunde bearbeiten kann. Wie wahrscheinlich ist es, dass in einer Stunde mehr als fünf Anrufe eingehen?
+
+65
+00:13:07.010 --> 00:13:19.163
+Mehr als fünf Anrufe ist das Gegenereignis zu höchstens fünf Anrufen. Die gesuchte Wahrscheinlichkeit ist daher eins minus P von X kleiner gleich fünf.
+
+66
+00:13:19.763 --> 00:13:28.117
+In R ziehen wir dazu das Ergebnis von ppois mit q gleich fünf von eins ab und erhalten ungefähr null Komma null acht vier.
+
+67
+00:13:29.117 --> 00:13:35.732
+In circa acht Komma vier Prozent der Stunden gehen also mehr Anrufe ein, als die Person bearbeiten kann.
+
+68
+00:13:38.540 --> 00:14:01.758
+Fassen wir zusammen: Die Poissonverteilung beschreibt die Anzahl der Ereignisse in einem festen Beobachtungsbereich, wenn die Ereignisse unabhängig voneinander auftreten und die erwartete Anzahl für jeden gleich großen Beobachtungsbereich gleich ist. Die möglichen Realisationen sind null, eins, zwei und so weiter, ohne feste Obergrenze.
+
+69
+00:14:02.358 --> 00:14:15.152
+Ihr einziger Parameter lambda ist die durchschnittliche Anzahl der Ereignisse im Beobachtungsbereich. Mit der Zähldichte berechnen wir die Einzelwahrscheinlichkeiten P von X gleich k.
+
+70
+00:14:15.752 --> 00:14:22.659
+Erwartungswert und Varianz sind beide gleich lambda, die Standardabweichung ist die Wurzel aus lambda.
+
+71
+00:14:23.259 --> 00:14:36.450
+In R berechnet dpois die Zähldichte und ppois die Verteilungsfunktion. Wahrscheinlichkeiten für mehr als k Ereignisse erhalten wir über die Gegenwahrscheinlichkeit, also eins minus ppois.
+
+72
+00:14:37.250 --> 00:14:43.235
+Zum Abschluss stellen wir Binomialverteilung und Poissonverteilung noch einmal gegenüber.
