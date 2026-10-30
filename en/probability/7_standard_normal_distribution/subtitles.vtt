@@ -1,0 +1,265 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:17.638
+In the last videos, we got to know discrete random variables and their distributions, for example the binomial distribution and the Poisson distribution. In this video, we move on to a continuous distribution that plays a central role in many applications: the standard normal distribution.
+
+2
+00:00:19.338 --> 00:00:22.225
+The learning goals of this video are:
+
+3
+00:00:22.675 --> 00:00:33.158
+First: to explain why, for a continuous random variable, probabilities are represented as areas under the density function, and why every single value has probability zero.
+
+4
+00:00:33.558 --> 00:00:42.294
+Second: to describe the shape, the expected value and the standard deviation of the standard normal distribution and to show them on the density function.
+
+5
+00:00:42.694 --> 00:00:53.964
+And third: to determine probabilities with the table in the formula sheet and with the R function pnorm, including exceedances, intervals and negative values.
+
+6
+00:00:55.970 --> 00:01:02.854
+First, a short recap of video two: there are two types of random variables, discrete and continuous.
+
+7
+00:01:03.354 --> 00:01:08.131
+For a discrete random variable, we can list in advance which values it can take.
+
+8
+00:01:08.581 --> 00:01:16.621
+A continuous random variable, on the other hand, takes values with any number of decimal places. Whole ranges of the number line are possible.
+
+9
+00:01:17.221 --> 00:01:30.598
+In the previous videos, we got to know three discrete random variables with their probability mass functions: the sum of two dice, the number of IT requests per day with a binomial distribution, and the number of calls per hour with a Poisson distribution.
+
+10
+00:01:31.148 --> 00:01:44.840
+In each case, the x-axis shows the possible realisations, for example the sum or the number of calls. Each realisation gets its own probability, namely the height of its bar. All bar heights together add up to one.
+
+11
+00:01:46.740 --> 00:01:56.581
+Now we come to a continuous random variable. As an example, we take a weather app. It forecasts a temperature of eighteen degrees for tomorrow.
+
+12
+00:01:57.081 --> 00:02:03.862
+The next day, we measure very precisely how warm it actually is, for example nineteen point three seven degrees.
+
+13
+00:02:04.362 --> 00:02:11.253
+The forecast error is the measured minus the forecast temperature. Here it is therefore plus one point three seven degrees.
+
+14
+00:02:11.853 --> 00:02:21.838
+Even with a well-functioning app, there are deviations upwards on some days and downwards on others. Small errors occur often, large errors rather rarely.
+
+15
+00:02:22.438 --> 00:02:36.335
+From the ex ante perspective, we model this forecast error as a random variable Z, measured in degrees Celsius. As the measurement is very precise, Z is a continuous random variable.
+
+16
+00:02:38.240 --> 00:02:59.858
+We assume that the forecast error follows the so-called standard normal distribution. Z is the usual letter for a random variable that follows the standard normal distribution; this distribution is written as N zero one. For continuous random variables, a so-called density function describes how the probabilities are distributed over the possible values.
+
+17
+00:03:00.458 --> 00:03:09.335
+As with the probability mass function, the x-axis shows the possible values, here the forecast errors in degrees Celsius.
+
+18
+00:03:09.835 --> 00:03:15.268
+The curve is highest at zero: forecast errors close to zero occur often.
+
+19
+00:03:15.768 --> 00:03:22.403
+Towards the outside, it falls symmetrically on both sides. Large errors upwards or downwards are therefore rare.
+
+20
+00:03:23.003 --> 00:03:30.060
+We show the formula of the density function here only for completeness. We do not need it for our calculations.
+
+21
+00:03:31.960 --> 00:03:42.225
+For a discrete random variable, we could go through the realisations one by one and assign a probability to each of them. For a continuous random variable, we proceed differently.
+
+22
+00:03:42.775 --> 00:03:58.626
+Every exact value, such as a forecast error of exactly one degree, that is one point zero zero zero and so on, is taken only with probability zero. This is because the possible realisations with infinitely many decimal places lie densely packed on the number line.
+
+23
+00:03:59.326 --> 00:04:07.720
+Instead, probabilities are represented by areas under the density function. The height of the curve itself is therefore not a probability.
+
+24
+00:04:08.320 --> 00:04:20.169
+The total area under the density function is one, which corresponds to one hundred percent. This matches the fact that, for a probability mass function, all bar heights together add up to one.
+
+25
+00:04:20.769 --> 00:04:39.527
+Because of the symmetry around zero, half of the area lies to the left of zero and half to the right. A forecast error below zero means that the app forecast too warm. An error above zero means that it forecast too cold. Each of the two therefore occurs with probability fifty percent.
+
+26
+00:04:40.227 --> 00:04:49.812
+Because single values have probability zero, for continuous random variables it makes no difference whether we write less than or less than or equal to.
+
+27
+00:04:52.010 --> 00:05:01.109
+The short notation N zero one contains two key figures of the standard normal distribution: the expected value zero and the variance one.
+
+28
+00:05:01.660 --> 00:05:15.035
+Because of the symmetry, the expected value lies exactly in the middle, at zero. For our example, this means: on average, the app is right. It forecasts neither systematically too warm nor too cold.
+
+29
+00:05:15.635 --> 00:05:21.247
+The variance is one, and so the standard deviation, as its square root, is also one.
+
+30
+00:05:21.847 --> 00:05:34.870
+Graphically, we can read off the standard deviation from the curvature of the density function. In the middle, the function is concave, it curves downwards; at the edges, it is convex, it curves upwards.
+
+31
+00:05:35.420 --> 00:05:44.679
+The inflection points, where the curvature changes, lie at minus one and at one. Their distance from the middle is exactly the standard deviation of one.
+
+32
+00:05:45.379 --> 00:05:52.914
+For the example, this means: the forecast errors typically vary by about one degree around the expected value of zero.
+
+33
+00:05:55.110 --> 00:06:08.209
+How likely is it that the forecast error is at most one degree? We are looking for P of Z less than or equal to one, that is, the area under the density to the left of one.
+
+34
+00:06:08.809 --> 00:06:20.609
+Mathematically, this area is an integral. For the density of the standard normal distribution, however, no antiderivative can be given as a formula. This is why we cannot calculate the integral by hand.
+
+35
+00:06:21.209 --> 00:06:39.508
+For these areas, there is therefore a function of its own: the cumulative distribution function of the standard normal distribution, written with the Greek letter Phi. Phi of z is the probability that Z is at most z, that is, the area to the left of z.
+
+36
+00:06:40.208 --> 00:06:48.295
+The values of Phi are provided by a computer, for example R or Excel. Alternatively, we read them off the table in the formula sheet.
+
+37
+00:06:50.200 --> 00:07:01.834
+We start with our question from before: how large is Phi of one, that is, the probability that the forecast error is at most one degree? Below, we see an excerpt from the table in the formula sheet.
+
+38
+00:07:02.384 --> 00:07:09.495
+The row gives the digit before the decimal point and the first decimal place, the column gives the second decimal place.
+
+39
+00:07:10.045 --> 00:07:26.595
+The threshold z for which we want the probability of falling below it is one, or one point zero zero. So we look in the row labelled one point zero and in the column labelled point zero zero. There we find zero point eight four one three, that is, eighty-four point one three percent.
+
+40
+00:07:27.195 --> 00:07:33.499
+With a probability of just over eighty-four percent, the forecast error is therefore at most one degree.
+
+41
+00:07:34.499 --> 00:07:45.614
+Second example: the probability that the forecast error is at most one point two three degrees. To do this, we split one point two three into one point two and zero point zero three.
+
+42
+00:07:46.164 --> 00:07:53.473
+So we go to the row one point two and to the column point zero three and read off zero point eight nine zero seven.
+
+43
+00:07:54.073 --> 00:08:01.309
+With a probability of just over eighty-nine percent, the forecast error is at most one point two three degrees.
+
+44
+00:08:03.520 --> 00:08:18.219
+For comparison, we calculate both values with R. In R, the cumulative distribution function of the normal distribution is called pnorm. As with pbinom and ppois, the p stands for the cumulative distribution function.
+
+45
+00:08:18.769 --> 00:08:29.586
+Without further arguments, pnorm uses the standard normal distribution. With q equals one, we get zero point eight four one three and further decimal places.
+
+46
+00:08:30.186 --> 00:08:37.129
+For q equals one point two three, rounded, the result is zero point eight nine zero seven.
+
+47
+00:08:37.729 --> 00:08:43.867
+The results agree with the table values. The table is merely rounded to four decimal places.
+
+48
+00:08:45.770 --> 00:08:59.761
+How likely is it that the actual temperature is more than one point two three degrees above the forecast? We are looking for P of Z greater than one point two three, that is, the area to the right of one point two three.
+
+49
+00:09:00.311 --> 00:09:18.596
+The table does not answer this directly, as it always gives the area to the left of the threshold z. We obtain the probability we are looking for here via the complementary event: we calculate one minus the probability that the forecast error is below one point two three degrees.
+
+50
+00:09:19.196 --> 00:09:22.770
+As a result, we get zero point one zero nine three.
+
+51
+00:09:23.670 --> 00:09:32.223
+In R, too, we can calculate the exceedance probability via the complementary event, by calculating one minus pnorm.
+
+52
+00:09:32.773 --> 00:09:40.324
+So in just under eleven percent of cases, the actual temperature is more than one point two three degrees above the forecast.
+
+53
+00:09:42.520 --> 00:09:52.661
+Now we are looking for the probability that the forecast error lies between one and one point two three degrees. This is the narrow area between these two values.
+
+54
+00:09:53.211 --> 00:09:59.152
+To do this, we start with the area to the left of one point two three and then subtract the area to the left of one.
+
+55
+00:09:59.752 --> 00:10:03.242
+As a result, we get four point nine four percent.
+
+56
+00:10:04.142 --> 00:10:08.259
+In R, too, we can calculate this difference directly in one command.
+
+57
+00:10:10.460 --> 00:10:26.453
+Finally, one more aspect that only concerns reading off the formula sheet. The table here starts at z equals zero. How, then, do we determine P of Z less than or equal to minus one, that is, the probability that the app forecast more than one degree too warm?
+
+58
+00:10:27.003 --> 00:10:34.513
+Here, the symmetry of the density function helps: the area to the left of minus one is exactly as large as the area to the right of one.
+
+59
+00:10:35.063 --> 00:10:47.362
+So both probabilities are equal. As before, we obtain the area to the right of one via the complementary event: one minus zero point eight four one three gives zero point one five eight seven.
+
+60
+00:10:48.262 --> 00:10:53.804
+In general: Phi of minus z is one minus Phi of z.
+
+61
+00:10:54.804 --> 00:11:07.794
+This leads to a connection with the standard deviation: with a probability of about sixty-eight percent, the forecast error lies between minus one and one, that is, within one standard deviation around the expected value.
+
+62
+00:11:10.190 --> 00:11:20.730
+To sum up: for a continuous random variable, probabilities are areas under the density function. The total area is one, and every single value has probability zero.
+
+63
+00:11:21.330 --> 00:11:33.252
+The standard normal distribution is symmetric around zero, with expected value zero and standard deviation one. We recognise the standard deviation by the inflection points at minus one and one.
+
+64
+00:11:33.853 --> 00:11:46.749
+The cumulative distribution function Phi of z is the area to the left of z. We read off its values from the table in the formula sheet or calculate them with pnorm in R.
+
+65
+00:11:47.349 --> 00:11:56.820
+We obtain exceedance probabilities via the complementary event, probabilities for intervals as a difference, and probabilities for negative values via the symmetry.
+
+66
+00:11:57.520 --> 00:12:06.757
+In the next video, we get to know the general normal distribution. With it, we adapt the expected value and the standard deviation to specific applications.

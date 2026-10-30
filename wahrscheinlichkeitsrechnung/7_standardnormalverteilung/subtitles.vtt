@@ -1,0 +1,265 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:21.003
+In den letzten Videos haben wir diskrete Zufallsvariablen und ihre Verteilungen kennengelernt, zum Beispiel die Binomialverteilung und die Poissonverteilung. In diesem Video kommen wir zu einer stetigen Verteilung, die in vielen Anwendungen eine zentrale Rolle spielt: der Standardnormalverteilung.
+
+2
+00:00:22.703 --> 00:00:25.192
+Die Lernziele des Videos sind:
+
+3
+00:00:25.642 --> 00:00:37.240
+Erstens: erklären, warum bei einer stetigen Zufallsvariablen Wahrscheinlichkeiten als Flächen unter der Dichtefunktion dargestellt werden und jeder einzelne Wert die Wahrscheinlichkeit null hat.
+
+4
+00:00:37.640 --> 00:00:46.274
+Zweitens: Form, Erwartungswert und Standardabweichung der Standardnormalverteilung beschreiben und an der Dichtefunktion zeigen.
+
+5
+00:00:46.674 --> 00:00:57.679
+Und drittens: Wahrscheinlichkeiten mit der Tabelle der Formelsammlung und mit der R-Funktion pnorm bestimmen, auch für Überschreitungen, Intervalle und negative Werte.
+
+6
+00:00:59.680 --> 00:01:07.325
+Zunächst ein kurzer Rückblick auf Video zwei: Es gibt zwei Typen von Zufallsvariablen, diskrete und stetige.
+
+7
+00:01:07.825 --> 00:01:14.178
+Bei einer diskreten Zufallsvariablen können wir vorab auflisten, welche Werte sie annehmen kann.
+
+8
+00:01:14.628 --> 00:01:23.837
+Eine stetige Zufallsvariable liefert dagegen Werte mit beliebig vielen Nachkommastellen. Möglich sind ganze Bereiche des Zahlenstrahls.
+
+9
+00:01:24.437 --> 00:01:41.642
+In den bisherigen Videos haben wir drei diskrete Zufallsvariablen mit ihren Zähldichten kennengelernt: die Augensumme von zwei Würfeln, die Anzahl der IT-Anfragen an einem Tag mit einer Binomialverteilung und die Anzahl der Anrufe pro Stunde mit einer Poissonverteilung.
+
+10
+00:01:42.192 --> 00:01:59.607
+Die x-Achse zeigt jeweils die möglichen Realisationen, zum Beispiel die Augensumme oder die Anzahl der Anrufe. Jede Realisation erhält ihre eigene Wahrscheinlichkeit, nämlich die Höhe ihres Stabs. Alle Stabhöhen zusammen ergeben eins.
+
+11
+00:02:01.510 --> 00:02:11.237
+Nun kommen wir zu einer stetigen Zufallsvariablen. Als Beispiel nehmen wir eine Wetter-App. Sie sagt für morgen eine Temperatur von achtzehn Grad voraus.
+
+12
+00:02:11.737 --> 00:02:20.777
+Am nächsten Tag messen wir sehr genau, wie warm es tatsächlich ist, zum Beispiel neunzehn Komma drei sieben Grad.
+
+13
+00:02:21.277 --> 00:02:30.844
+Der Prognosefehler ist die gemessene minus die vorhergesagte Temperatur. Hier beträgt er also plus eins Komma drei sieben Grad.
+
+14
+00:02:31.444 --> 00:02:43.791
+Auch bei einer gut funktionierenden App gibt es an manchen Tagen Abweichungen nach oben und an anderen nach unten. Kleine Fehler kommen häufig vor, große Fehler eher selten.
+
+15
+00:02:44.391 --> 00:02:57.509
+Diesen Prognosefehler modellieren wir in der ex-ante-Sicht als Zufallsvariable Z, gemessen in Grad Celsius. Da sehr genau gemessen wird, ist Z eine stetige Zufallsvariable.
+
+16
+00:02:59.410 --> 00:03:22.055
+Wir nehmen an, dass der Prognosefehler der sogenannten Standardnormalverteilung folgt. Z ist der übliche Buchstabe für eine Zufallsvariable, die der Standardnormalverteilung folgt; diese wird mit N null eins notiert. Bei stetigen Zufallsvariablen beschreibt eine sogenannte Dichtefunktion, wie sich die Wahrscheinlichkeiten auf die möglichen Werte verteilen.
+
+17
+00:03:22.655 --> 00:03:30.638
+Wie bei der Zähldichte zeigt die x-Achse die möglichen Werte, hier also die Prognosefehler in Grad Celsius.
+
+18
+00:03:31.138 --> 00:03:37.118
+Die Kurve ist bei null am höchsten: Prognosefehler in der Nähe von null treten häufig auf.
+
+19
+00:03:37.618 --> 00:03:44.894
+Nach außen fällt sie zu beiden Seiten symmetrisch ab. Große Fehler nach oben oder unten sind also selten.
+
+20
+00:03:45.494 --> 00:03:52.206
+Die Formel der Dichtefunktion zeigen wir hier nur der Vollständigkeit halber. Zum Rechnen brauchen wir sie nicht.
+
+21
+00:03:54.110 --> 00:04:06.514
+Bei einer diskreten Zufallsvariablen konnten wir die Realisationen einzeln durchgehen und jeder eine Wahrscheinlichkeit zuordnen. Bei einer stetigen Zufallsvariablen gehen wir anders vor.
+
+22
+00:04:07.064 --> 00:04:26.547
+Jeder ganz bestimmte Wert, etwa ein Prognosefehler von exakt einem Grad, also eins Komma null null null und so weiter, wird nur mit der Wahrscheinlichkeit null angenommen. Denn die möglichen Realisationen mit unendlich vielen Nachkommastellen liegen dicht an dicht auf dem Zahlenstrahl.
+
+23
+00:04:27.247 --> 00:04:37.183
+Wahrscheinlichkeiten werden stattdessen durch Flächen unter der Dichtefunktion dargestellt. Die Höhe der Kurve selbst ist also keine Wahrscheinlichkeit.
+
+24
+00:04:37.783 --> 00:04:50.381
+Die gesamte Fläche unter der Dichtefunktion ist eins, das entspricht hundert Prozent. Das passt dazu, dass bei einer Zähldichte alle Stabhöhen zusammen eins ergeben.
+
+25
+00:04:50.981 --> 00:05:10.471
+Wegen der Symmetrie um null liegt links und rechts von null jeweils die Hälfte der Fläche. Ein Prognosefehler unter null bedeutet, dass die App zu warm vorhergesagt hat. Ein Fehler über null bedeutet, dass sie zu kalt vorhergesagt hat. Beides tritt also jeweils mit der Wahrscheinlichkeit fünfzig Prozent ein.
+
+26
+00:05:11.171 --> 00:05:21.415
+Weil einzelne Werte die Wahrscheinlichkeit null haben, spielt es bei stetigen Zufallsvariablen keine Rolle, ob wir kleiner oder kleiner gleich schreiben.
+
+27
+00:05:23.620 --> 00:05:34.186
+Die Kurznotation N null eins enthält zwei Kennzahlen der Standardnormalverteilung: den Erwartungswert null und die Varianz eins.
+
+28
+00:05:34.736 --> 00:05:48.155
+Der Erwartungswert liegt wegen der Symmetrie genau in der Mitte, bei null. Für unser Beispiel heißt das: Die App liegt im Durchschnitt richtig. Sie sagt weder systematisch zu warm noch zu kalt voraus.
+
+29
+00:05:48.755 --> 00:05:55.348
+Die Varianz ist eins, und damit ist auch die Standardabweichung als Wurzel daraus gleich eins.
+
+30
+00:05:55.948 --> 00:06:07.734
+Grafisch können wir die Standardabweichung an der Krümmung der Dichtefunktion ablesen. Im mittleren Bereich ist die Funktion rechtsgekrümmt, an den Rändern linksgekrümmt.
+
+31
+00:06:08.284 --> 00:06:18.799
+Die Wendepunkte, an denen die Krümmung wechselt, liegen bei minus eins und bei eins. Ihr Abstand zur Mitte ist genau die Standardabweichung eins.
+
+32
+00:06:19.499 --> 00:06:27.682
+Für das Beispiel heißt das: Die Prognosefehler schwanken typischerweise um etwa ein Grad um den Erwartungswert null.
+
+33
+00:06:29.890 --> 00:06:41.919
+Wie wahrscheinlich ist es, dass der Prognosefehler höchstens ein Grad beträgt? Gesucht ist P von Z kleiner gleich eins, also die Fläche unter der Dichte links von eins.
+
+34
+00:06:42.519 --> 00:06:55.194
+Mathematisch ist diese Fläche ein Integral. Für die Dichte der Standardnormalverteilung lässt sich aber keine Stammfunktion als Formel angeben. Deshalb können wir das Integral nicht von Hand ausrechnen.
+
+35
+00:06:55.794 --> 00:07:13.934
+Für diese Flächen gibt es daher eine eigene Funktion: die Verteilungsfunktion der Standardnormalverteilung, geschrieben mit dem griechischen Buchstaben Phi. Phi von z ist die Wahrscheinlichkeit, dass Z höchstens z ist, also die Fläche links von z.
+
+36
+00:07:14.634 --> 00:07:25.145
+Die Werte von Phi liefert ein Computer, zum Beispiel R oder auch Excel. Alternativ lesen wir sie aus der Tabelle in der Formelsammlung ab.
+
+37
+00:07:27.050 --> 00:07:41.736
+Wir beginnen mit unserer Frage von eben: Wie groß ist Phi von eins, also die Wahrscheinlichkeit, dass der Prognosefehler höchstens ein Grad beträgt? Unten sehen wir dazu einen Ausschnitt aus der Tabelle der Formelsammlung.
+
+38
+00:07:42.286 --> 00:07:49.636
+Die Zeile gibt die Stelle vor dem Komma und die erste Nachkommastelle an, die Spalte die zweite Nachkommastelle.
+
+39
+00:07:50.186 --> 00:08:12.991
+Der Schwellenwert z, dessen Unterschreitungswahrscheinlichkeit wir suchen, ist eins beziehungsweise eins Komma null null. Wir suchen also in der Zeile, die mit eins Komma null beschriftet ist, und in der Spalte, die mit Komma null null beschriftet ist. Dort finden wir null Komma acht vier eins drei, also vierundachtzig Komma eins drei Prozent.
+
+40
+00:08:13.591 --> 00:08:19.698
+Mit gut vierundachtzig Prozent Wahrscheinlichkeit ist der Prognosefehler also höchstens ein Grad.
+
+41
+00:08:20.698 --> 00:08:32.619
+Zweites Beispiel: die Wahrscheinlichkeit, dass der Prognosefehler höchstens eins Komma zwei drei Grad beträgt. Dazu zerlegen wir eins Komma zwei drei in eins Komma zwei und null Komma null drei.
+
+42
+00:08:33.169 --> 00:08:42.082
+Wir gehen also in die Zeile eins Komma zwei und in die Spalte Komma null drei und lesen null Komma acht neun null sieben ab.
+
+43
+00:08:42.682 --> 00:08:51.058
+Mit gut neunundachtzig Prozent Wahrscheinlichkeit ist der Prognosefehler höchstens eins Komma zwei drei Grad.
+
+44
+00:08:53.270 --> 00:09:06.270
+Zum Vergleich berechnen wir beide Werte mit R. Die Verteilungsfunktion der Normalverteilung heißt in R pnorm. Das p steht wie bei pbinom und ppois für die Verteilungsfunktion.
+
+45
+00:09:06.820 --> 00:09:20.120
+Ohne weitere Angaben verwendet pnorm die Standardnormalverteilung. Mit q gleich eins erhalten wir null Komma acht vier eins drei und weitere Nachkommastellen.
+
+46
+00:09:20.720 --> 00:09:27.266
+Für q gleich eins Komma zwei drei ergibt sich gerundet null Komma acht neun null sieben.
+
+47
+00:09:27.866 --> 00:09:34.552
+Die Ergebnisse stimmen mit den Tabellenwerten überein. Die Tabelle ist lediglich auf vier Nachkommastellen gerundet.
+
+48
+00:09:36.450 --> 00:09:52.386
+Wie wahrscheinlich ist es, dass die tatsächliche Temperatur um mehr als eins Komma zwei drei Grad über der Prognose liegt? Gesucht ist P von Z größer eins Komma zwei drei, also die Fläche rechts von eins Komma zwei drei.
+
+49
+00:09:52.936 --> 00:10:11.261
+Die Tabelle beantwortet das nicht unmittelbar, da sie immer die Fläche links vom Schwellenwert z angibt. Die hier gesuchte Wahrscheinlichkeit ermitteln wir über das Gegenereignis: Wir rechnen eins minus die Wahrscheinlichkeit, dass der Prognosefehler unter eins Komma zwei drei Grad liegt.
+
+50
+00:10:11.861 --> 00:10:15.857
+Im Ergebnis erhalten wir null Komma eins null neun drei.
+
+51
+00:10:16.757 --> 00:10:25.272
+Auch in R können wir die Überschreitungswahrscheinlichkeit als Gegenereignis ausrechnen, indem wir eins minus pnorm rechnen.
+
+52
+00:10:25.822 --> 00:10:33.910
+In knapp elf Prozent der Fälle liegt die tatsächliche Temperatur also um mehr als eins Komma zwei drei Grad über der Prognose.
+
+53
+00:10:36.120 --> 00:10:48.304
+Nun suchen wir die Wahrscheinlichkeit, dass der Prognosefehler zwischen eins und eins Komma zwei drei Grad liegt. Das ist die schmale Fläche zwischen diesen beiden Werten.
+
+54
+00:10:48.854 --> 00:10:55.405
+Wir starten dazu mit der Fläche links von eins Komma zwei drei und ziehen die Fläche links von eins ab.
+
+55
+00:10:56.005 --> 00:10:59.845
+Im Ergebnis erhalten wir vier Komma neun vier Prozent.
+
+56
+00:11:00.745 --> 00:11:05.385
+Auch in R können wir diese Differenz direkt in einem Befehl ausrechnen.
+
+57
+00:11:07.590 --> 00:11:25.672
+Abschließend noch ein Aspekt, der nur das Ablesen aus der Formelsammlung betrifft. Die Tabelle beginnt hier bei z gleich null. Wie bestimmen wir dann P von Z kleiner gleich minus eins, also die Wahrscheinlichkeit, dass die App um mehr als ein Grad zu warm vorhergesagt hat?
+
+58
+00:11:26.222 --> 00:11:35.042
+Hier hilft die Symmetrie der Dichtefunktion: Die Fläche links von minus eins ist genauso groß wie die Fläche rechts von eins.
+
+59
+00:11:35.592 --> 00:11:48.961
+Beide Wahrscheinlichkeiten sind also gleich. Die Fläche rechts von eins erhalten wir wie eben über das Gegenereignis: eins minus null Komma acht vier eins drei ergibt null Komma eins fünf acht sieben.
+
+60
+00:11:49.861 --> 00:11:56.465
+Allgemein gilt: Phi von minus z ist eins minus Phi von z.
+
+61
+00:11:57.465 --> 00:12:12.296
+Daraus ergibt sich eine Verbindung zur Standardabweichung: Mit rund achtundsechzig Prozent Wahrscheinlichkeit liegt der Prognosefehler zwischen minus eins und eins, also innerhalb einer Standardabweichung um den Erwartungswert.
+
+62
+00:12:14.700 --> 00:12:27.797
+Fassen wir zusammen: Bei einer stetigen Zufallsvariablen sind Wahrscheinlichkeiten Flächen unter der Dichtefunktion. Die Gesamtfläche ist eins, und jeder einzelne Wert hat die Wahrscheinlichkeit null.
+
+63
+00:12:28.397 --> 00:12:41.483
+Die Standardnormalverteilung ist symmetrisch um null, mit Erwartungswert null und Standardabweichung eins. Die Standardabweichung erkennen wir an den Wendepunkten bei minus eins und eins.
+
+64
+00:12:42.083 --> 00:12:54.598
+Die Verteilungsfunktion Phi von z ist die Fläche links von z. Ihre Werte lesen wir aus der Tabelle der Formelsammlung ab oder berechnen sie mit pnorm in R.
+
+65
+00:12:55.198 --> 00:13:05.496
+Überschreitungswahrscheinlichkeiten erhalten wir über das Gegenereignis, Wahrscheinlichkeiten für Intervalle als Differenz und Wahrscheinlichkeiten für negative Werte über die Symmetrie.
+
+66
+00:13:06.196 --> 00:13:16.371
+Im nächsten Video lernen wir die allgemeine Normalverteilung kennen. Damit passen wir Erwartungswert und Standardabweichung an konkrete Anwendungen an.
