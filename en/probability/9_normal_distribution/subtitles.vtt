@@ -1,0 +1,313 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:16.265
+In the last video, we got to know the standard normal distribution. Now we generalise it to the normal distribution with a freely chosen expected value and a freely chosen standard deviation. This allows us to use it directly in many applications.
+
+2
+00:00:17.965 --> 00:00:20.650
+The learning goals of this video are:
+
+3
+00:00:21.100 --> 00:00:34.989
+First: to explain how the general normal distribution with the parameters μ and σ arises from the standard normal distribution, and to justify why μ is the expected value and σ is the standard deviation.
+
+4
+00:00:35.389 --> 00:00:45.930
+Second: to reduce probabilities for a normally distributed random variable to the standard normal distribution by standardisation, and to determine them with the table in the formula sheet.
+
+5
+00:00:46.330 --> 00:00:54.745
+And third: to determine a quantile of a normal distribution, that is, a value that is only exceeded with a given probability.
+
+6
+00:00:56.750 --> 00:01:07.702
+First, a recap: the standard normal distribution has the expected value zero and the standard deviation one. That fitted the forecast error of the weather app well.
+
+7
+00:01:08.252 --> 00:01:21.787
+However, many continuous quantities in applications lie around a different value and spread more or less widely, for example the demand for a company's product, the return on a share or people's intelligence quotient.
+
+8
+00:01:22.387 --> 00:01:32.092
+We want to keep three properties of the standard normal distribution. First: with high probability, the quantity lies close to its expected value.
+
+9
+00:01:32.592 --> 00:01:37.440
+Second: deviations upwards and downwards are possible in a symmetric way.
+
+10
+00:01:37.940 --> 00:01:42.236
+Third: larger deviations are possible, but less frequent.
+
+11
+00:01:42.786 --> 00:01:47.290
+What we want to change are the expected value and the standard deviation.
+
+12
+00:01:49.290 --> 00:01:55.692
+The general normal distribution has two parameters: μ is any real number, and σ is greater than zero.
+
+13
+00:01:56.242 --> 00:02:07.233
+We start with a standard normally distributed random variable Z and use it to form a new random variable X: we multiply Z by σ and add μ.
+
+14
+00:02:07.833 --> 00:02:19.159
+Then X is called normally distributed with the parameters μ and σ squared, N of μ and σ squared for short. The second entry in the short notation is the variance.
+
+15
+00:02:19.759 --> 00:02:27.617
+Intuitively speaking: multiplying by σ stretches or compresses the values of Z, and adding μ shifts them.
+
+16
+00:02:29.620 --> 00:02:44.113
+We already know such a conversion from video six. There, we calculated the gain G in the casino from the sum of the dice X: twice the sum of the dice minus the stake of fifteen euros.
+
+17
+00:02:44.663 --> 00:02:50.365
+A sum of two gives a gain of minus eleven, a sum of three gives a gain of minus nine.
+
+18
+00:02:50.915 --> 00:03:02.027
+That was a linear transformation with the factor a equal to two and the added number b equal to minus fifteen. For the normal distribution, the factor is σ and the added number is μ.
+
+19
+00:03:02.627 --> 00:03:15.290
+As in video six, we show both distributions one above the other: at the top the density of Z with the axis z, at the bottom the density of X with the axis x.
+
+20
+00:03:15.841 --> 00:03:24.021
+We map a few realisations as examples. The value zero becomes μ plus σ times zero, that is, μ.
+
+21
+00:03:24.521 --> 00:03:34.256
+The value one becomes μ plus σ, the value minus one becomes μ minus σ, and the value two becomes μ plus two σ.
+
+22
+00:03:34.806 --> 00:03:39.796
+So every realisation of Z has exactly one matching realisation of X.
+
+23
+00:03:40.346 --> 00:03:52.134
+The curve at the bottom has the same shape as the one at the top. Its centre is now at μ, and a step of length one on the z-axis corresponds to a step of length σ on the x-axis.
+
+24
+00:03:54.340 --> 00:04:03.328
+Now we justify why μ is the expected value and σ is the standard deviation of X. To do this, we use the rules of calculation from video six.
+
+25
+00:04:03.878 --> 00:04:12.974
+Here, a equals σ and b equals μ. We also know from video seven: Z has the expected value zero and the variance one.
+
+26
+00:04:13.524 --> 00:04:20.132
+For the expected value of X, we get σ times zero plus μ, that is, μ.
+
+27
+00:04:21.132 --> 00:04:29.597
+For the variance, the added μ drops out, and the factor σ is squared. With the variance one of Z, we get σ squared.
+
+28
+00:04:30.197 --> 00:04:34.282
+The standard deviation is its square root, that is, σ.
+
+29
+00:04:34.882 --> 00:04:41.165
+So the parameter μ is the expected value and σ is the standard deviation of X.
+
+30
+00:04:42.165 --> 00:04:49.957
+In the double plot, we see this as follows: at the top, the expected value is at zero, at the bottom, it is at μ.
+
+31
+00:04:50.507 --> 00:05:05.930
+As with the standard normal distribution, the inflection points lie exactly one standard deviation to the left and right of the expected value: at the top at minus one and one, at the bottom at μ minus σ and μ plus σ.
+
+32
+00:05:06.930 --> 00:05:13.279
+We can also see the role of the parameters in a plot on a common axis. We start with the standard normal distribution.
+
+33
+00:05:13.779 --> 00:05:18.368
+If μ increases, the curve shifts to the right. Its shape stays the same.
+
+34
+00:05:18.918 --> 00:05:26.498
+If σ increases, the curve becomes wider and at the same time flatter, because the area under it always remains one.
+
+35
+00:05:27.048 --> 00:05:31.858
+With a smaller σ, it becomes narrower and taller accordingly.
+
+36
+00:05:34.060 --> 00:05:44.492
+Now for an application example. We randomly select a person from the population. Let X be their intelligence quotient, IQ for short.
+
+37
+00:05:45.042 --> 00:05:52.878
+Standard IQ tests are calibrated so that the expected value is one hundred and the standard deviation is fifteen.
+
+38
+00:05:53.428 --> 00:06:00.906
+In the short notation, we write one hundred after X as the expected value and fifteen squared as the variance.
+
+39
+00:06:03.110 --> 00:06:12.244
+We now label the double plot with the concrete values: at the top z from minus three to three, at the bottom the IQ from fifty-five to one hundred and forty-five.
+
+40
+00:06:12.794 --> 00:06:22.864
+The value zero becomes an IQ of one hundred, one becomes one hundred and fifteen, minus one becomes eighty-five and two becomes one hundred and thirty.
+
+41
+00:06:23.464 --> 00:06:37.606
+The expected value is at one hundred. One standard deviation corresponds to fifteen IQ points: the range of one standard deviation around the expected value extends from eighty-five to one hundred and fifteen.
+
+42
+00:06:39.810 --> 00:06:51.598
+Now we determine probabilities. Because every realisation of X corresponds to exactly one realisation of Z, each area at the bottom has an area of exactly the same size at the top.
+
+43
+00:06:52.148 --> 00:07:01.126
+First example: an IQ below one hundred corresponds to Z below zero. This probability is fifty percent because of the symmetry.
+
+44
+00:07:01.726 --> 00:07:16.331
+Second example: an IQ between eighty-five and one hundred and fifteen corresponds to Z between minus one and one. This is the range within one standard deviation around the expected value, with a probability of about sixty-eight percent.
+
+45
+00:07:16.931 --> 00:07:23.302
+Third example: an IQ above one hundred and fifteen corresponds to Z above one.
+
+46
+00:07:24.302 --> 00:07:33.426
+For these values, we could read off the matching point on the z-axis directly. For arbitrary values, we will next get to know a transformation.
+
+47
+00:07:35.330 --> 00:07:42.714
+The transformation is based on the definition of X. We solve it for Z: first, we subtract μ on both sides.
+
+48
+00:07:44.014 --> 00:07:46.438
+Then we divide by σ.
+
+49
+00:07:47.738 --> 00:07:54.892
+This conversion back is called standardisation. It is also given in this form in the formula sheet.
+
+50
+00:07:56.292 --> 00:08:03.742
+We first apply it to a probability whose result we already know: P of X greater than one hundred and fifteen.
+
+51
+00:08:05.042 --> 00:08:13.303
+On both sides of the inequality, we subtract μ, here one hundred. In addition, we divide by σ, here fifteen.
+
+52
+00:08:14.603 --> 00:08:21.096
+This leaves exactly Z on the left; on the right, this calculation gives the value one.
+
+53
+00:08:22.496 --> 00:08:34.900
+From here, we continue as in video seven via the complementary event and the table. A randomly selected person has an IQ above one hundred and fifteen with a probability of about sixteen percent.
+
+54
+00:08:37.100 --> 00:08:40.832
+How likely is an IQ above one hundred and thirty?
+
+55
+00:08:41.832 --> 00:08:50.257
+We proceed exactly as before: on both sides, we subtract μ, here one hundred, and we divide by σ, here fifteen.
+
+56
+00:08:51.557 --> 00:08:57.440
+This again leaves exactly Z on the left; on the right, we get the value two.
+
+57
+00:08:58.440 --> 00:09:08.180
+The probability we are looking for is as large as P of Z greater than two. We can determine its value via the complementary event, that is, one minus Phi of two.
+
+58
+00:09:09.480 --> 00:09:19.372
+Next, we read off Phi of two from the table: in the row two point zero and in the column point zero zero. There we find zero point nine seven seven two.
+
+59
+00:09:20.672 --> 00:09:28.895
+As a result, we get a probability of two point two eight percent that a randomly selected person has an IQ above one hundred and thirty.
+
+60
+00:09:31.100 --> 00:09:37.622
+Now we turn the question around: which IQ is exceeded with a probability of only one percent?
+
+61
+00:09:38.172 --> 00:09:49.712
+To answer this, we are looking for the point x such that one percent of the area lies to its right. Since the total area under the density function is one hundred percent, ninety-nine percent lies to the left of x.
+
+62
+00:09:50.262 --> 00:09:54.651
+Such a value is called a quantile, here the ninety-nine percent quantile.
+
+63
+00:09:55.251 --> 00:10:04.951
+We proceed in two steps: first, we look for the matching point z for the standard normal distribution, then we convert it into an IQ value.
+
+64
+00:10:05.501 --> 00:10:13.218
+Step one: we are looking for z with Phi of z equal to zero point nine nine.
+
+65
+00:10:14.218 --> 00:10:21.604
+This time, we read the table backwards: inside the table, we look for the value that comes closest to zero point nine nine.
+
+66
+00:10:22.804 --> 00:10:33.865
+The candidates are zero point nine eight nine eight and zero point nine nine zero one. The closest is zero point nine nine zero one, in the row two point three and the column point zero three.
+
+67
+00:10:34.465 --> 00:10:38.462
+So z is approximately two point three three.
+
+68
+00:10:39.462 --> 00:10:50.056
+Step two: using the definition of X, we convert back to the IQ scale. One hundred plus fifteen times two point three three gives one hundred and thirty-four point nine five.
+
+69
+00:10:50.656 --> 00:10:56.921
+So an IQ of about one hundred and thirty-five is exceeded with a probability of only one percent.
+
+70
+00:10:59.120 --> 00:11:15.990
+All these calculations can also be carried out in R. For the general normal distribution, pnorm additionally receives the arguments mean and sd for the expected value and the standard deviation.
+
+71
+00:11:16.890 --> 00:11:34.054
+As the second parameter of the normal distribution, R expects the standard deviation, in the example fifteen, and not the variance. Via the complementary event, we get, rounded, zero point one five eight seven for an IQ above one hundred and fifteen.
+
+72
+00:11:34.654 --> 00:11:41.136
+For an IQ above one hundred and thirty, the result is, rounded, zero point zero two two eight.
+
+73
+00:11:41.736 --> 00:12:10.682
+For quantiles, R has a function that we have not used so far. Instead of p for the cumulative distribution function, the command for the quantile starts with q. For the normal distribution, the quantile command is called qnorm. As the argument p, we pass the area to the left of the point we are looking for, here zero point nine nine. The further arguments of qnorm are mean and sd, that is, μ and σ of the normal distribution.
+
+74
+00:12:11.232 --> 00:12:20.184
+We get about one hundred and thirty-four point nine. The result from R is more precise here, because we had to round to two decimal places when reading off the table.
+
+75
+00:12:22.590 --> 00:12:34.101
+To sum up: from a standard normally distributed random variable Z, μ plus σ times Z gives a normally distributed random variable X with the parameters μ and σ squared.
+
+76
+00:12:34.701 --> 00:12:44.237
+With the rules of calculation from video six, it follows that μ is the expected value and σ is the standard deviation of X.
+
+77
+00:12:44.837 --> 00:12:51.433
+Standardisation reduces probabilities for X to the cumulative distribution function Phi of the standard normal distribution.
+
+78
+00:12:52.033 --> 00:13:03.415
+For a quantile, we first read off z backwards from the table and then convert back with μ plus σ times z. In R, qnorm does this for us.

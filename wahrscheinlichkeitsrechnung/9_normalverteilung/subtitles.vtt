@@ -1,0 +1,313 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:17.251
+Im letzten Video haben wir die Standardnormalverteilung kennengelernt. Jetzt verallgemeinern wir sie zur Normalverteilung mit frei wählbarem Erwartungswert und frei wählbarer Standardabweichung. So können wir sie unmittelbar in vielen Anwendungen einsetzen.
+
+2
+00:00:18.951 --> 00:00:24.161
+Die Lernziele des Videos sind:
+
+3
+00:00:24.611 --> 00:00:38.589
+Erstens: erklären, wie die allgemeine Normalverteilung mit den Parametern μ und σ aus der Standardnormalverteilung entsteht, und begründen, warum μ der Erwartungswert und σ die Standardabweichung ist.
+
+4
+00:00:38.989 --> 00:00:49.890
+Zweitens: Wahrscheinlichkeiten für eine normalverteilte Zufallsvariable durch Standardisierung auf die Standardnormalverteilung zurückführen und mit der Tabelle der Formelsammlung bestimmen.
+
+5
+00:00:50.290 --> 00:00:59.198
+Und drittens: ein Quantil einer Normalverteilung bestimmen, also einen Wert, der nur mit einer vorgegebenen Wahrscheinlichkeit überschritten wird.
+
+6
+00:01:01.200 --> 00:01:12.752
+Zunächst ein Rückblick: Die Standardnormalverteilung hat den Erwartungswert null und die Standardabweichung eins. Für den Prognosefehler der Wetter-App passte das gut.
+
+7
+00:01:13.302 --> 00:01:28.333
+Viele stetige Größen in Anwendungen liegen aber um einen anderen Wert herum und streuen stärker oder schwächer, etwa die Nachfragemenge eines Unternehmens, die Rendite einer Aktie oder der Intelligenzquotient von Menschen.
+
+8
+00:01:28.933 --> 00:01:38.359
+Drei Eigenschaften der Standardnormalverteilung möchten wir behalten. Erstens: Mit großer Wahrscheinlichkeit liegt die Größe in der Nähe des Erwartungswerts.
+
+9
+00:01:38.859 --> 00:01:44.413
+Zweitens: Abweichungen sind symmetrisch nach oben und nach unten möglich.
+
+10
+00:01:44.913 --> 00:01:49.734
+Drittens: Größere Abweichungen sind möglich, aber seltener.
+
+11
+00:01:50.284 --> 00:01:54.374
+Ändern möchten wir den Erwartungswert und die Standardabweichung.
+
+12
+00:01:56.370 --> 00:02:04.766
+Die allgemeine Normalverteilung hat zwei Parameter: μ ist eine beliebige reelle Zahl, und σ ist größer als null.
+
+13
+00:02:05.316 --> 00:02:18.364
+Wir starten mit einer standardnormalverteilten Zufallsvariablen Z und bilden daraus eine neue Zufallsvariable X: Wir multiplizieren Z mit σ und addieren μ.
+
+14
+00:02:18.964 --> 00:02:31.748
+Dann heißt X normalverteilt mit den Parametern μ und σ Quadrat, kurz N von μ und σ Quadrat. An zweiter Stelle steht in der Kurzschreibweise die Varianz.
+
+15
+00:02:32.348 --> 00:02:42.418
+Anschaulich gesprochen: Die Multiplikation mit σ streckt beziehungsweise staucht die Werte von Z, und die Addition von μ verschiebt sie.
+
+16
+00:02:44.420 --> 00:02:56.832
+Eine solche Umrechnung kennen wir bereits aus Video sechs. Dort haben wir aus der Augensumme X den Gewinn G im Casino berechnet: die doppelte Augensumme minus fünfzehn Euro Einsatz.
+
+17
+00:02:57.382 --> 00:03:04.554
+Zur Augensumme zwei gehört der Gewinn minus elf, zur Augensumme drei der Gewinn minus neun.
+
+18
+00:03:05.104 --> 00:03:19.061
+Das war eine Lineartransformation mit dem Faktor a gleich zwei und der addierten Zahl b gleich minus fünfzehn. Bei der Normalverteilung ist der Faktor σ und die addierte Zahl μ.
+
+19
+00:03:19.661 --> 00:03:32.585
+Wie in Video sechs stellen wir beide Verteilungen übereinander dar: oben die Dichte von Z mit der Achse z, unten die Dichte von X mit der Achse x.
+
+20
+00:03:33.134 --> 00:03:40.568
+Wir überführen exemplarisch einige Realisationen. Der Wert null wird zu μ plus σ mal null, also zu μ.
+
+21
+00:03:41.068 --> 00:03:50.807
+Der Wert eins wird zu μ plus σ, der Wert minus eins zu μ minus σ und der Wert zwei zu μ plus zwei σ.
+
+22
+00:03:51.357 --> 00:03:56.942
+Jede Realisation von Z hat also genau eine passende Realisation von X.
+
+23
+00:03:57.492 --> 00:04:09.512
+Die Kurve unten hat dieselbe Form wie oben. Ihre Mitte liegt jetzt bei μ, und ein Schritt der Länge eins auf der z-Achse entspricht einem Schritt der Länge σ auf der x-Achse.
+
+24
+00:04:11.710 --> 00:04:22.320
+Nun begründen wir, warum μ der Erwartungswert und σ die Standardabweichung von X ist. Dazu nutzen wir die Rechenregeln aus Video sechs.
+
+25
+00:04:22.870 --> 00:04:32.261
+Hier ist a gleich σ und b gleich μ. Aus Video sieben wissen wir außerdem: Z hat den Erwartungswert null und die Varianz eins.
+
+26
+00:04:32.811 --> 00:04:38.844
+Für den Erwartungswert von X erhalten wir σ mal null plus μ, also μ.
+
+27
+00:04:39.844 --> 00:04:49.405
+Bei der Varianz fällt das addierte μ weg, und der Faktor σ wird quadriert. Mit der Varianz eins von Z ergibt sich σ Quadrat.
+
+28
+00:04:50.005 --> 00:04:54.450
+Die Standardabweichung ist die Wurzel daraus, also σ.
+
+29
+00:04:55.050 --> 00:05:02.507
+Der Parameter μ ist also der Erwartungswert und σ die Standardabweichung von X.
+
+30
+00:05:03.507 --> 00:05:09.795
+Im Doppelplot sehen wir das so: Oben liegt der Erwartungswert bei null, unten bei μ.
+
+31
+00:05:10.345 --> 00:05:25.270
+Wie bei der Standardnormalverteilung liegen die Wendepunkte genau eine Standardabweichung links und rechts vom Erwartungswert: oben bei minus eins und eins, unten bei μ minus σ und μ plus σ.
+
+32
+00:05:26.270 --> 00:05:34.066
+Die Rolle der Parameter können wir auch durch den Plot auf einer gemeinsamen Achse erkennen. Wir starten mit der Standardnormalverteilung.
+
+33
+00:05:34.566 --> 00:05:40.867
+Wird μ größer, verschiebt sich die Kurve nach rechts. Ihre Form bleibt gleich.
+
+34
+00:05:41.417 --> 00:05:49.173
+Wird σ größer, wird die Kurve breiter und zugleich flacher, denn die Fläche darunter bleibt immer eins.
+
+35
+00:05:49.723 --> 00:05:53.922
+Bei kleinerem σ wird sie entsprechend schmaler und höher.
+
+36
+00:05:56.130 --> 00:06:06.163
+Nun zu einem Anwendungsbeispiel. Wir wählen zufällig eine Person aus der Bevölkerung aus. X sei ihr Intelligenzquotient, kurz IQ.
+
+37
+00:06:06.713 --> 00:06:14.793
+Standard-IQ-Tests sind so kalibriert, dass der Erwartungswert hundert und die Standardabweichung fünfzehn beträgt.
+
+38
+00:06:15.343 --> 00:06:23.069
+In der Kurzschreibweise schreiben wir hinter X die hundert als Erwartungswert und fünfzehn Quadrat als Varianz.
+
+39
+00:06:25.270 --> 00:06:36.793
+Den Doppelplot beschriften wir nun mit den konkreten Werten: oben z von minus drei bis drei, unten der IQ von fünfundfünfzig bis hundertfünfundvierzig.
+
+40
+00:06:37.343 --> 00:06:48.247
+Der Wert null wird zum IQ hundert, eins wird zu hundertfünfzehn, minus eins zu fünfundachtzig und zwei zu hundertdreißig.
+
+41
+00:06:48.847 --> 00:07:03.157
+Der Erwartungswert liegt bei hundert. Eine Standardabweichung entspricht fünfzehn IQ-Punkten: Der Bereich eine Standardabweichung um den Erwartungswert reicht von fünfundachtzig bis hundertfünfzehn.
+
+42
+00:07:05.360 --> 00:07:17.156
+Nun bestimmen wir Wahrscheinlichkeiten. Weil jede Realisation von X genau einer Realisation von Z entspricht, gehören zu den Flächen unten genau gleich große Flächen oben.
+
+43
+00:07:17.706 --> 00:07:27.471
+Erstes Beispiel: Ein IQ unter hundert entspricht Z unter null. Diese Wahrscheinlichkeit ist wegen der Symmetrie fünfzig Prozent.
+
+44
+00:07:28.071 --> 00:07:45.929
+Zweites Beispiel: Ein IQ zwischen fünfundachtzig und hundertfünfzehn entspricht Z zwischen minus eins und eins. Das ist der Bereich innerhalb einer Standardabweichung um den Erwartungswert, mit rund achtundsechzig Prozent Wahrscheinlichkeit.
+
+45
+00:07:46.529 --> 00:07:52.260
+Drittes Beispiel: Ein IQ über hundertfünfzehn entspricht Z über eins.
+
+46
+00:07:53.260 --> 00:08:03.146
+Bei diesen Werten konnten wir die passende Stelle auf der z-Achse direkt ablesen. Für beliebige Werte lernen wir als Nächstes eine Transformation kennen.
+
+47
+00:08:05.050 --> 00:08:14.760
+Die Transformation basiert auf der Definition von X. Die lösen wir nach Z auf: Zuerst ziehen wir auf beiden Seiten μ ab.
+
+48
+00:08:16.060 --> 00:08:18.096
+Dann teilen wir durch σ.
+
+49
+00:08:19.396 --> 00:08:25.295
+Diese Rückrechnung heißt Standardisierung. Sie steht so auch in der Formelsammlung.
+
+50
+00:08:26.695 --> 00:08:34.965
+Wir wenden sie zuerst auf eine Wahrscheinlichkeit an, deren Ergebnis wir schon kennen: P von X größer hundertfünfzehn.
+
+51
+00:08:36.265 --> 00:08:45.748
+Auf beiden Seiten der Ungleichung ziehen wir μ ab bzw. hundert. Zudem teilen wir durch σ bzw. durch fünfzehn.
+
+52
+00:08:47.048 --> 00:08:53.390
+Dadurch steht links dann genau Z, rechts ergibt sich in dieser Rechnung der Wert eins.
+
+53
+00:08:54.790 --> 00:09:07.741
+Weiter geht es wie in Video sieben über das Gegenereignis und die Tabelle. Eine zufällige Person hat mit einer Wahrscheinlichkeit von rund sechzehn Prozent einen IQ über hundertfünfzehn.
+
+54
+00:09:09.940 --> 00:09:13.906
+Wie wahrscheinlich ist ein IQ über hundertdreißig?
+
+55
+00:09:14.906 --> 00:09:25.260
+Wir gehen genauso vor wie gerade: Wir ziehen auf beiden Seiten μ bzw. hundert ab, und wir teilen durch σ bzw. durch fünfzehn.
+
+56
+00:09:26.560 --> 00:09:31.536
+Dadurch steht links wieder genau Z, rechts ergibt sich der Wert zwei.
+
+57
+00:09:32.536 --> 00:09:43.325
+Die gesuchte Wahrscheinlichkeit ist so groß wie P von Z größer zwei. Den Wert können wir über das Gegenereignis ermitteln, also eins minus Phi von zwei.
+
+58
+00:09:44.625 --> 00:09:56.433
+Als Nächstes lesen wir Phi von zwei aus der Tabelle ab: in der Zeile zwei Komma null und in der Spalte Komma null null. Dort steht null Komma neun sieben sieben zwei.
+
+59
+00:09:57.733 --> 00:10:09.617
+Im Ergebnis erhalten wir eine Wahrscheinlichkeit von zwei Komma zwei acht Prozent dafür, dass eine zufällig ausgewählte Person einen IQ über hundertdreißig hat.
+
+60
+00:10:11.820 --> 00:10:19.703
+Jetzt drehen wir die Fragestellung um: Welcher IQ wird nur mit einer Wahrscheinlichkeit von einem Prozent überschritten?
+
+61
+00:10:20.253 --> 00:10:34.348
+Gesucht ist dazu die Stelle x, sodass auf der rechten Seite davon ein Prozent der Fläche liegt. Da unter der gesamten Dichtefunktion hundert Prozent Fläche liegen, befinden sich links von x neunundneunzig Prozent.
+
+62
+00:10:34.898 --> 00:10:40.614
+Einen solchen Wert nennt man Quantil, hier das neunundneunzig-Prozent-Quantil.
+
+63
+00:10:41.214 --> 00:10:50.488
+Wir gehen in zwei Schritten vor: Zuerst suchen wir die passende Stelle z bei der Standardnormalverteilung, dann rechnen wir sie in einen IQ-Wert um.
+
+64
+00:10:51.038 --> 00:10:58.122
+Schritt eins: Gesucht ist z mit Phi von z gleich null Komma neun neun.
+
+65
+00:10:59.122 --> 00:11:06.762
+Diesmal lesen wir die Tabelle rückwärts: Wir suchen im Inneren der Tabelle den Wert, der null Komma neun neun am nächsten kommt.
+
+66
+00:11:07.963 --> 00:11:22.828
+In Frage kommen null Komma neun acht neun acht und null Komma neun neun null eins. Am nächsten liegt null Komma neun neun null eins, in der Zeile zwei Komma drei und in der Spalte Komma null drei.
+
+67
+00:11:23.428 --> 00:11:26.771
+Also ist z ungefähr zwei Komma drei drei.
+
+68
+00:11:27.771 --> 00:11:40.014
+Schritt zwei: Mit der Definition von X rechnen wir zurück auf die IQ-Skala. Hundert plus fünfzehn mal zwei Komma drei drei ergibt hundertvierunddreißig Komma neun fünf.
+
+69
+00:11:40.614 --> 00:11:48.810
+Ein IQ von rund hundertfünfunddreißig wird also nur mit einer Wahrscheinlichkeit von einem Prozent überschritten.
+
+70
+00:11:51.010 --> 00:12:04.850
+All diese Rechnungen lassen sich auch in R durchführen. Für die allgemeine Normalverteilung erhält pnorm zusätzlich die Argumente mean und sd für den Erwartungswert und die Standardabweichung.
+
+71
+00:12:05.750 --> 00:12:23.786
+Als zweiten Parameter der Normalverteilung erwartet R die Standardabweichung, im Beispiel also fünfzehn, und nicht die Varianz. Über das Gegenereignis erhalten wir für einen IQ über hundertfünfzehn gerundet null Komma eins fünf acht sieben.
+
+72
+00:12:24.386 --> 00:12:31.403
+Für einen IQ über hundertdreißig ergibt sich gerundet null Komma null zwei zwei acht.
+
+73
+00:12:32.003 --> 00:13:02.937
+Für Quantile gibt es in R eine Funktion, die wir bislang noch nicht verwendet haben. Anstelle von p für die Verteilungsfunktion beginnt der Befehl für das Quantil mit q. Für die Normalverteilung heißt der Quantilsbefehl qnorm. Als Argument p übergeben wir die Fläche links von der gesuchten Stelle, hier also null Komma neun neun. Die weiteren Argumente von qnorm sind mean und sd, also μ und σ der Normalverteilung.
+
+74
+00:13:03.487 --> 00:13:14.882
+Wir erhalten rund hundertvierunddreißig Komma neun. Das Ergebnis aus R ist hier genauer, da wir beim Ablesen aus der Tabelle auf zwei Nachkommastellen runden mussten.
+
+75
+00:13:17.280 --> 00:13:32.220
+Fassen wir zusammen: Aus einer standardnormalverteilten Zufallsvariablen Z entsteht mit μ plus σ mal Z eine normalverteilte Zufallsvariable X mit den Parametern μ und σ Quadrat.
+
+76
+00:13:32.820 --> 00:13:41.353
+Mit den Rechenregeln aus Video sechs folgt: μ ist der Erwartungswert und σ die Standardabweichung von X.
+
+77
+00:13:41.954 --> 00:13:50.207
+Die Standardisierung führt Wahrscheinlichkeiten für X auf die Verteilungsfunktion Phi der Standardnormalverteilung zurück.
+
+78
+00:13:50.807 --> 00:14:01.764
+Für ein Quantil lesen wir zuerst z rückwärts aus der Tabelle ab und rechnen dann mit μ plus σ mal z zurück. In R übernimmt das qnorm.
