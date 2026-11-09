@@ -1,0 +1,233 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:13.934
+Wie stark ändert sich ein Ergebnis, wenn wir eine Eingangsgröße ein wenig verändern? Diese Frage taucht in vielen betriebswirtschaftlichen Anwendungen auf. Das mathematische Werkzeug dafür ist die Ableitung.
+
+2
+00:00:15.634 --> 00:00:19.026
+In diesem Video verfolgen wir drei Lernziele.
+
+3
+00:00:19.476 --> 00:00:26.644
+Erstens: an einem Beispiel aus der BWL fragen, wie stark sich der Funktionswert ändert, wenn sich x ändert.
+
+4
+00:00:27.044 --> 00:00:34.644
+Zweitens: vom Differenzenquotienten über immer kleinere Änderungen von x zur Ableitung als Steigung der Tangente gelangen.
+
+5
+00:00:35.044 --> 00:00:42.827
+Und drittens: die Ableitung im Beispiel als marginalen Effekt des Marketingbudgets auf den Umsatz deuten.
+
+6
+00:00:44.830 --> 00:00:58.230
+Ein Unternehmen untersucht, wie sein Umsatz vom Marketingbudget abhängt. Das Marketingbudget nennen wir x, gemessen in tausend Euro. Den Umsatz nennen wir f von x, ebenfalls in tausend Euro.
+
+7
+00:00:58.780 --> 00:01:06.475
+Für den Zusammenhang nehmen wir an, dass die Marketingaufwendungen in Form einer Wurzelfunktion auf den Umsatz einwirken.
+
+8
+00:01:07.075 --> 00:01:21.248
+Ohne Marketing liegt der Umsatz bei fünfhundert tausend Euro. Mit wachsendem Budget steigt der Umsatz, durch die Wurzelfunktion wird die Kurve aber immer flacher. Wir betrachten die Bedeutung des Verlaufs nun genauer.
+
+9
+00:01:21.948 --> 00:01:30.681
+Nun stellt sich die Frage: Wie viel zusätzlichen Umsatz bringen tausend Euro mehr für Marketing? Die Antwort hängt davon ab, wo wir stehen.
+
+10
+00:01:31.281 --> 00:01:39.940
+Bei einem Budget von zehntausend Euro bringen tausend Euro mehr etwa sechs Komma zwei tausend Euro zusätzlichen Umsatz.
+
+11
+00:01:40.490 --> 00:01:45.287
+Bei fünfzigtausend Euro sind es nur noch etwa zwei Komma acht tausend Euro.
+
+12
+00:01:45.837 --> 00:01:55.566
+Bei kleinem Budget bringt jeder zusätzliche Euro also mehr als bei großem Budget – die Kurve ist an der ersten Stelle steiler als an der zweiten.
+
+13
+00:01:56.566 --> 00:02:10.257
+Dabei haben wir die tausend Euro mehr allerdings nur beispielhaft gewählt. Ebenso gut könnten wir eine kleinere oder größere Erhöhung betrachten. Diese Änderung des Budgets sehen wir uns als Nächstes genauer an.
+
+14
+00:02:12.060 --> 00:02:18.854
+Dazu konzentrieren wir uns nun auf ein aktuelles Budget von x gleich zehn, also zehntausend Euro.
+
+15
+00:02:19.404 --> 00:02:25.235
+Der Umsatz beträgt dort etwa sechshundertsechsundzwanzig Komma fünf tausend Euro.
+
+16
+00:02:25.835 --> 00:02:32.921
+Die Änderung des Budgets bezeichnen wir mit Δx. Das Zeichen Delta steht für „Änderung von“.
+
+17
+00:02:33.471 --> 00:02:45.757
+Möglich wäre zum Beispiel eine Erhöhung um zweitausend Euro, um tausend Euro oder nur um hundert Euro – also Δx gleich zwei, eins oder null Komma eins.
+
+18
+00:02:46.356 --> 00:02:55.108
+Wir wollen wissen, welchen Effekt die Änderung auf den Umsatz hätte. Diese Änderung des Funktionswerts bezeichnen wir mit Δf.
+
+19
+00:02:55.708 --> 00:03:07.079
+Um Änderungen unterschiedlicher Größe vergleichen zu können, betrachten wir nicht die Änderung Δf allein, sondern das Verhältnis aus Änderung des Funktionswerts und Änderung von x.
+
+20
+00:03:08.880 --> 00:03:18.178
+Dieses Verhältnis heißt Differenzenquotient: Im Zähler steht die Differenz der Funktionswerte, im Nenner die Differenz der x-Werte.
+
+21
+00:03:18.728 --> 00:03:26.292
+Im Beispiel ist der Differenzenquotient die Änderung des Umsatzes im Verhältnis zum zusätzlichen Marketingbudget.
+
+22
+00:03:26.892 --> 00:03:37.308
+Für eine erste Berechnung des Differenzenquotienten setzen wir Δx gleich zwei: Wir erhöhen also das Budget von zehn auf zwölf.
+
+23
+00:03:37.808 --> 00:03:46.561
+Der Umsatz steigt um etwa zwölf tausend Euro, im Verhältnis also etwa sechs Komma null vier tausend Euro pro tausend Euro Budget.
+
+24
+00:03:47.161 --> 00:03:55.964
+Am Graphen ist der Differenzenquotient die Steigung der Geraden durch die beiden Punkte. Diese Gerade heißt Sekante.
+
+25
+00:03:56.964 --> 00:04:02.131
+Als nächstes setzen wir Δx gleich eins: von zehn auf elf.
+
+26
+00:04:02.631 --> 00:04:07.367
+Der Differenzenquotient beträgt nun etwa sechs Komma eins sieben.
+
+27
+00:04:08.367 --> 00:04:13.624
+Δx gleich null Komma eins: von zehn auf zehn Komma eins.
+
+28
+00:04:14.124 --> 00:04:24.613
+Die beiden Punkte liegen jetzt so nah beieinander, dass wir eine Lupe zu Hilfe nehmen. Der Differenzenquotient beträgt etwa sechs Komma drei eins.
+
+29
+00:04:26.610 --> 00:04:41.254
+Bis hierher ist die Situation recht vielschichtig, denn wir brauchen zwei Festlegungen. Erstens: Was ist das aktuelle Budget x? Zweitens: Um welches Δx soll das Budget erhöht werden?
+
+30
+00:04:41.854 --> 00:04:51.640
+Die Ableitung erspart uns eine dieser Festlegungen, und zwar das Δx. Die Ableitung betrachtet standardmäßig eine unendlich kleine Änderung von x.
+
+31
+00:04:52.240 --> 00:05:05.616
+Wir lassen Δx also gegen null gehen und schauen, welcher Zahl sich der Differenzenquotient dabei nähert. Diesen Wert nennt man Grenzwert, abgekürzt mit lim, ausgesprochen Limes.
+
+32
+00:05:06.216 --> 00:05:15.349
+Genau gleich null dürfen wir Δx nicht setzen, denn dann würden wir durch null teilen – deshalb der Weg über immer kleinere Änderungen.
+
+33
+00:05:15.949 --> 00:05:22.985
+Den Grenzwert nennen wir die Ableitung von f an der Stelle x, geschrieben f'(x).
+
+34
+00:05:23.685 --> 00:05:36.211
+Am Graphen ist die Ableitung die Steigung der Geraden, der sich die Sekanten annähern. Diese Gerade berührt die Kurve im Punkt zu x gleich zehn und heißt Tangente.
+
+35
+00:05:37.810 --> 00:05:45.642
+Wenn dieser Grenzwert existiert, sagt man, dass die Funktion an der Stelle x differenzierbar ist.
+
+36
+00:05:46.242 --> 00:05:57.456
+Die Funktionen, die wir in dieser Veranstaltung betrachten – etwa lineare, quadratische oder Exponentialfunktionen – erfüllen diese Eigenschaft.
+
+37
+00:05:58.006 --> 00:06:05.813
+Bei einer glatten Kurve, also ohne Knicke, nähern sich die Sekanten von links und von rechts derselben Tangente.
+
+38
+00:06:06.513 --> 00:06:14.945
+Problematisch können stückweise definierte Funktionen sein, selbst wenn sie stetig sind, ihr Graph also ohne Sprung verläuft.
+
+39
+00:06:15.495 --> 00:06:25.496
+Hat der Graph eine Ecke, so nähern sich die Differenzenquotienten von links und von rechts unterschiedlichen Zahlen – hier zwei und null Komma fünf.
+
+40
+00:06:26.096 --> 00:06:35.498
+Es gibt dann keinen gemeinsamen Grenzwert und keine eindeutige Tangente – die Funktion ist an dieser Stelle nicht differenzierbar.
+
+41
+00:06:36.498 --> 00:06:49.333
+Unsere Marketingfunktion ist für alle positiven Werte des Budgets differenzierbar. Nur direkt bei x gleich null wird die Kurve unendlich steil und wir können die Ableitung nicht auswerten.
+
+42
+00:06:50.930 --> 00:07:05.720
+Den Grenzwert können wir direkt berechnen, ohne immer kleinere Δx einzusetzen. Dafür gibt es Ableitungsregeln, die wir im nächsten Video systematisch behandeln. Für unsere Funktion genügen drei davon.
+
+43
+00:07:06.270 --> 00:07:17.091
+Zuerst schreiben wir die Wurzel als Potenz: Wurzel aus x ist x hoch ein halb. Damit können wir die Ableitungsregel für Potenzfunktionen nutzen.
+
+44
+00:07:17.791 --> 00:07:25.132
+Laut der Potenzregel wird in der Ableitung der Exponent als Faktor hinzugefügt, und er verringert sich dann um eins.
+
+45
+00:07:25.832 --> 00:07:39.593
+Ansonsten gilt beim Ableiten, dass Vorfaktoren in der Ableitung bestehen bleiben, hier also der Faktor vierzig. Additive Konstanten fallen in der Ableitung weg, hier die fünfhundert.
+
+46
+00:07:40.293 --> 00:07:47.426
+Zusammengefasst ergibt das zwanzig mal x hoch minus ein halb, also zwanzig durch Wurzel aus x.
+
+47
+00:07:48.426 --> 00:08:01.149
+Die Ableitung f'(x) ist selbst wieder eine Funktion: Für jedes Budget x gibt sie die Steigung der Umsatzkurve an. Wir können sie also für jede Stelle auswerten, ohne neu zu rechnen.
+
+48
+00:08:01.949 --> 00:08:09.001
+An der Stelle x gleich zehn ergibt sich zwanzig durch Wurzel aus zehn, also etwa sechs Komma drei zwei.
+
+49
+00:08:09.601 --> 00:08:19.024
+Diesen Wert tragen wir in die Tabelle ein: Ihm haben sich die Differenzenquotienten genähert. Die Tangente hat genau diese Steigung.
+
+50
+00:08:21.030 --> 00:08:27.370
+Zurück zur Ausgangsfrage: Wir setzen die beiden Budgets aus der Motivation in die Ableitung ein.
+
+51
+00:08:27.920 --> 00:08:46.516
+An der Stelle x gleich zehn ergibt sich, wie eben berechnet, etwa sechs Komma drei zwei. An der Stelle x gleich fünfzig ergibt sich zwanzig durch Wurzel aus fünfzig, also etwa zwei Komma acht drei.
+
+52
+00:08:47.516 --> 00:09:04.701
+Die Ableitung beschreibt den marginalen Effekt des Marketingbudgets auf den Umsatz. Bei einem Budget von fünfzigtausend Euro ist er deutlich geringer als bei zehntausend Euro: Wenn schon viel Marketing genutzt wird, bringt zusätzliches Budget weniger zusätzlichen Umsatz.
+
+53
+00:09:06.700 --> 00:09:15.784
+Der Differenzenquotient ist die durchschnittliche Änderung des Funktionswerts pro Einheit von x – am Graphen die Steigung einer Sekante.
+
+54
+00:09:16.334 --> 00:09:27.283
+Lassen wir Δx gegen null gehen, nähert er sich der Ableitung f'(x), der momentanen Änderungsrate – am Graphen die Steigung der Tangente.
+
+55
+00:09:27.833 --> 00:09:35.348
+Existiert dieser Grenzwert, heißt f an der Stelle x differenzierbar; Ecken im Graphen sind problematisch.
+
+56
+00:09:35.898 --> 00:09:46.098
+Im Beispiel beträgt die Ableitung an der Stelle zehn etwa sechs Komma drei zwei – der marginale Marketingeffekt bei einem Budget von zehntausend Euro.
+
+57
+00:09:48.098 --> 00:09:58.101
+In diesem Video haben wir durchgehend f von x geschrieben. Ebenso gut können wir sprechendere Namen verwenden: U für den Umsatz und m für das Marketingbudget.
+
+58
+00:09:58.701 --> 00:10:04.446
+U'(m) ist dann der marginale Effekt des Marketingbudgets auf den Umsatz.

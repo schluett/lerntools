@@ -1,0 +1,437 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:10.126
+This video explains the key differentiation rules that you will need from now on. With them, we find the derivative directly from the function term.
+
+2
+00:00:11.626 --> 00:00:17.926
+We obtain the derivative as a new function and can then calculate the slope of the tangent at any point.
+
+3
+00:00:19.726 --> 00:00:38.823
+We go through the rules in this order: first some basic building blocks – constant functions, powers, sums and constant factors, the exponential and the logarithmic function. These are followed by three rules for combined functions: for products, for quotients and for composite functions.
+
+4
+00:00:41.620 --> 00:00:47.651
+We start with the simplest function: a constant function, for example f of x equals three.
+
+5
+00:00:48.651 --> 00:00:56.099
+Its graph is a horizontal line. However x changes, the function value stays the same. The slope is zero everywhere.
+
+6
+00:00:56.899 --> 00:01:02.348
+This holds for every fixed number b: the derivative of a constant function is zero.
+
+7
+00:01:04.550 --> 00:01:07.249
+Next, we look at power functions.
+
+8
+00:01:08.849 --> 00:01:17.182
+Here, the function term is a power. The base is x, and the exponent n can be any whole number or any decimal number, except zero.
+
+9
+00:01:18.382 --> 00:01:26.389
+The power rule says: for the derivative, the exponent is written in front as a factor, and we subtract one from the exponent.
+
+10
+00:01:27.589 --> 00:01:38.122
+Let us look at the function f of x equals x cubed as an example. In the derivative, the three comes to the front as a factor, and we reduce the exponent by one.
+
+11
+00:01:38.822 --> 00:01:42.824
+As the derivative, we therefore get three x squared.
+
+12
+00:01:44.024 --> 00:01:52.492
+Next example: the function f of x equals x. Here, too, we can use the power rule if we write x as x to the power of one.
+
+13
+00:01:53.492 --> 00:01:58.128
+The power rule reduces the exponent by one, that is, to zero.
+
+14
+00:01:58.928 --> 00:02:05.087
+Since any number to the power of zero equals one, the result of the derivative is one.
+
+15
+00:02:06.087 --> 00:02:10.776
+Accordingly, the line y equals x has slope one everywhere.
+
+16
+00:02:12.980 --> 00:02:18.766
+The power rule also works in situations where, at first glance, it does not seem to apply.
+
+17
+00:02:19.366 --> 00:02:23.581
+What about, for example, the function one over x?
+
+18
+00:02:24.581 --> 00:02:32.957
+A first rewriting rule helps here: a fraction with x to the power of n in the denominator becomes x to the power of minus n.
+
+19
+00:02:34.157 --> 00:02:39.798
+With the rewriting rule, one over x becomes x to the power of minus one.
+
+20
+00:02:40.798 --> 00:02:47.434
+Now we apply the power rule: the minus one comes to the front as a factor, and we subtract one from the exponent.
+
+21
+00:02:48.234 --> 00:02:53.519
+In the exponent, we get minus one minus one, that is, minus two.
+
+22
+00:02:54.319 --> 00:03:00.707
+Written back as a fraction with the first rule, the derivative is therefore minus one over x squared.
+
+23
+00:03:01.907 --> 00:03:07.756
+Next example: How can we differentiate the function f of x equals the square root of x?
+
+24
+00:03:08.756 --> 00:03:20.689
+In this situation, a second rewriting rule helps: a root becomes a fraction in the exponent. The exponent under the root goes to the top of the fraction, the small number on the root to the bottom.
+
+25
+00:03:21.889 --> 00:03:26.257
+With the second rule, the square root of x equals x to the power of one half.
+
+26
+00:03:27.257 --> 00:03:33.983
+Now we apply the power rule: one half comes to the front as a factor, and we subtract one from the exponent.
+
+27
+00:03:34.783 --> 00:03:39.876
+In the exponent, we get one half minus one, that is, minus one half.
+
+28
+00:03:40.676 --> 00:03:46.774
+Written back as a root, this gives one over two times the square root of x.
+
+29
+00:03:47.974 --> 00:03:51.976
+In the third example, we use both rewriting rules one after the other.
+
+30
+00:03:52.776 --> 00:04:01.599
+First, we rewrite the term under the root. The first rule is helpful here. Instead of dividing by x squared, we write x to the power of minus two.
+
+31
+00:04:02.399 --> 00:04:07.858
+With the second rule, its cube root is x to the power of minus two thirds.
+
+32
+00:04:09.358 --> 00:04:13.528
+With the new notation, we can now find the derivative using the power rule.
+
+33
+00:04:14.228 --> 00:04:19.582
+Minus two thirds comes to the front as a factor, and we subtract one from the exponent.
+
+34
+00:04:20.382 --> 00:04:30.055
+In the exponent, we get minus two thirds minus one. That is minus two thirds minus three thirds, so minus five thirds.
+
+35
+00:04:30.855 --> 00:04:37.463
+So overall, the derivative is minus two thirds times x to the power of minus five thirds.
+
+36
+00:04:38.463 --> 00:04:45.668
+Written back as a root, this gives minus two over three times the cube root of x to the power of five.
+
+37
+00:04:46.868 --> 00:04:58.783
+Rewriting the derivative as a fraction and a root is optional and not required in the exam. For finding higher derivatives, the power notation from the second-to-last step would be more convenient.
+
+38
+00:05:00.980 --> 00:05:02.723
+Now we come to sums.
+
+39
+00:05:03.723 --> 00:05:10.208
+If a function consists of several terms, we differentiate each term separately and add the results.
+
+40
+00:05:11.208 --> 00:05:15.707
+As an example, we consider the function x cubed plus x squared.
+
+41
+00:05:16.507 --> 00:05:22.294
+The first term is differentiated with the power rule. This gives three x squared.
+
+42
+00:05:23.095 --> 00:05:27.217
+Differentiated in the same way, the second term gives two x.
+
+43
+00:05:28.017 --> 00:05:32.415
+So the derivative of f is the sum of these two results.
+
+44
+00:05:34.415 --> 00:05:41.880
+A special case is a term that does not depend on x at all: an additive constant, for example in x squared plus three.
+
+45
+00:05:42.680 --> 00:05:46.112
+By the power rule, x squared becomes two x.
+
+46
+00:05:46.812 --> 00:05:52.253
+The constant three has the derivative zero. So it vanishes when we differentiate.
+
+47
+00:05:53.453 --> 00:06:05.002
+The graph shows why: the constant only shifts the curve upwards. As a result, the curve becomes neither steeper nor flatter at any point. The tangent is simply shifted along and keeps its slope.
+
+48
+00:06:10.700 --> 00:06:13.836
+Now we look at a constant factor in front of a function.
+
+49
+00:06:14.836 --> 00:06:20.201
+If a function is multiplied by a constant factor, this factor is kept when differentiating.
+
+50
+00:06:21.201 --> 00:06:24.898
+For three times x squared, the three stays.
+
+51
+00:06:25.698 --> 00:06:30.138
+x squared is differentiated with the power rule and gives two x.
+
+52
+00:06:30.938 --> 00:06:33.823
+Together, this gives the derivative six x.
+
+53
+00:06:35.823 --> 00:06:45.955
+On the graph: the factor three makes every function value three times as large. So every change in the function value is also three times as large, and so is the slope.
+
+54
+00:06:46.755 --> 00:06:50.561
+That is why the factor is also kept in the derivative.
+
+55
+00:06:51.761 --> 00:06:56.051
+Here we see two memory aids for the additive and the multiplicative constant.
+
+56
+00:06:57.251 --> 00:07:03.798
+Both types of constant can appear in one function, for example in four x cubed plus five.
+
+57
+00:07:04.598 --> 00:07:11.507
+The factor four stays when differentiating, and x cubed becomes three x squared by the power rule.
+
+58
+00:07:12.307 --> 00:07:18.483
+The additive constant five vanishes. Overall, the derivative is twelve x squared.
+
+59
+00:07:20.680 --> 00:07:27.688
+Two functions have particularly memorable derivatives: the exponential function e to the x and the natural logarithm.
+
+60
+00:07:28.688 --> 00:07:32.228
+The derivative of e to the x is again e to the x.
+
+61
+00:07:33.028 --> 00:07:37.680
+So at every point, the slope is exactly as large as the function value.
+
+62
+00:07:38.480 --> 00:07:42.277
+At x equals zero, both are one.
+
+63
+00:07:43.077 --> 00:07:47.512
+At x equals one, both are about two point seven two.
+
+64
+00:07:48.512 --> 00:08:01.548
+This leads to exponential growth: the function value grows and is at the same time the slope. So the slope keeps growing too, and this in turn makes the function values grow faster and faster.
+
+65
+00:08:03.548 --> 00:08:07.874
+The natural logarithm is only defined for positive x.
+
+66
+00:08:08.674 --> 00:08:12.726
+The derivative of the natural logarithm is one over x.
+
+67
+00:08:13.726 --> 00:08:17.162
+At x equals one, the slope is one.
+
+68
+00:08:17.962 --> 00:08:23.755
+At x equals two, it is only one half. So the curve becomes flatter and flatter.
+
+69
+00:08:25.960 --> 00:08:29.642
+Now we come to functions that are made up of two parts.
+
+70
+00:08:30.642 --> 00:08:34.360
+First, we look at a function made of two factors.
+
+71
+00:08:35.160 --> 00:08:39.439
+Here is an example: f of x equals x times ln x.
+
+72
+00:08:40.239 --> 00:08:44.984
+With the differentiation rules discussed so far, we cannot find the derivative.
+
+73
+00:08:45.784 --> 00:08:51.782
+The factors that appear in the function both depend on x, and we write them down as helper functions.
+
+74
+00:08:52.382 --> 00:09:00.898
+The first factor is u of x equals x, the second factor is v of x equals ln x.
+
+75
+00:09:01.898 --> 00:09:10.286
+For the derivative of a product, the product rule applies. It builds the derivative from the helper functions and their derivatives as follows.
+
+76
+00:09:10.786 --> 00:09:17.151
+u' of x times v of x, plus u of x times v' of x.
+
+77
+00:09:18.350 --> 00:09:25.883
+For our example, we already know the derivatives: u' of x is one, and v' of x is one over x.
+
+78
+00:09:26.883 --> 00:09:31.317
+Substituting gives first one times ln x.
+
+79
+00:09:31.917 --> 00:09:35.749
+To this we add x times one over x.
+
+80
+00:09:36.549 --> 00:09:43.534
+In the second term, the x cancels. So the derivative is ln x plus one.
+
+81
+00:09:45.730 --> 00:09:48.877
+Next, we look at quotients of two functions.
+
+82
+00:09:49.877 --> 00:09:56.249
+Here u is in the numerator and v in the denominator, and the denominator must not be zero.
+
+83
+00:09:57.049 --> 00:10:03.549
+In the derivative, the numerator contains almost the same expression as in the product rule, but with a minus in the middle.
+
+84
+00:10:04.349 --> 00:10:15.466
+That is why the order matters here: first comes u' times v, then u times v' is subtracted. The denominator is v squared.
+
+85
+00:10:16.666 --> 00:10:25.130
+As an example, we take e to the x over x, for x not equal to zero. Here u equals e to the x and v equals x.
+
+86
+00:10:25.930 --> 00:10:31.111
+The derivative of u is again e to the x, the derivative of v is one.
+
+87
+00:10:32.111 --> 00:10:40.261
+Substituting, we get in the numerator e to the x times x minus e to the x times one, and in the denominator x squared.
+
+88
+00:10:41.061 --> 00:10:45.510
+In the numerator, we factor out e to the x and obtain the result.
+
+89
+00:10:47.710 --> 00:10:50.431
+Finally, we look at composite functions.
+
+90
+00:10:51.431 --> 00:10:55.453
+Here we substitute the result of one function into another function.
+
+91
+00:10:56.253 --> 00:11:00.550
+An example is the logarithm of x squared plus three x.
+
+92
+00:11:01.550 --> 00:11:08.318
+When we evaluate this function for a specific value of x, we proceed, as we know, in two steps.
+
+93
+00:11:08.918 --> 00:11:11.656
+Let us take x equals one, for example.
+
+94
+00:11:12.256 --> 00:11:22.829
+To calculate f of x, we first carry out the calculation inside the brackets of the logarithm, for x equals one that is one plus three equals four.
+
+95
+00:11:23.429 --> 00:11:26.268
+Then we apply the logarithm to this value.
+
+96
+00:11:27.268 --> 00:11:31.354
+Following these two steps, we split the function into two parts.
+
+97
+00:11:32.154 --> 00:11:37.161
+We call the first calculation step the inner function, v of x for short.
+
+98
+00:11:37.761 --> 00:11:42.512
+The inner function often also sits visually inside the function term.
+
+99
+00:11:43.512 --> 00:11:47.898
+We obtain the outer function by writing just v in place of the inner function.
+
+100
+00:11:48.498 --> 00:11:54.158
+So the outer function is a function of v. Here u of v equals ln v.
+
+101
+00:11:55.158 --> 00:11:59.044
+For the chain rule, we need the derivatives of both helper functions.
+
+102
+00:11:59.644 --> 00:12:03.651
+In the example, the derivative of the logarithm is one over v.
+
+103
+00:12:04.451 --> 00:12:09.292
+For the inner derivative, we use the power rule and get two x plus three.
+
+104
+00:12:10.292 --> 00:12:18.763
+According to the chain rule, we obtain the whole derivative f'(x) as the product of the outer derivative and the inner derivative.
+
+105
+00:12:19.963 --> 00:12:26.497
+In the example, this product is one over v times, in brackets, two x plus three.
+
+106
+00:12:27.497 --> 00:12:35.570
+In the last step, for v we have to put the right-hand side of the inner function back in, so that the overall result depends only on x.
+
+107
+00:12:36.570 --> 00:12:40.316
+Written as a fraction, two x plus three is in the numerator.
+
+108
+00:12:42.520 --> 00:12:49.838
+The most important differentiation rules can be found in the formula sheet. You can practise them in the quiz that follows.
+
+109
+00:12:50.838 --> 00:12:57.944
+When we later deal with functions of several variables, the two rules from the memory aids in particular will play a role again.

@@ -96,14 +96,42 @@
   pointer-events:none;
 }
 
+    
+.home-link {
+  position:fixed;
+  top:14px;
+  left:18px;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:38px;
+  background:rgba(255,255,255,.96);
+  border:1px solid #D8DDE5;
+  border-radius:7px;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
+  color:#2E6F9E !important;
+  text-decoration:none !important;
+  transition:border-color .15s ease, box-shadow .15s ease;
+}
+.home-link:hover,
+.home-link:focus-visible {
+  border-color:#2E6F9E;
+  box-shadow:0 0 0 1px #2E6F9E;
+  outline:none;
+}
+.home-link svg { display:block; }
+
   </style>
 </head>
 <body>
+  <a class="home-link" href="../../" aria-label="Home" title="Home"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 3.5 21 11"/><path d="M5.5 9.5V20h5v-5.5h3V20h5V9.5"/></svg></a>
   <nav class="language-switch" aria-label="Language"><a class="" href="../../../matrixrechnung/3_rechenregeln/" lang="de" aria-current="false">DE</a><span aria-hidden="true">|</span><a class="current" href="./" lang="en" aria-current="page">EN</a></nav>
   <main>
     <header class="site-header"><h1 class="site-header-title">Learning Tools Quantitative Methods</h1><p class="site-header-professor">Prof. Dr. Sebastian Schlütter</p><p class="site-header-institution">Mainz University of Applied Sciences</p><section class="tool-intro" aria-label="Information"><p>The learning tools provided here were developed to support students at Mainz University of Applied Sciences in studying selected topics in quantitative methods. They complement the regular course materials and in-person classes but do not replace them. In particular, the selection and scope of the learning tools do not imply any limitation of the material that may be relevant for examinations.</p><p>The learning tools are currently in a trial phase. Comments, feedback, and suggestions for improvement are welcome and can be sent by email to <a href="mailto:sebastian.schluetter@hs-mainz.de">sebastian.schluetter@hs-mainz.de</a>.</p><p>The learning videos were created using Python and Manim. The narration is generated using an AI voice provided by OpenAI.</p></section></header>
     <div class="content-wide">
-      <a class="back" href="../../mathematics/">← Mathematics, Bachelor&#x27;s Module</a>
+      <a class="back" href="../../mathematics/matrix-algebra/">← Matrix Algebra</a>
       <h2 class="page-title">Working with Matrices</h2>
       <p class="subtitle">Sum, difference and scalar multiple</p>
       <video id="player" controls preload="metadata">

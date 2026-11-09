@@ -1,0 +1,233 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:10.988
+How strongly does a result change when we vary an input slightly? This question comes up in many business applications. The mathematical tool for it is the derivative.
+
+2
+00:00:12.688 --> 00:00:15.387
+In this video, we pursue three learning goals.
+
+3
+00:00:15.837 --> 00:00:22.428
+First: using a business example, to ask how strongly the function value changes when x changes.
+
+4
+00:00:22.828 --> 00:00:30.237
+Second: to move from the difference quotient, via ever smaller changes in x, to the derivative as the slope of the tangent.
+
+5
+00:00:30.637 --> 00:00:38.718
+And third: to interpret the derivative in the example as the marginal effect of the marketing budget on revenue.
+
+6
+00:00:40.720 --> 00:00:53.756
+A company is investigating how its revenue depends on its marketing budget. We call the marketing budget x, measured in thousands of euros. We call the revenue f of x, also in thousands of euros.
+
+7
+00:00:54.306 --> 00:01:00.206
+For this relationship, we assume that marketing spending affects revenue in the form of a square root function.
+
+8
+00:01:00.806 --> 00:01:14.216
+Without marketing, revenue is five hundred thousand euros. As the budget grows, revenue rises, but because of the square root the curve becomes flatter and flatter. Let's now look more closely at what this shape means.
+
+9
+00:01:14.916 --> 00:01:22.920
+This raises the question: how much additional revenue does one thousand euros more for marketing bring? The answer depends on where we are.
+
+10
+00:01:23.520 --> 00:01:30.761
+With a budget of ten thousand euros, one thousand euros more brings about six point two thousand euros of additional revenue.
+
+11
+00:01:31.311 --> 00:01:36.052
+With fifty thousand euros, it is only about two point eight thousand euros.
+
+12
+00:01:36.602 --> 00:01:45.503
+So with a small budget, every additional euro brings more than with a large budget – the curve is steeper at the first point than at the second.
+
+13
+00:01:46.503 --> 00:01:59.001
+However, we chose the additional one thousand euros only as an example. We could just as well consider a smaller or a larger increase. Let's take a closer look at this change in the budget next.
+
+14
+00:02:00.800 --> 00:02:07.351
+To do this, we now focus on a current budget of x equals ten, that is, ten thousand euros.
+
+15
+00:02:07.901 --> 00:02:12.643
+Revenue there is about six hundred and twenty-six point five thousand euros.
+
+16
+00:02:13.243 --> 00:02:19.722
+We denote the change in the budget by Δx. The Greek letter delta stands for a change.
+
+17
+00:02:20.272 --> 00:02:31.579
+For example, we could increase it by two thousand euros, by one thousand euros or by only one hundred euros – that is, Δx equals two, one or zero point one.
+
+18
+00:02:32.179 --> 00:02:40.433
+We want to know what effect this change would have on revenue. We denote this change in the function value by Δf.
+
+19
+00:02:41.033 --> 00:02:50.576
+To compare changes of different sizes, we look not at the change Δf on its own, but at the ratio of the change in the function value to the change in x.
+
+20
+00:02:52.380 --> 00:03:01.716
+This ratio is called the difference quotient: the numerator is the difference between the function values, the denominator the difference between the x values.
+
+21
+00:03:02.266 --> 00:03:08.815
+In the example, the difference quotient is the change in revenue relative to the additional marketing budget.
+
+22
+00:03:09.415 --> 00:03:17.787
+For a first calculation of the difference quotient, we set Δx equal to two: so we increase the budget from ten to twelve.
+
+23
+00:03:18.287 --> 00:03:26.662
+Revenue rises by about twelve thousand euros, which is a ratio of about six point zero four thousand euros per thousand euros of budget.
+
+24
+00:03:27.262 --> 00:03:34.430
+On the graph, the difference quotient is the slope of the straight line through the two points. This line is called a secant.
+
+25
+00:03:35.430 --> 00:03:39.798
+Next, we set Δx equal to one: from ten to eleven.
+
+26
+00:03:40.298 --> 00:03:43.947
+The difference quotient is now about six point one seven.
+
+27
+00:03:44.947 --> 00:03:49.598
+Δx equals zero point one: from ten to ten point one.
+
+28
+00:03:50.098 --> 00:03:57.939
+The two points are now so close together that we use a magnifying glass. The difference quotient is about six point three one.
+
+29
+00:03:59.950 --> 00:04:11.718
+Up to this point, the situation is rather complex, because we need to make two choices. First: what is the current budget x? Second: by which Δx should the budget be increased?
+
+30
+00:04:12.318 --> 00:04:21.191
+The derivative saves us one of these choices, namely Δx. By default, the derivative considers an infinitely small change in x.
+
+31
+00:04:21.791 --> 00:04:31.440
+So we let Δx tend to zero and see which number the difference quotient approaches. This value is called the limit, abbreviated as lim.
+
+32
+00:04:32.040 --> 00:04:40.383
+We cannot set Δx exactly equal to zero, because then we would be dividing by zero – hence the route via ever smaller changes.
+
+33
+00:04:40.983 --> 00:04:46.465
+We call the limit the derivative of f at the point x, written f'(x).
+
+34
+00:04:47.165 --> 00:04:57.361
+On the graph, the derivative is the slope of the straight line that the secants approach. This line touches the curve at the point where x equals ten and is called the tangent.
+
+35
+00:04:58.970 --> 00:05:04.404
+If this limit exists, we say that the function is differentiable at the point x.
+
+36
+00:05:05.004 --> 00:05:12.555
+The functions we consider in this course – such as linear, quadratic or exponential functions – have this property.
+
+37
+00:05:13.105 --> 00:05:20.263
+For a smooth curve, that is, one without kinks, the secants from the left and from the right approach the same tangent.
+
+38
+00:05:20.963 --> 00:05:27.083
+Piecewise defined functions can be problematic, even if they are continuous, meaning that their graph has no jump.
+
+39
+00:05:27.633 --> 00:05:36.863
+If the graph has a corner, the difference quotients from the left and from the right approach different numbers – here two and zero point five.
+
+40
+00:05:37.463 --> 00:05:43.447
+There is then no common limit and no unique tangent – the function is not differentiable at this point.
+
+41
+00:05:44.447 --> 00:05:55.810
+Our marketing function is differentiable for all positive values of the budget. Only directly at x equals zero does the curve become infinitely steep, and there we cannot evaluate the derivative.
+
+42
+00:05:57.410 --> 00:06:10.341
+We can calculate the limit directly, without inserting ever smaller values of Δx. There are differentiation rules for this, which we cover systematically in the next video. For our function, three of them are enough.
+
+43
+00:06:10.891 --> 00:06:21.327
+First, we write the square root as a power: the square root of x is x to the power of one half. This lets us use the differentiation rule for power functions.
+
+44
+00:06:22.027 --> 00:06:29.864
+According to the power rule, the exponent becomes a factor in the derivative, and the exponent itself is then reduced by one.
+
+45
+00:06:30.564 --> 00:06:39.668
+Apart from that, constant factors remain in the derivative, here the factor forty. Additive constants disappear when we differentiate, here the five hundred.
+
+46
+00:06:40.368 --> 00:06:48.228
+Taken together, this gives twenty times x to the power of minus one half, that is, twenty divided by the square root of x.
+
+47
+00:06:49.228 --> 00:07:00.327
+The derivative f'(x) is itself a function: for every budget x, it gives the slope of the revenue curve. So we can evaluate it at any point without recalculating.
+
+48
+00:07:01.127 --> 00:07:08.528
+At the point x equals ten, we get twenty divided by the square root of ten, which is about six point three two.
+
+49
+00:07:09.128 --> 00:07:16.297
+We enter this value in the table: it is the value the difference quotients approached. The tangent has exactly this slope.
+
+50
+00:07:18.300 --> 00:07:25.098
+Back to the original question: we substitute the two budgets from the motivation into the derivative.
+
+51
+00:07:25.648 --> 00:07:40.171
+At the point x equals ten, as we have just calculated, we get about six point three two. At the point x equals fifty, we get twenty divided by the square root of fifty, which is about two point eight three.
+
+52
+00:07:41.171 --> 00:07:57.329
+The derivative describes the marginal effect of the marketing budget on revenue. With a budget of fifty thousand euros, it is considerably smaller than with ten thousand euros: if a lot of marketing is already being used, an additional budget brings less additional revenue.
+
+53
+00:07:59.330 --> 00:08:06.965
+The difference quotient is the average change in the function value per unit of x – on the graph, the slope of a secant.
+
+54
+00:08:07.515 --> 00:08:16.521
+If we let Δx tend to zero, it approaches the derivative f'(x), the instantaneous rate of change – on the graph, the slope of the tangent.
+
+55
+00:08:17.071 --> 00:08:23.373
+If this limit exists, f is called differentiable at the point x; corners in the graph are problematic.
+
+56
+00:08:23.923 --> 00:08:32.444
+In the example, the derivative at x equals ten is about six point three two – the marginal marketing effect at a budget of ten thousand euros.
+
+57
+00:08:34.444 --> 00:08:43.279
+In this video, we have written f of x throughout. We could just as well use more descriptive names: R for revenue and m for the marketing budget.
+
+58
+00:08:43.879 --> 00:08:48.930
+R'(m) is then the marginal effect of the marketing budget on revenue.
